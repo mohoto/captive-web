@@ -1,8 +1,6 @@
 import * as React from "react";
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-const IconTraining: React.FC<IconProps> = (props) => (
+const IconTraining: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="396.494px"
