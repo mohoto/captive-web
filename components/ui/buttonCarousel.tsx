@@ -39,8 +39,8 @@ const buttonVariants = cva(
 type ButtonCarouselProps = React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
-    currentIndex: number;
-    setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+    currentIndex?: number;
+    setCurrentIndex?: React.Dispatch<React.SetStateAction<number>>;
   };
 
 function ButtonCarousel({
