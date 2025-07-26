@@ -1,12 +1,15 @@
-type Props = {};
+interface IconDesignProps {
+  className?: string;
+}
 
-const IconConfiguration = ({}: Props) => (
+const IconConfiguration: React.FC<IconDesignProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="512"
     height="512"
     viewBox="0 0 512 512"
     fill="currentColor"
+    className={className}
   >
     <path
       clipRule="evenodd"

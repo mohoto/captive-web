@@ -1,12 +1,17 @@
-import { Props } from "next/script";
+import React from "react";
 
-const IconDesign = ({}: Props) => (
+interface IconDesignProps {
+  className?: string;
+}
+
+const IconDesign: React.FC<IconDesignProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="396.494px"
     height="396.494px"
     viewBox="0 0 396.494 396.494"
     fill="currentColor"
+    className={className}
   >
     <g>
       <path

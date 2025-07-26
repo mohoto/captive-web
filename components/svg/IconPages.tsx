@@ -1,12 +1,15 @@
-type Props = {};
+interface IconDesignProps {
+  className?: string;
+}
 
-const IconPages = ({}: Props) => (
+const IconPages: React.FC<IconDesignProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="512"
     height="512"
     viewBox="0 0 72 72"
     fill="currentColor"
+    className={className}
   >
     <path d="m58 66h-44a5.006 5.006 0 0 1 -5-5v-50a5.006 5.006 0 0 1 5-5h44a5.006 5.006 0 0 1 5 5v50a5.006 5.006 0 0 1 -5 5zm-44-58a3 3 0 0 0 -3 3v50a3 3 0 0 0 3 3h44a3 3 0 0 0 3-3v-50a3 3 0 0 0 -3-3z" />
     <rect height="22" rx="3" width="12" x="14" y="39" />

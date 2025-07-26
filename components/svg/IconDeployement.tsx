@@ -1,12 +1,15 @@
-type Props = {};
+interface IconDesignProps {
+  className?: string;
+}
 
-const IconDeployement = ({}: Props) => (
+const IconDeployement: React.FC<IconDesignProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="396.494px"
     height="396.494px"
     viewBox="0 0 64 64"
     fill="currentColor"
+    className={className}
   >
     <g id="Layer_1" />
     <g id="Layer_2" />

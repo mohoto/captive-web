@@ -1,12 +1,15 @@
-type Props = {};
+interface IconDesignProps {
+  className?: string;
+}
 
-const IconSeo = ({}: Props) => (
+const IconSeo: React.FC<IconDesignProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="512"
     height="512"
     viewBox="0 0 64 64"
     fill="currentColor"
+    className={className}
   >
     <g id="Glyph">
       <g>
