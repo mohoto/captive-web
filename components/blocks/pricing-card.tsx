@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -45,7 +45,7 @@ export function PricingCard({
     }
   }, [isInView, hasAnimated]);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -56,7 +56,7 @@ export function PricingCard({
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -69,7 +69,7 @@ export function PricingCard({
     },
   };
 
-  const listItemVariants = {
+  const listItemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,

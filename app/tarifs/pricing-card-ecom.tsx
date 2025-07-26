@@ -2,7 +2,7 @@
 
 import { PricingCard } from "@/components/blocks/pricing-card";
 
-export function PricingCardBasic() {
+export function PricingCardEcom() {
   return (
     <PricingCard
       title="Site e-commerce"
@@ -13,7 +13,7 @@ export function PricingCardBasic() {
         {
           title: "Inclus",
           items: [
-            "4 pages : page d&#39;accueil, pages catégories, page produit, page panier",
+            "4 pages : page d'accueil, pages catégories, page produit, page panier",
             "Référencement du nom de votre entreprise sur Google",
             "Formation sur Shopify pour la gestion de votre boutique",
             "Formulaire de contact",

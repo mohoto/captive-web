@@ -12,7 +12,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiWhatsappFill } from "react-icons/ri";
 import CarouselEcom from "./carousel-ecom";
-import { PricingCardBasic } from "./pricing-card-basic";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -209,9 +208,6 @@ function Page() {
               autonome.
             </p>
           </div>
-        </div>
-        <div className="lg:px-28 xl:px-36">
-          <PricingCardBasic />
         </div>
       </section>
       <section className="my-10 lg:px-40 xl:px-68">

@@ -123,7 +123,7 @@ export default function NavbarTwo() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link href="/site-vitrine">TARIFS</Link>
+                  <Link href="/tarifs">TARIFS</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -183,7 +183,7 @@ export default function NavbarTwo() {
                     className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
                     onClick={() => setOpenMenu(false)}
                   >
-                    <Link href="/sass">Tarifs</Link>
+                    <Link href="/tarifs">Tarifs</Link>
                   </div>
                   <div
                     className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
