@@ -179,7 +179,7 @@ function CarouselEcom() {
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
-                      Paiement en plusieurs fois (via Stripe ou d'autres
+                      Paiement en plusieurs fois (via Stripe ou dd&#39;autres
                       solutions)
                     </li>
                     <li className="py-1 font-light w-full flex items-center">

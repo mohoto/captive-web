@@ -82,7 +82,6 @@ function CarouselEcom() {
                       Inventaire
                     </li>
                     <li className="py-1 font-light w-full flex items-center">
-                      {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
@@ -108,7 +107,6 @@ function CarouselEcom() {
                       Automatiser les notifications de commande
                     </li>
                     <li className="py-1 font-light w-full flex items-center">
-                      {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
@@ -168,22 +166,19 @@ function CarouselEcom() {
                       Pay
                     </li>
                     <li className="py-1 font-light w-full flex items-center">
-                      {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
                       PayPal, intégré facilement
                     </li>
                     <li className="py-1 font-light w-full flex items-center">
-                      {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
-                      Paiement en plusieurs fois (via Stripe ou d'autres
+                      Paiement en plusieurs fois (via Stripe ou d&#39;autres
                       solutions)
                     </li>
                     <li className="py-1 font-light w-full flex items-center">
-                      {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>

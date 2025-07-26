@@ -93,7 +93,7 @@ function PricingWebSite() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Création d'une fiche Goggle My business</span>
+                      <span>Création d&#39;une fiche Goggle My business</span>
                     </li>
 
                     <li className="flex items-center">
@@ -162,7 +162,7 @@ function PricingWebSite() {
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
                       <span>
-                        4 pages : page d'accueil, pages catégories, page
+                        4 pages : page d&#39;accueil, pages catégories, page
                         produit, page panier
                       </span>
                     </li>
@@ -184,7 +184,7 @@ function PricingWebSite() {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
-                      <span>Création d'une fiche Goggle My business</span>
+                      <span>Création d&#39;une fiche Goggle My business</span>
                     </li>
                     <li className="flex items-center">
                       <svg

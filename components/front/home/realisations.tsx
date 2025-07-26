@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import localFont from "next/font/local";
 import { IoHomeOutline, IoShirtOutline } from "react-icons/io5";
 import { VscTools } from "react-icons/vsc";
 
@@ -16,10 +15,6 @@ import NestRenovSite from "@/public/images/home/sites-web/NEST_RENOVE_site_web.p
 import MakenergySite from "../../../public/images/home/sites-web/MAK-ENERGY-site-web.png";
 import ParisianSite from "../../../public/images/home/sites-web/PARISIAN-MODE_site_web.png";
 import SiaySite from "../../../public/images/home/sites-web/SIAY-site-web.png";
-
-const icomoonFont = localFont({
-  src: "../../../fonts/icomoon.ttf",
-});
 
 function Realisations() {
   return (
@@ -99,8 +94,8 @@ function Realisations() {
                       </div>
                       <p className="mb-6">
                         Nous avons conçu pour Mak Energy un site clair et
-                        rassurant, en valorisant leurs services d'éradiction et
-                        d'éxermination de nuisibles avec des visuels
+                        rassurant, en valorisant leurs services d&#39;éradiction
+                        et d&#39;éxermination de nuisibles avec des visuels
                         professionnels, une navigation intuitive et une mise en
                         avant des engagements pour inspirer confiance aux
                         particuliers et aux professionnels.

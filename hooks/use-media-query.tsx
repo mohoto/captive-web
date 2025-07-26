@@ -19,7 +19,7 @@ export function useMediaQuery(query: string) {
     // Crée un objet MediaQueryList pour surveiller la media query
     const result = matchMedia(query);
 
-    // Ajoute un écouteur d'événements pour détecter les changements
+    // Ajoute un écouteur d&#39;événements pour détecter les changements
     // Par exemple, quand l'utilisateur redimensionne la fenêtre
     result.addEventListener("change", onChange);
 

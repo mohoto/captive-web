@@ -185,6 +185,14 @@ const AnimatedTestimonialsDemo: React.FC = () => {
 const MyAnimatedTestimonials: React.FC = () => {
   return (
     <section className="my-10 px-8 lg:px-32">
+      <div className="flex items-center flex-col">
+        <span className="text-captive-secondary text-center font-semibold text-md">
+          AVIS CLIENTS
+        </span>
+        <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-12 mb-12">
+          Nos clients en parlent le mieux
+        </h2>
+      </div>
       <div className="relative">
         <style>
           {`
@@ -193,8 +201,8 @@ const MyAnimatedTestimonials: React.FC = () => {
               100% { background-position: 100% 50%; }
             }
             .animated-grid {
-              width: 200%;
-              height: 200%;
+              width: 100%;
+              height: 100%;
               background-image: 
                 linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px), 
                 linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);

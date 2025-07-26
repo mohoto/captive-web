@@ -22,7 +22,6 @@ interface CarouselInfo {
   items: HTMLElement[];
 }
 
-
 function CarouselEcom() {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -180,7 +179,7 @@ function CarouselEcom() {
                       <div className="bg-captive-secondary rounded-full mr-2">
                         <BsCheck className=" w-5 h-5 text-white" />
                       </div>
-                      Paiement en plusieurs fois (via Stripe ou d'autres
+                      Paiement en plusieurs fois (via Stripe ou d&#39;autres
                       solutions)
                     </li>
                     <li className="py-1 w-full flex items-center">

@@ -7,17 +7,15 @@ function Banner() {
       <div className="container">
         <div className="bg-gradient-to-r from-blue-900 to-blue-600 flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
           <h2 className="text-3xl text-white text-center lg:text-left">
-            Besoin d'un site web pour votre activité ?
+            Besoin d&#39;un site web pour votre activité ?
           </h2>
-          <button className="px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-white transition-all duration-75 ease-in-out">
-            <Link
-              href="tel:0757837110"
-              className="flex gap-3 items-center text-lg font-bold"
-            >
-              <RiWhatsappFill className="h-8 w-8 text-green-700" />
-              07 57 83 71 10
-            </Link>
-          </button>
+          <Link
+            href="tel:0757837110"
+            className="flex gap-3 items-center text-lg font-bold px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-white transition-all duration-75 ease-in-out"
+          >
+            <RiWhatsappFill className="h-8 w-8 text-green-700" />
+            07 57 83 71 10
+          </Link>
         </div>
       </div>
     </section>
