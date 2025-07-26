@@ -1,9 +1,7 @@
 import Image from "next/image";
 import heroImage from "../../../public/images/home/captive_agence_web_services.png";
 
-type Props = {};
-
-function Hero({}: Props) {
+function Hero() {
   return (
     <section className="pt-10 lg:pt-16 pb-10 px-8 lg:px-32 bg-captive-primary">
       <div className="container grid lg:grid-cols-2 2xl:gap-x-12 3xl:gap-x-20 gap-y-12 lg:gap-y-0 items-center">

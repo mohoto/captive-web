@@ -13,9 +13,7 @@ const icomoonFont = localFont({
   src: "../../../fonts/icomoon.ttf",
 });
 
-type Props = {};
-
-function Services({}: Props) {
+function Services() {
   return (
     <section className="lg:px-32 px-8 bg-captive-primary py-16">
       <div className="container">

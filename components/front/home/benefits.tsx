@@ -9,9 +9,7 @@ const icomoonFont = localFont({
   src: "../../../fonts/icomoon.ttf",
 });
 
-type Props = {};
-
-function Benefits({}: Props) {
+function Benefits() {
   return (
     <section className="mb-20 mt-28 px-8 lg:px-32">
       <div className="container">

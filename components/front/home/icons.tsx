@@ -9,9 +9,7 @@ import { SiGoogleads } from "react-icons/si";
 import { TbWorldWww } from "react-icons/tb";
 import { TfiYoutube } from "react-icons/tfi";
 
-type Props = {};
-
-function Icons({}: Props) {
+function Icons() {
   return (
     <section className="lg:px-8 py-8">
       <div className="container">

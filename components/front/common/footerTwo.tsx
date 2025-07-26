@@ -4,9 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 
-type Props = {};
-
-function FooterTwo({}: Props) {
+function FooterTwo() {
   return (
     <footer>
       <div className="bg-captive-primary">
@@ -28,12 +26,8 @@ function FooterTwo({}: Props) {
             <h5 className="text-xl font-bold md:text-lg">LIENS RAPIDES</h5>
             <div className="flex flex-col mt-6 space-y-2 text-lg md:text-base">
               <Link href="/site-vitrine">Site vitrine</Link>
-              <Link href="/e-commerce">
-                Site e-commerce
-              </Link>
-              <Link href="/application-web">
-                SaaS / Application web
-              </Link>
+              <Link href="/e-commerce">Site e-commerce</Link>
+              <Link href="/application-web">SaaS / Application web</Link>
               <Link href="/tarifs">Tarifs</Link>
               <Link href="/contact">Contact</Link>
             </div>

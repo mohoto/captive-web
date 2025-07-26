@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { RiWhatsappFill } from "react-icons/ri";
 
-type Props = {};
-
-function Banner({}: Props) {
+function Banner() {
   return (
     <section className="lg:px-8 -mt-10">
       <div className="container">

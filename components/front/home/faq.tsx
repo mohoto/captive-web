@@ -6,9 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 
-type Props = {};
-
-function Faq({}: Props) {
+function Faq() {
   return (
     <section className="my-16 px-8 lg:px-32">
       <div className="grid lg:grid-cols-2 lg:gap-x-10">

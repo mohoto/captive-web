@@ -13,9 +13,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import CarouselEcom from "./carousel-ecom";
 import { PricingCardBasic } from "./pricing-card-basic";
 
-type Props = {};
-
-function Page({}: Props) {
+function Page() {
   return (
     <>
       <section className="pt-6 bg-captive-primary px-8 lg:px-32">

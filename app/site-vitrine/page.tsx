@@ -13,9 +13,7 @@ import Link from "next/link";
 import { BsCheck } from "react-icons/bs";
 import { RiWhatsappFill } from "react-icons/ri";
 
-type Props = {};
-
-function Page({}: Props) {
+function Page() {
   return (
     <>
       <section className="pt-8 bg-captive-primary px-8 lg:px-32">

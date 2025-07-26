@@ -22,9 +22,7 @@ interface CarouselInfo {
   items: HTMLElement[];
 }
 
-interface Props {}
-
-function CarouselEcom({}: Props) {
+function CarouselEcom() {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
 

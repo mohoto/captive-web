@@ -11,9 +11,7 @@ const icomoonFont = localFont({
   src: "../../../fonts/icomoon.ttf",
 });
 
-type Props = {};
-
-function Introduction({}: Props) {
+function Introduction() {
   return (
     <section className="my-10 px-8 lg:px-32">
       <div className="grid lg:grid-cols-2 2xl:gap-x-20 lg:gap-x-10 items-center gap-y-4">

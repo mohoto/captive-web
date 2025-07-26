@@ -6,9 +6,7 @@ const icomoonFont = localFont({
   src: "../../../fonts/icomoon.ttf",
 });
 
-type Props = {};
-
-function GoogleBusiness({}: Props) {
+function GoogleBusiness() {
   return (
     <section className="px-8 lg:px-32 bg-captive-primary pt-16 pb-28">
       <div className="grid lg:grid-cols-2 2xl:gap-x-20 lg:gap-x-10 place-items-center gap-y-4">
