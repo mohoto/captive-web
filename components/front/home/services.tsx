@@ -1,17 +1,6 @@
-import { Ubuntu } from "next/font/google";
-import localFont from "next/font/local";
 import Image from "next/image";
 import { BsCheck } from "react-icons/bs";
 import ServicesImage from "../../../public/images/home/captive-web_sites_web.png";
-
-const raleway = Ubuntu({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-});
-
-const icomoonFont = localFont({
-  src: "../../../fonts/icomoon.ttf",
-});
 
 function Services() {
   return (

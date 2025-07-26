@@ -50,7 +50,7 @@ function GoogleBusiness() {
               Google My Business aumente la visibilité des professionnels dans
               les recherches locales sur Google. Il rend votre activité plus
               accessible en mettant en avant des informations clés comme
-              l'adresse, les horaires et le numéro de téléphone. Les avis
+              l&#39;adresse, les horaires et le numéro de téléphone. Les avis
               clients affichés renforcent la confiance envers vous.
             </p>
             <div className="mt-8 flex flex-col gap-y-5">

@@ -151,7 +151,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                   {testimonials[active].designation}
                 </p>
                 <motion.p className="mt-8 text-lg">
-                  "{testimonials[active].quote}"
+                  &quot;{testimonials[active].quote}&quot;
                 </motion.p>
               </div>
             </motion.div>

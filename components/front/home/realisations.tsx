@@ -175,10 +175,10 @@ function Realisations() {
                       <p className="mb-6">
                         Nous avons conçu pour Parisian Mode une boutique en
                         ligne chic et intemporelle, parfaitement alignée avec
-                        l’esprit "parisienne-bohème". Le site met en valeur une
-                        sélection de vêtements et accessoires grâce des visuels
-                        élégants et une interface pensée pour inspirer confiance
-                        et faciliter l’achat.
+                        l’esprit &quot;parisienne-bohème&quot;. Le site met en
+                        valeur une sélection de vêtements et accessoires grâce
+                        des visuels élégants et une interface pensée pour
+                        inspirer confiance et faciliter l’achat.
                       </p>
                       <button className="text-shikam-normal border-shikam-normal px-4 py-2 rounded-full text-sm border-2 hover:bg-captive-secondary hover:text-white transition-all duration-75 ease-in-out">
                         <Link

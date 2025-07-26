@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import Image from "next/image";
 import { FaWebAwesome } from "react-icons/fa6";
 import { HiUserPlus } from "react-icons/hi2";
@@ -6,10 +5,6 @@ import { MdVisibility } from "react-icons/md";
 import { SiTrustpilot } from "react-icons/si";
 import { TbMessageChatbotFilled } from "react-icons/tb";
 import BusinessImage from "../../../public/images/home/captive-web_presentation.png";
-
-const icomoonFont = localFont({
-  src: "../../../fonts/icomoon.ttf",
-});
 
 function Introduction() {
   return (

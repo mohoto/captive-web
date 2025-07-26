@@ -1,11 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import localFont from "next/font/local";
-
-const icomoonFont = localFont({
-  src: "../../../fonts/icomoon.ttf",
-});
 
 function PricingWebSite() {
   return (
