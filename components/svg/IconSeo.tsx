@@ -7,7 +7,6 @@ const IconSeo = ({}: Props) => (
     height="512"
     viewBox="0 0 64 64"
     fill="currentColor"
-    {...props}
   >
     <g id="Glyph">
       <g>
