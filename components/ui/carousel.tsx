@@ -188,7 +188,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-captive-secondary hover:bg-blue-800",
+        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-secondary-hover",
         orientation === "horizontal"
           ? "-translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -223,23 +223,25 @@ function CarouselNext({
 
   return (
     <ButtonCarousel
-      data-slot="carousel-next"
+      data-slot="carousel-previous"
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-captive-secondary hover:bg-blue-800",
+        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-secondary-hover",
         orientation === "horizontal"
           ? "-translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={() => {
-        scrollNext(); // toujours appelé
+        scrollNext();
         if (setCurrentIndex && typeof currentIndex === "number") {
           setCurrentIndex(currentIndex + 1);
         }
       }}
+      currentIndex={currentIndex}
+      setCurrentIndex={setCurrentIndex}
       {...props}
     >
       <ArrowRight className="text-white" />

@@ -11,17 +11,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiWhatsappFill } from "react-icons/ri";
 import CarouselEcom from "./carousel-ecom";
+import { PricingCardBasic } from "./pricing-card-basic";
 
 type Props = {};
 
 function Page({}: Props) {
   return (
     <>
-      <section className="lg:pt-4 pt-4 bg-captive-primary px-8 lg:px-32">
+      <section className="pt-6 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
             <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-b from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12 text-center lg:text-left">
-              Lancez votre e-commerce avec une boutique en ligne professionnelle
+              Lancez votre e&#8209;commerce avec une boutique en ligne
+              professionnelle
             </h1>
             <p className="text-lg text-center lg:text-left">
               Profitez de la puissance de la publicité sur Facebook pour
@@ -60,8 +62,7 @@ function Page({}: Props) {
 
           <div className="order-1 lg:order-2">
             <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
-              Pourquoi se lancer dans <br />
-              l’e-commerce ?
+              Pourquoi se lancer dans l’e&#8209;commerce ?
             </h2>
             <p>
               L’e-commerce est aujourd’hui un levier incontournable pour
@@ -78,8 +79,7 @@ function Page({}: Props) {
           </div>
           <div className="place-self-center order-3">
             <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
-              Pourquoi choisir Shopify pour votre site <br />
-              e-commerce ?
+              Pourquoi choisir Shopify pour votre site e&#8209;commerce ?
             </h2>
             <p>
               Shopify est l’une des plateformes e-commerce les plus puissantes
@@ -139,7 +139,7 @@ function Page({}: Props) {
               Personnalisation du design du site
             </h3>
             <p className="text-center">
-              Nous adaptons le thème graphique à votre image de marque pour un
+              Nous créons un thème graphique à votre image de marque pour un
               rendu professionnel, moderne et cohérent.
             </p>
           </div>
@@ -205,6 +205,9 @@ function Page({}: Props) {
               autonome.
             </p>
           </div>
+        </div>
+        <div className="lg:px-28 xl:px-36">
+          <PricingCardBasic />
         </div>
       </section>
       <section className="my-10 lg:px-40 xl:px-68">

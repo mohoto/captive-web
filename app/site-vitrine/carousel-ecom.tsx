@@ -27,7 +27,6 @@ interface Props {}
 function CarouselEcom({}: Props) {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log("currentIndex:", currentIndex);
 
   /* const handleNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, info.total - 1));

@@ -1,13 +1,12 @@
-import * as React from "react";
+type Props = {};
 
-const IconDeployement: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const IconDeployement = ({}: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="396.494px"
     height="396.494px"
     viewBox="0 0 64 64"
     fill="currentColor"
-    {...props}
   >
     <g id="Layer_1" />
     <g id="Layer_2" />

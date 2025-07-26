@@ -101,6 +101,7 @@ function PricingWebSite({}: Props) {
                       </svg>
                       <span>Création d'une fiche Goggle My business</span>
                     </li>
+
                     <li className="flex items-center">
                       <svg
                         className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
@@ -110,7 +111,8 @@ function PricingWebSite({}: Props) {
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
                       <span>
-                        Référencement du nom de votre entreprise sur Google
+                        Configuration des éléments techniques : nom de domaine,
+                        hébergement, sécurité (HTTPS)
                       </span>
                     </li>
                   </ul>
@@ -273,6 +275,16 @@ function PricingWebSite({}: Props) {
                       >
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
+                      <span>Site web très interactif / UX poussée</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
                       <span>Marketplace</span>
                     </li>
                     <li className="flex items-center">
@@ -284,6 +296,16 @@ function PricingWebSite({}: Props) {
                         <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
                       </svg>
                       <span>Système de réservation / planning</span>
+                    </li>
+                    <li className="flex items-center">
+                      <svg
+                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        viewBox="0 0 12 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                      </svg>
+                      <span>Application métier</span>
                     </li>
                     <li className="flex items-center">
                       <svg

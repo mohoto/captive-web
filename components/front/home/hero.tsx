@@ -1,13 +1,11 @@
 import Image from "next/image";
-import { FaShopify, FaWordpress } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
 import heroImage from "../../../public/images/home/captive_agence_web_services.png";
 
 type Props = {};
 
 function Hero({}: Props) {
   return (
-    <section className="lg:pt-10 pt-6 pb-10 px-8 lg:px-32 bg-captive-primary">
+    <section className="pt-10 lg:pt-16 pb-10 px-8 lg:px-32 bg-captive-primary">
       <div className="container grid lg:grid-cols-2 2xl:gap-x-12 3xl:gap-x-20 gap-y-12 lg:gap-y-0 items-center">
         <div className="lg:col-span-1 order-2 lg:order-1">
           <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-r from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12">
@@ -17,11 +15,11 @@ function Hero({}: Props) {
             Agence leader en création de site web et gestion de publicités sur
             le web pour les professionnels.
           </p>
-          <div className="flex gap-5 mt-10">
+          {/* <div className="flex gap-5 mt-10">
             <FaWordpress className="h-16 w-16 text-stone-300" />
             <FaShopify className="h-16 w-16 text-stone-300" />
             <RiNextjsFill className="h-16 w-16 text-stone-300" />
-          </div>
+          </div> */}
           <div></div>
         </div>
         <div className="order-1 lg:order-2 lg:col-span-1 flex justify-end">

@@ -10,7 +10,7 @@ function FooterTwo({}: Props) {
   return (
     <footer>
       <div className="bg-captive-primary">
-        <div className="grid grid-cols-1 px-6 bg-bleue-karoy-100 bg-opacity-90 md:grid-cols-4 gap-y-10 py-14 text-md md:gap-x-20 md:px-6 lg:px-12 xl:px-20 2xl:px-44 3xl:px-52">
+        <div className="grid grid-cols-1 px-6 bg-opacity-90 md:grid-cols-4 gap-y-10 py-14 text-md md:gap-x-20 px-6 lg:px-12 xl:px-20 2xl:px-44 3xl:px-52">
           <div className="flex flex-col">
             <Image
               src={LogoCaptive}
@@ -27,15 +27,14 @@ function FooterTwo({}: Props) {
           <div>
             <h5 className="text-xl font-bold md:text-lg">LIENS RAPIDES</h5>
             <div className="flex flex-col mt-6 space-y-2 text-lg md:text-base">
-              <Link href="/formations">Nos formations</Link>
+              <Link href="/formations">Site vitrine</Link>
               <Link href="/financement/financement-pole-emploi">
-                Financement Pôle emploi
+                Site e-commerce
               </Link>
-              <Link href="/financement/financement-cpf">Financement CPF</Link>
               <Link href="/financement/financement-agephip">
-                Financement AGEPHIP
+                SaaS / Application web
               </Link>
-              <Link href="/financement/financement-opco">Financement OPCO</Link>
+              <Link href="/financement/financement-opco">Tarifs</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </div>

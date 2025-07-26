@@ -1,6 +1,6 @@
-import * as React from "react";
+type Props = {};
 
-const IconSeo: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const IconSeo = ({}: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="512"

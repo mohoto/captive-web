@@ -1,13 +1,12 @@
-import * as React from "react";
+import { Props } from "next/script";
 
-const IconDesign: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const IconDesign = ({}: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="396.494px"
     height="396.494px"
     viewBox="0 0 396.494 396.494"
     fill="currentColor"
-    {...props}
   >
     <g>
       <path

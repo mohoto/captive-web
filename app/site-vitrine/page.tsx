@@ -18,7 +18,7 @@ type Props = {};
 function Page({}: Props) {
   return (
     <>
-      <section className="lg:pt-4 pt-4 bg-captive-primary px-8 lg:px-32">
+      <section className="pt-8 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
             <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-b from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12 text-center lg:text-left">
@@ -206,11 +206,11 @@ function Page({}: Props) {
             NOTRE ENGAGEMENT
           </span>
           <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-8 lg:mb-6">
-            Notre accompagnement personnalisé sur Shopify
+            Notre accompagnement personnalisé pour votre site vitrine
           </h2>
           <p className="text-lg font-semibold text-center">
-            Notre mission : vous livrer une boutique clé en main, prête à
-            vendre, et facile à utiliser au quotidien.
+            Notre mission : vous livrer un site clé en main, professionnel,
+            moderne et facile à gérer.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-x-10 gap-y-10 mt-12 lg:px-28 xl:px-36">
@@ -222,8 +222,9 @@ function Page({}: Props) {
               Personnalisation du design du site
             </h3>
             <p className="text-center">
-              Nous adaptons le thème graphique à votre image de marque pour un
-              rendu professionnel, moderne et cohérent.
+              Nous créons un design sur mesure, adapté à votre image de marque
+              pour valoriser votre activité et inspirer confiance à vos
+              visiteurs.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
@@ -234,8 +235,9 @@ function Page({}: Props) {
               Création des pages essentielles
             </h3>
             <p className="text-center">
-              Nous concevons toutes les pages clés pour présenter vos produits,
-              votre activité et faciliter la navigation de vos visiteurs.
+              Nous concevons toutes les pages indispensables pour présenter vos
+              services, votre entreprise, vos témoignages, votre équipe ou
+              encore vos réalisations.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
@@ -243,11 +245,12 @@ function Page({}: Props) {
               <IconConfiguration className="fill-captive-secondary text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
-              Configuration complète de votre boutique
+              Configuration complète du site
             </h3>
             <p className="text-center">
-              Nous paramétrons l’ensemble de votre boutique : devise, TVA, modes
-              de paiement, livraison, mentions légales et paramètres généraux.
+              Nous configurons tous les éléments techniques : nom de domaine,
+              hébergement, sécurité (HTTPS), formulaires de contact, mentions
+              légales, RGPD, et autres paramètres essentiels.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
@@ -258,8 +261,9 @@ function Page({}: Props) {
               Référencement de base (SEO) sur Google
             </h3>
             <p className="text-center">
-              Nous optimisons les titres, URL, balises et contenus pour que
-              votre boutique soit bien référencée sur Google dès le lancement.
+              Nous optimisons les titres, URLs, balises et contenus pour
+              garantir une bonne visibilité de votre site sur Google dès sa mise
+              en ligne.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
@@ -267,12 +271,12 @@ function Page({}: Props) {
               <IconDeployement className="fill-captive-secondary text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
-              Mise en ligne de votre boutique sur le web
+              Mise en ligne de votre site vitrine
             </h3>
             <p className="text-center">
-              Une fois tous les éléments validés, nous publions votre boutique
-              en ligne et la rendons accessible au public, prête à recevoir ses
-              premiers visiteurs.
+              Une fois tout validé, nous mettons votre site en ligne et le
+              rendons accessible au public. Votre entreprise est désormais
+              visible 24h/24 sur le web.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
@@ -280,12 +284,12 @@ function Page({}: Props) {
               <IconTraining className="fill-captive-secondary text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
-              Formation à l’utilisation de Shopify
+              Formation à l’utilisation du site
             </h3>
             <p className="text-center">
-              Nous vous montrons comment gérer vos produits, suivre vos
-              commandes et utiliser Shopify au quotidien pour être totalement
-              autonome.
+              Nous vous formons à l’utilisation de votre site (ajout de textes,
+              images, pages, etc.), si besoin pour certaines activités, pour que
+              vous puissiez le gérer facilement et en toute autonomie.
             </p>
           </div>
         </div>
@@ -296,9 +300,9 @@ function Page({}: Props) {
             Prêt à donner de la visibilité à votre activité ?
           </h2>
           <p className="text-white text-center lg:px-20 text-lg">
-            Contactez-nous pour discuter de votre projet. Nous réalisons un site
-            vitrine qui reflète parfaitement votre activité, qui mettra en
-            valeur vos services et vous aidera à attirer de nouveaux clients.
+            Contactez-nous pour discuter de votre projet. Nous réalisonserons un
+            site vitrine qui mettra en valeur vos services et vous aidera à
+            attirer de nouveaux clients.
           </p>
           <button className="text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-captive-secondary-hover hover:text-white transition-all duration-75 ease-in-out">
             <Link

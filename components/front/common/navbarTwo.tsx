@@ -1,23 +1,29 @@
 "use client";
 
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import * as React from "react";
-import { useState } from "react";
-
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import LogoCaptive from "@/public/images/captive_web_Logo-optimise.svg";
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import * as React from "react";
+import { useState } from "react";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { RiWhatsappFill } from "react-icons/ri";
 
 const components: { title: string; href: string; description: string }[] = [
@@ -36,6 +42,7 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export default function NavbarTwo() {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const pathname = usePathname();
 
   const [openMenu, setOpenMenu] = useState(false);
@@ -43,159 +50,153 @@ export default function NavbarTwo() {
   const [subnav, setSubnav] = useState(0);
   const [navSticky, setNavSticky] = useState(false);
 
+  React.useEffect(() => {
+    window.document.addEventListener("scroll", () => {
+      if (window.scrollY > 170) {
+        setNavSticky(true);
+      } else {
+        setNavSticky(false);
+      }
+    });
+    /* window.document.addEventListener('scroll', () => {
+        setSubnav(0);
+    }); */
+  });
+
   return (
     <header
       className={cn(
+        "px-6 lg:px-12 xl:px-20 2xl:px-44 3xl:px-52",
         navSticky
-          ? "fixed top-0 z-50 w-full transition duration-500 ease-in-out shadow-lg bg-white border"
+          ? "fixed top-0 z-50 w-full transition duration-500 ease-in-out shadow-lg bg-white border py-4"
           : "bg-white py-4"
       )}
     >
-      <nav className="flex justify-between items-center px-32">
+      <nav className="flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           <Image
             src={LogoCaptive}
             alt="Logo captive Web"
-            className="rounded-xl"
+            className="w-24 lg:w-32"
             width={120}
             height={100}
             priority
           />
         </Link>
-        <NavigationMenu viewport={false}>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>ACCUEIL</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                        href="/"
-                      >
-                        <div className="mt-4 mb-2 text-lg font-medium">
-                          shadcn/ui
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-tight">
-                          Beautifully designed components built with Tailwind
-                          CSS.
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
+        {isDesktop ? (
+          <NavigationMenu viewport={false}>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/site-vitrine">ACCUEIL</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/site-vitrine">SITE VITRINE</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/e-commerce">SITE E-COMMERCE</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/site-vitrine">APPLICATION WEB</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/site-vitrine">TARIFS</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/site-vitrine">NOUS CONTACTER</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        ) : (
+          <div className="order-3">
+            <Drawer
+              direction="right"
+              open={openMenu}
+              onOpenChange={setOpenMenu}
+            >
+              <DrawerTrigger>
+                <IoMdMenu className="h-8 w-8" />
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle className="flex justify-end">
+                    <DrawerClose asChild>
+                      <IoMdClose className="h-8 w-8" />
+                    </DrawerClose>
+                  </DrawerTitle>
+                </DrawerHeader>
+                <div className="px-4 flex flex-col text-lg gap-y-3">
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
                   >
-                    Styles for headings, paragraphs, lists...etc
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/site-vitrine">SITE VITRINE</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className={navigationMenuTriggerStyle()}
-              >
-                <Link href="/e-commerce">SITE E-COMMERCE</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>List</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Components</div>
-                        <div className="text-muted-foreground">
-                          Browse all components in the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Documentation</div>
-                        <div className="text-muted-foreground">
-                          Learn how to use the library.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">
-                        <div className="font-medium">Blog</div>
-                        <div className="text-muted-foreground">
-                          Read our latest blog posts.
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Simple</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">Components</Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">Documentation</Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#">Blocks</Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[200px] gap-4">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="#" className="flex-row items-center gap-2">
-                        <CircleHelpIcon />
-                        Backlog
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#" className="flex-row items-center gap-2">
-                        <CircleIcon />
-                        To Do
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="#" className="flex-row items-center gap-2">
-                        <CircleCheckIcon />
-                        Done
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-        <div>
+                    <Link href="/">Accueil</Link>
+                  </div>
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    <Link href="/site-vitrine">Site vitrine</Link>
+                  </div>
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    <Link href="/e-commerce">Site e-commerce</Link>
+                  </div>
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    <Link href="/sass">SasS/Application web</Link>
+                  </div>
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    <Link href="/sass">Tarifs</Link>
+                  </div>
+                  <div
+                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    <Link href="/sass">Nous contacter</Link>
+                  </div>
+                </div>
+              </DrawerContent>
+            </Drawer>
+          </div>
+        )}
+        <div className="order-2 lg:order-3">
           <button className="px-6 py-2 rounded-full shadow-xs transition-all duration-75 ease-out bg-captive-primary group hover:bg-captive-secondary">
             <Link
               href="tel:0757837110"
