@@ -13,7 +13,7 @@ function GoogleBusiness() {
         <div className="w-full sm:max-w-md md:max-w-xl mx-auto">
           <Image
             src={GoogleBusinessImage}
-            alt="Agence Shikam publicité sur les réseaux sociaux"
+            alt="Service Google Business"
             className="rounded-xl w-full h-auto object-contain"
             style={{
               maxWidth: "80%",
@@ -23,18 +23,15 @@ function GoogleBusiness() {
           />
         </div>
         <div className="flex flex-col items-stretch">
-          <h3 className="text-3xl text-shikam-fonce mb-12">
-            <span className="text-shikam-normal font-semibold">
-              Google My Business{" "}
-            </span>
+          <h3 className="text-3xl mb-12">
+            <span className="font-semibold">Google My Business </span>
             inclus avec la création de votre site web
           </h3>
-          <div className="bg-shikam-light p-8 rounded-xl self-end">
+          <div className="p-8 rounded-xl self-end">
             <div className="flex items-center gap-x-3 mb-4">
               <Image
                 src="/images/home/Google-My-Business_logo.svg"
                 alt="Logo Googme My Business"
-                className=""
                 width={40}
                 height={40}
                 priority
@@ -58,37 +55,22 @@ function GoogleBusiness() {
             </p>
             <div className="mt-8 flex flex-col gap-y-5">
               <div className="flex items-center gap-x-4">
-                <span
-                  style={icomoonFont.style}
-                  className="text-shikam-fonce text-3xl"
-                >
+                <span style={icomoonFont.style} className="text-3xl">
                   h
                 </span>
-                <p className="text-shikam-fonce mb-0 text-lg">
-                  Visibilité locale accrue
-                </p>
+                <p className="mb-0 text-lg">Visibilité locale accrue</p>
               </div>
               <div className="flex items-center gap-x-4">
-                <span
-                  style={icomoonFont.style}
-                  className="text-shikam-fonce text-3xl"
-                >
+                <span style={icomoonFont.style} className="ext-3xl">
                   i
                 </span>
-                <p className="text-shikam-fonce mb-0 text-lg">
-                  Interaction client facilitée
-                </p>
+                <p className="mb-0 text-lg">Interaction client facilitée</p>
               </div>
               <div className="flex items-center gap-x-4">
-                <span
-                  style={icomoonFont.style}
-                  className="text-shikam-fonce text-3xl"
-                >
+                <span style={icomoonFont.style} className="text-3xl">
                   j
                 </span>
-                <p className="text-shikam-fonce mb-0 text-lg">
-                  Analyse de performance
-                </p>
+                <p className="mb-0 text-lg">Analyse de performance</p>
               </div>
             </div>
           </div>

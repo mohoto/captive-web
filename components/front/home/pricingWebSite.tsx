@@ -36,16 +36,12 @@ function PricingWebSite() {
                   </h3>
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
-                      <span className="text-sm mb-1 text-shikam-normal">
-                        A partir de
-                      </span>
-                      <p className="text-shikam-normal text-5xl mr-2">1 200€</p>
+                      <span className="text-sm mb-1">A partir de</span>
+                      <p className="text-5xl mr-2">1 200€</p>
                     </div>
-                    <span className="text-lg ml-1 font-normal text-shikam-normal">
-                      ht
-                    </span>
+                    <span className="text-lg ml-1 font-normal">ht</span>
                   </div>
-                  <ul className="text-shikam-normal space-y-2 flex-grow mb-6">
+                  <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
                         className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
@@ -131,16 +127,12 @@ function PricingWebSite() {
                   </h3>
                   <div className="leading-none flex items-center mb-4 border-b border-blue-300">
                     <div className="flex flex-col mb-2">
-                      <span className="text-sm mb-1 text-shikam-normal">
-                        A partir de
-                      </span>
-                      <p className="text-shikam-normal text-5xl mr-2">1 400€</p>
+                      <span className="text-sm mb-1">A partir de</span>
+                      <p className="text-5xl mr-2">1 400€</p>
                     </div>
-                    <span className="text-lg ml-1 font-normal text-shikam-normal">
-                      ht
-                    </span>
+                    <span className="text-lg ml-1 font-normal">ht</span>
                   </div>
-                  <ul className="text-shikam-normal space-y-2 flex-grow mb-6">
+                  <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
                         className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
@@ -246,15 +238,11 @@ function PricingWebSite() {
                   </h3>
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
-                      <span className="text-sm mb-1 text-shikam-normal">
-                        Tarif
-                      </span>
-                      <p className="text-shikam-normal text-3xl mr-2">
-                        Nous consulter
-                      </p>
+                      <span className="text-sm mb-1">Tarif</span>
+                      <p className="text-3xl mr-2">Nous consulter</p>
                     </div>
                   </div>
-                  <ul className="text-shikam-normal space-y-2 flex-grow mb-6">
+                  <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
                         className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"

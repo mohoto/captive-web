@@ -7,7 +7,7 @@ import LogoSiay from "@/public/images/testimonials/logo-siay.png";
 import LogoWorkFormation from "@/public/images/testimonials/logo-work-formation.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useState } from "react";
 
 const testimonials = [
@@ -52,7 +52,7 @@ interface Testimonial {
   quote: string;
   name: string;
   designation: string;
-  src: string;
+  src: StaticImageData;
 }
 
 interface AnimatedTestimonialsProps {
