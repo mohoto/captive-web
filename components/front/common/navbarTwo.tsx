@@ -1,5 +1,6 @@
 "use client";
 
+import CaptiveLogo from "@/components/svg/CaptiveLogo";
 import {
   Drawer,
   DrawerClose,
@@ -17,8 +18,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
-import LogoCaptive from "@/public/images/captive_web_Logo-optimise.svg";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
@@ -66,22 +65,15 @@ export default function NavbarTwo() {
   return (
     <header
       className={cn(
-        "px-6 lg:px-12 xl:px-20 2xl:px-44 3xl:px-52",
+        "px-6 lg:px-32",
         navSticky
-          ? "fixed top-0 z-50 w-full transition duration-500 ease-in-out shadow-lg bg-white border py-4"
-          : "bg-white py-4"
+          ? "fixed top-0 z-50 w-full transition duration-500 ease-in-out shadow-lg bg-white border py-2"
+          : "bg-white py-2 border"
       )}
     >
       <nav className="flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
-          <Image
-            src={LogoCaptive}
-            alt="Logo captive Web"
-            className="w-24 lg:w-32"
-            width={120}
-            height={100}
-            priority
-          />
+          <CaptiveLogo className="w-24 lg:w-32 fill-captive-secondary" />
         </Link>
         {isDesktop ? (
           <NavigationMenu viewport={false}>
@@ -91,7 +83,7 @@ export default function NavbarTwo() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link href="/site-vitrine">ACCUEIL</Link>
+                  <Link href="/">ACCUEIL</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -131,7 +123,7 @@ export default function NavbarTwo() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link href="/site-vitrine">NOUS CONTACTER</Link>
+                  <Link href="/contact">NOUS CONTACTER</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

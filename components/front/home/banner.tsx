@@ -5,7 +5,7 @@ function Banner() {
   return (
     <section className="lg:px-8 -mt-10">
       <div className="container">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-600 flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
+        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between lg:rounded-lg flex-col gap-y-4">
           <h2 className="text-3xl text-white text-center lg:text-left">
             Besoin d&#39;un site web pour votre activité ?
           </h2>

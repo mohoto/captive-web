@@ -18,13 +18,13 @@ import SiaySite from "../../../public/images/home/sites-web/SIAY-site-web.png";
 
 function Realisations() {
   return (
-    <section className="py-12 px-8 lg:px-32">
+    <section className="py-12 px-8 lg:px-32 bg-captive-primary">
       <div className="container">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             NOS RÉALISATIONS
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-12 mb-28">
+          <h2 className="heading__center">
             Des sites web faits sur mesure pour chaque client
           </h2>
         </div>
@@ -33,24 +33,24 @@ function Realisations() {
             <CarouselPrevious className="-top-10 xl:left-0 left-0" />
             <CarouselNext className="-top-10 xl:left-16 left-16" />
             <CarouselContent>
-              <CarouselItem className="lg:basis-1/3 px-8">
+              <CarouselItem className="lg:basis-1/3 lg:px-8">
                 <div className="!border-0 shadow-none">
                   <div className="flex aspect-square items-center justify-center p-0">
                     <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
                       <div className="absolute inset-0 overflow-y-scroll max-h-full group-hover:animate-scroll-image">
                         <Image
                           src={SiaySite}
-                          alt="Illustration création site web SIAY"
+                          alt="Site web SIAY"
                           className="w-full shadow-md"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 bg-captive-primary rounded-lg">
+                  <div className="p-4  rounded-lg bg-white">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <IoShirtOutline className="h-5 w-5" />
-                        <h3 className="font-bold text-2xl">SIAY</h3>
+                        <IoShirtOutline className="h-5 w-5 text-captive-secondary" />
+                        <h3 className="font-bold text-2xl text-captive-secondary">SIAY</h3>
                       </div>
                       <p className="mb-6">
                         Nous avons créé pour SIAY une boutique en ligne à
@@ -80,17 +80,17 @@ function Realisations() {
                       <div className="absolute inset-0 overflow-y-scroll max-h-full group-hover:animate-scroll-image">
                         <Image
                           src={MakenergySite}
-                          alt="Illustration création site web SIAY"
+                          alt="Site web Make Energy"
                           className="w-full"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 bg-captive-primary rounded-lg">
+                  <div className="p-4  rounded-lg bg-white">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <IoHomeOutline className="h-5 w-5" />
-                        <h3 className="font-bold text-2xl">MAK ENERGY</h3>
+                        <IoHomeOutline className="h-5 w-5 text-captive-secondary" />
+                        <h3 className="font-bold text-2xl text-captive-secondary">MAK ENERGY</h3>
                       </div>
                       <p className="mb-6">
                         Nous avons conçu pour Mak Energy un site clair et
@@ -120,25 +120,25 @@ function Realisations() {
                       <div className="absolute inset-0 overflow-y-scroll max-h-full group-hover:animate-scroll-image">
                         <Image
                           src={NestRenovSite}
-                          alt="Illustration création site web SIAY"
+                          alt="Site web Nest Renove"
                           className="w-full"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 bg-captive-primary rounded-lg">
+                  <div className="p-4  rounded-lg bg-white">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <VscTools className="h-5 w-5" />
-                        <h3 className="font-bold text-2xl">NEST RENOVE</h3>
+                        <VscTools className="h-5 w-5 text-captive-secondary" />
+                        <h3 className="font-bold text-2xl text-captive-secondary">NEST RENOVE</h3>
                       </div>
                       <p className="mb-6">
-                        Nous avons créé pour SIAY une boutique en ligne à
-                        l’image de leur marque : élégante, moderne et un style
-                        propre à la marque. Le site met en valeur leurs
-                        collections et leurs produits avec de belles photos et
-                        un parcours d’achat fluide, pour offrir une expérience
-                        agréable à leurs clientes.
+                        Nous avons conçu une landing page moderne et épurée pour
+                        valoriser les fonctionnalités des thermostats
+                        intelligents. Le design met en avant les bénéfices
+                        produit de façon claire et impactante, avec un
+                        formulaire de lead intégré pour capter les demandes et
+                        faciliter la génération de prospects.
                       </p>
                       <button className="text-shikam-normal border-shikam-normal px-4 py-2 rounded-full text-sm border-2 hover:bg-captive-secondary hover:text-white transition-all duration-75 ease-in-out">
                         <Link
@@ -160,17 +160,17 @@ function Realisations() {
                       <div className="absolute inset-0 overflow-y-scroll max-h-full group-hover:animate-scroll-image">
                         <Image
                           src={ParisianSite}
-                          alt="Illustration création site web SIAY"
+                          alt="Site web Parisian Mode"
                           className="w-full"
                         />
                       </div>
                     </div>
                   </div>
-                  <div className="p-4 bg-captive-primary rounded-lg">
+                  <div className="p-4  rounded-lg bg-white">
                     <div>
                       <div className="flex items-center gap-3 mb-4">
-                        <IoShirtOutline className="h-5 w-5" />
-                        <h3 className="font-bold text-2xl">PARISIAN MODE</h3>
+                        <IoShirtOutline className="h-5 w-5 text-captive-secondary" />
+                        <h3 className="font-bold text-2xl text-captive-secondary">PARISIAN MODE</h3>
                       </div>
                       <p className="mb-6">
                         Nous avons conçu pour Parisian Mode une boutique en

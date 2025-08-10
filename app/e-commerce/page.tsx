@@ -21,17 +21,16 @@ export const metadata: Metadata = {
 function Page() {
   return (
     <>
-      <section className="pt-6 bg-captive-primary px-8 lg:px-32">
+      <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-b from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12 text-center lg:text-left">
+            <h1 className="heading__page">
               Lancez votre e&#8209;commerce avec une boutique en ligne
               professionnelle
             </h1>
             <p className="text-lg text-center lg:text-left">
-              Profitez de la puissance de la publicité sur Facebook pour
-              atteindre un public plus large et convertir efficacement des
-              prospects en clients fidèles.
+              Une solution clé en main pour vendre rapidement, simplement et
+              efficacement.
             </p>
           </div>
           <div className="flex justify-end">
@@ -64,7 +63,7 @@ function Page() {
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
+            <h2 className="mb-6">
               Pourquoi se lancer dans l’e&#8209;commerce ?
             </h2>
             <p>
@@ -81,7 +80,7 @@ function Page() {
             </p>
           </div>
           <div className="place-self-center order-3">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
+            <h2 className="mb-6">
               Pourquoi choisir Shopify pour votre site e&#8209;commerce ?
             </h2>
             <p>
@@ -111,10 +110,10 @@ function Page() {
       </section>
       <section className="pt-16 px-8 lg:px-32 bg-captive-primary">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             VOTRE BOUTIQUE
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 lg:mb-16 xl:leading-10 mb-8">
+          <h2 className="heading__center">
             Shopify : une plateforme complète, pensée pour les commerçants
           </h2>
         </div>
@@ -122,10 +121,10 @@ function Page() {
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             NOTRE ENGAGEMENT
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-8 lg:mb-6">
+          <h2 className="heading__center mb-4">
             Notre accompagnement personnalisé sur Shopify
           </h2>
           <p className="text-lg font-semibold text-center">
@@ -134,9 +133,9 @@ function Page() {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-x-10 gap-y-10 mt-12 lg:px-28 xl:px-36">
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary flex flex-col justify-center">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet flex flex-col justify-center">
             <div className="flex justify-center mb-6">
-              <IconDesign className="fill-captive-secondary text-center w-20 h-20" />
+              <IconDesign className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Personnalisation du design du site
@@ -146,9 +145,9 @@ function Page() {
               rendu professionnel, moderne et cohérent.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet">
             <div className="flex justify-center mb-6">
-              <IconPages className="fill-captive-secondary text-center w-20 h-20" />
+              <IconPages className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Création des pages essentielles
@@ -158,9 +157,9 @@ function Page() {
               votre activité et faciliter la navigation de vos visiteurs.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet">
             <div className="flex justify-center mb-6">
-              <IconConfiguration className="fill-captive-secondary text-center w-20 h-20" />
+              <IconConfiguration className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Configuration complète de votre boutique
@@ -170,9 +169,9 @@ function Page() {
               de paiement, livraison, mentions légales et paramètres généraux.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet">
             <div className="flex justify-center mb-6">
-              <IconSeo className="fill-captive-secondary text-center w-20 h-20" />
+              <IconSeo className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Référencement de base (SEO) sur Google
@@ -182,9 +181,9 @@ function Page() {
               votre boutique soit bien référencée sur Google dès le lancement.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet">
             <div className="flex justify-center mb-6">
-              <IconDeployement className="fill-captive-secondary text-center w-20 h-20" />
+              <IconDeployement className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Mise en ligne de votre boutique sur le web
@@ -195,9 +194,9 @@ function Page() {
               premiers visiteurs.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-violet">
             <div className="flex justify-center mb-6">
-              <IconTraining className="fill-captive-secondary text-center w-20 h-20" />
+              <IconTraining className="fill-captive-violet text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Formation à l’utilisation de Shopify
@@ -211,8 +210,8 @@ function Page() {
         </div>
       </section>
       <section className="my-10 lg:px-40 xl:px-68">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-600 flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
-          <h2 className="text-3xl text-white text-center lg:text-left font-semibold">
+        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
+          <h2 className="heading__center text-white mb-2 px-0">
             Prêt à lancer votre e-commerce ?
           </h2>
           <p className="text-white text-center lg:px-20 text-lg">

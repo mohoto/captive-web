@@ -2,7 +2,6 @@ import Banner from "@/components/front/home/banner";
 import FaqDemo from "@/components/front/home/faqDemo";
 import GoogleBusiness from "@/components/front/home/googleBusiness";
 import Hero from "@/components/front/home/hero";
-import Icons from "@/components/front/home/icons";
 import Introduction from "@/components/front/home/introduction";
 import MyAnimatedTestimonials from "@/components/front/home/myAnimatedTestimonials";
 import PricingWebSite from "@/components/front/home/pricingWebSite";
@@ -21,7 +20,7 @@ export default function Page() {
       <Hero />
       <Introduction />
       <Services />
-      <Icons />
+      {/* <Icons /> */}
       <PricingWebSite />
       <Realisations />
       <GoogleBusiness />

@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 function Page() {
   return (
     <>
-      <section className="pt-8 bg-captive-primary px-8 lg:px-32">
+      <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-b from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12 text-center lg:text-left">
+            <h1 className="heading__page">
               Gagnez en visibilité et en confiance avec un site web clé en main
             </h1>
             <p className="text-lg text-center lg:text-left">
@@ -64,7 +64,7 @@ function Page() {
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
+            <h2 className="mb-6">
               Un site web professionnel, sans prise de tête
             </h2>
             <p>
@@ -84,7 +84,7 @@ function Page() {
         </div>
         <div className="grid lg:grid-cols-2 lg:gap-x-10 gap-y-4 lg:items-center mt-10">
           <div className="place-self-center order-1">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
+            <h2 className="mb-6">
               Que vous vendiez un service, un savoir-faire ou votre expertise :
               soyez visible
             </h2>
@@ -123,7 +123,7 @@ function Page() {
       </section>
       <section className="py-16 px-8 lg:px-32 bg-captive-primary">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="text-captive-secondary heading__span">
             SITE WEB PRO
           </span>
           <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 lg:mb-16 xl:leading-10 mb-8">
@@ -206,7 +206,7 @@ function Page() {
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="text-captive-secondary heading__span">
             NOTRE ENGAGEMENT
           </span>
           <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-8 lg:mb-6">

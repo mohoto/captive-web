@@ -54,7 +54,7 @@ Button.displayName = "Button";
 // Badge component
 const badgeVariants = {
   default: "border-transparent bg-primary hover:bg-primary/80",
-  secondary: "border-transparent bg-secondary",
+  secondary: "border-transparent bg-captive-blue text-white",
   destructive:
     "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
   outline: "text-foreground",
@@ -204,37 +204,37 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
     {
       className,
       title = "Questions fréquentes de nos client sur la création de sites web",
-      description = "Find answers to common questions about our services",
+      description = "",
       items = [
         {
-          question: "What makes your platform unique?",
+          question: "Combien coûte la création d’un site ?",
           answer:
-            "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
-          category: "Platform",
+            "Le tarif varie selon vos besoins (nombre de pages, fonctionnalités, niveau de personnalisation…). Nous proposons des formules de base claires et accessibles, aussi bien pour les sites vitrines que pour les boutiques en ligne, sans frais cachés. Contactez-nous pour un devis simple et rapide",
+          category: "Prix",
         },
         {
-          question: "How does the pricing structure work?",
+          question: "Combien de temps faut-il pour créer mon site ?",
           answer:
-            "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
-          category: "Pricing",
+            "En moyenne, un site vitrine est prêt en 1 à 3 semaines selon la complexité et la réactivité pour valider les contenus. Nous nous adaptons à votre rythme et vos délais.",
+          category: "Délai",
         },
         {
-          question: "What kind of support do you offer?",
+          question: "Dois-je fournir les textes et les images ?",
           answer:
-            "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
-          category: "Support",
+            "Vous avez déjà vos contenus ? Parfait. Sinon, nous nous chargeons de tout : rédaction des textes, recherche de visuels professionnels… pour un site prêt à l’emploi, sans effort de votre part.",
+          category: "Contenu",
         },
         {
-          question: "How secure is my data?",
+          question: "Le site sera-t-il visible sur Google ?",
           answer:
-            "We take security seriously with enterprise-grade encryption, regular security audits, and compliance with industry standards like SOC 2 and GDPR. Your data is protected with multiple layers of security.",
-          category: "Security",
+            "Oui, tous nos sites sont optimisés pour le référencement naturel dès leur mise en ligne. Cette optimisation de base vous permettra d’apparaître sur Google, notamment lorsque l’on recherche le nom de votre entreprise.",
+          category: "Visibilité",
         },
         {
-          question: "Can I integrate with existing tools?",
+          question: "Aurais-je la main pour modifier mon site après ?",
           answer:
-            "Yes! We offer extensive integration capabilities with popular tools and platforms. Our API allows for custom integrations, and we have pre-built connectors for major business applications.",
-          category: "Integration",
+            "Pour les boutiques en ligne, vous bénéficiez d’un accès complet à l’administration du site, avec une formation à l’appui. Vous pourrez modifier facilement textes, images et produits. Pour les sites vitrines, certaines sections sont modifiables selon vos besoins. Pour des fonctionnalités plus avancées, la personnalisation dépendra du type de solution mise en place.",
+          category: "Configuration",
         },
       ],
       contactInfo = {
@@ -248,14 +248,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
     ref
   ) => {
     return (
-      <section
-        ref={ref}
-        className={cn(
-          "py-16 w-full bg-gradient-to-b from-transparent via-muted/30 to-transparent",
-          className
-        )}
-        {...props}
-      >
+      <section ref={ref} className={cn("py-16 w-full", className)} {...props}>
         <div className="container mx-auto px-4">
           {/* Header */}
           <motion.div
@@ -265,9 +258,11 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             className="max-w-3xl mx-auto text-center mb-12"
           >
             <div className="inline-flex items-center justify-center p-2 rounded-full bg-captive-primary mb-4">
-              <HelpCircle className="h-6 w-6 text-captive-secondary" />
+              <HelpCircle className="h-6 w-6 text-captive-blue" />
             </div>
-            <h2 className="text-4xl font-bold mb-4">{title}</h2>
+            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center xl:leading-10 mb-12">
+              {title}
+            </h2>
             {description && (
               <p className="text-lg max-w-2xl mx-auto">{description}</p>
             )}

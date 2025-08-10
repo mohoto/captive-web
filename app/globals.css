@@ -42,8 +42,14 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-captive-primary: oklch(97% 0.001 106.424);
-  --color-captive-secondary: oklch(54.6% 0.245 262.881);
+  --color-captive-secondary: oklch(0.2012 0.1106 271.27);
   --color-captive-secondary-hover: oklch(42.4% 0.199 265.638);
+  --color-captive-blue: oklch(0.6194 0.2085 255.62);
+  --color-captive-green: oklch(0.8328 0.283374 142.4953);
+  --color-captive-ciel: oklch(0.8828 0.1502 197.41);
+  --color-captive-violet: oklch(0.5885 0.2988 308.43)
+
+
 }
 
 :root {
@@ -121,6 +127,18 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .heading__page {
+    @apply 2xl:text-4xl font-bold mb-8 lg:text-4xl text-3xl xl:leading-10 text-center lg:text-left text-captive-secondary;
+  }
+  h2 {
+    @apply lg:text-3xl text-2xl font-semibold xl:leading-10 text-captive-secondary;
+  }
+  .heading__center {
+    @apply text-center lg:px-48 2xl:px-64 mb-10 lg:mb-20;
+  }
+  .heading__span {
+    @apply text-center text-captive-blue font-light;
   }
   p {
     @apply mb-4;

@@ -6,9 +6,8 @@ export function PricingCardEcom() {
   return (
     <PricingCard
       title="Site e-commerce"
-      description="Création de votre site web vitrine en moins de 15 jours"
+      description="Votre Boutique en ligne"
       price="1 800"
-      note="OFFERT : configuration de votre compte Google My Business pour aumente votre visibilité dans les recherches locales sur Google."
       originalPrice={199}
       features={[
         {

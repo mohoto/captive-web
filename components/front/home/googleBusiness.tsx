@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import Image from "next/image";
+import { MdOutlineAdsClick, MdOutlineVisibility } from "react-icons/md";
+import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import GoogleBusinessImage from "../../../public/images/home/Shikam-google-mybusiness.webp";
 
 const icomoonFont = localFont({
@@ -8,7 +10,7 @@ const icomoonFont = localFont({
 
 function GoogleBusiness() {
   return (
-    <section className="px-8 lg:px-32 bg-captive-primary pt-16 pb-28">
+    <section className="px-8 lg:px-32 py-16">
       <div className="grid lg:grid-cols-2 2xl:gap-x-20 lg:gap-x-10 place-items-center gap-y-4">
         <div className="w-full sm:max-w-md md:max-w-xl mx-auto">
           <Image
@@ -23,11 +25,11 @@ function GoogleBusiness() {
           />
         </div>
         <div className="flex flex-col items-stretch">
-          <h3 className="text-3xl mb-12">
-            <span className="font-semibold">Google My Business </span>
+          <h2 className="text-3xl mb-4">
+            <span className="text-[#437ee2]">Google My Business </span>
             inclus avec la création de votre site web
-          </h3>
-          <div className="p-8 rounded-xl self-end">
+          </h2>
+          <div className="py-8 rounded-xl lg:self-end">
             <div className="flex items-center gap-x-3 mb-4">
               <Image
                 src="/images/home/Google-My-Business_logo.svg"
@@ -46,8 +48,8 @@ function GoogleBusiness() {
                 <span className="font-normal text-[#437ee2]"> My business</span>
               </h3>
             </div>
-            <p className="font-light">
-              Google My Business aumente la visibilité des professionnels dans
+            <p>
+              Google My Business augmente la visibilité des professionnels dans
               les recherches locales sur Google. Il rend votre activité plus
               accessible en mettant en avant des informations clés comme
               l&#39;adresse, les horaires et le numéro de téléphone. Les avis
@@ -55,22 +57,16 @@ function GoogleBusiness() {
             </p>
             <div className="mt-8 flex flex-col gap-y-5">
               <div className="flex items-center gap-x-4">
-                <span style={icomoonFont.style} className="text-3xl">
-                  h
-                </span>
-                <p className="mb-0 text-lg">Visibilité locale accrue</p>
+                <MdOutlineVisibility className="size-8 text-captive-secondary" />
+                <p className="mb-0 text-lg text-captive-secondary">Visibilité locale accrue</p>
               </div>
               <div className="flex items-center gap-x-4">
-                <span style={icomoonFont.style} className="ext-3xl">
-                  i
-                </span>
-                <p className="mb-0 text-lg">Interaction client facilitée</p>
+                <MdOutlineAdsClick className="size-8 text-captive-secondary" />
+                <p className="mb-0 text-lg text-captive-secondary">Interaction client facilitée</p>
               </div>
               <div className="flex items-center gap-x-4">
-                <span style={icomoonFont.style} className="text-3xl">
-                  j
-                </span>
-                <p className="mb-0 text-lg">Analyse de performance</p>
+                <TbBrandGoogleAnalytics className="size-8 text-captive-secondary" />
+                <p className="mb-0 text-lg text-captive-secondary">Analyse de performance</p>
               </div>
             </div>
           </div>

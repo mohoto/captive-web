@@ -11,7 +11,9 @@ import SiteProfessionnels from "@/public/images/site-vitrine/captive-web_site_we
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { BsCheck } from "react-icons/bs";
+import { GrTools } from "react-icons/gr";
+import { IoStorefrontOutline } from "react-icons/io5";
+import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
 
 export const metadata: Metadata = {
@@ -22,10 +24,10 @@ export const metadata: Metadata = {
 function Page() {
   return (
     <>
-      <section className="pt-8 bg-captive-primary px-8 lg:px-32">
+      <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="2xl:text-4xl font-bold mb-8 lg:text-4xl text-4xl bg-gradient-to-b from-blue-900 to-blue-600 bg-clip-text text-transparent xl:leading-12 text-center lg:text-left">
+            <h1 className="heading__page">
               Gagnez en visibilité et en confiance avec un site web clé en main
             </h1>
             <p className="text-lg text-center lg:text-left">
@@ -64,8 +66,8 @@ function Page() {
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
-              Un site web professionnel, sans prise de tête
+            <h2 className="mb-6">
+              Un site web professionnel sans prise de tête
             </h2>
             <p>
               Vous êtes artisan, commerçant local, indépendant ou à la tête
@@ -84,7 +86,7 @@ function Page() {
         </div>
         <div className="grid lg:grid-cols-2 lg:gap-x-10 gap-y-4 lg:items-center mt-10">
           <div className="place-self-center order-1">
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold mb-6 xl:leading-10">
+            <h2 className="mb-6">
               Que vous vendiez un service, un savoir-faire ou votre expertise :
               soyez visible
             </h2>
@@ -123,67 +125,164 @@ function Page() {
       </section>
       <section className="py-16 px-8 lg:px-32 bg-captive-primary">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             SITE WEB PRO
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 lg:mb-16 xl:leading-10 mb-8">
-            Un site vitrine : pour qui ?
+          <h2 className="heading__center">
+            Un site web vitrine : pour qui ?
           </h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-y-12 lg:gap-y-0 items-center">
           <div>
-            <div>
-              <ul className="flex flex-col gap-y-2">
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+            {/* <div className="grid lg:grid-cols-2 gap-x-10 gap-y-4">
+              <ul className="flex flex-col gap-y-4">
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Artisans</h3>
+                      <p className="mb-0">Plombier, électricien, maçon, peintre...</p>
+                    </div>     
                   </div>
-                  Artisan (plombier, électricien, maçon, peintre, etc.)
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Commerçant local</h3>
+                      <p className="mb-0">Restaurant, salon de coiffure, boutique,
+                      fleuriste...</p>
+                    </div>     
                   </div>
-                  Commerçant local (restaurant, salon de coiffure, boutique,
-                  fleuriste…)
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Profession libérale</h3>
+                      <p className="mb-0">Avocat, médecin, architecte, consultant...</p>
+                    </div>     
                   </div>
-                  Profession libérale (avocat, expert-comptable, consultant…)
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" /> 
+                     <div>
+                      <h3 className="text-lg font-semibold">Indépendant / auto-entrepreneur</h3>
+                      <p className="mb-0">Coach, photographe,
+                      graphiste...</p>
+                    </div>   
                   </div>
-                  Indépendant / auto-entrepreneur (coach, photographe,
-                  graphiste…)
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+              </ul>
+              <ul className="flex flex-col gap-y-4">
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2 ">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Professionnel du bien-être</h3>
+                      <p className="mb-0">Ostéopathe, naturopathe,
+                      esthéticienne,...</p>
+                    </div>  
                   </div>
-                  Professionnel du bien-être (ostéopathe, naturopathe,
-                  esthéticienne…)
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2 ">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" /> 
+                     <div>
+                      <h3 className="text-lg font-semibold">TPE / PME</h3>
+                      <p className="mb-0">Souhaitant une présence professionnelle
+                      en ligne</p>
+                    </div>    
                   </div>
-                  Dirigeant de TPE / PME souhaitant une présence professionnelle
-                  en ligne
                 </li>
-                <li className="py-1 w-full flex items-center text-lg font-semibold">
-                  {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
-                  <div className="bg-captive-secondary rounded-full mr-2">
-                    <BsCheck className=" w-5 h-5 text-white" />
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2 ">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Association ou collectivité</h3>
+                      <p className="mb-0">Souhaitant informer et communiquer
+                      facilement</p>
+                    </div>    
                   </div>
-                  Association ou collectivité souhaitant informer et communiquer
-                  facilement
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-start gap-x-2 ">
+                     <FaCirclePlus className=" w-5 h-5 text-captive-blue mt-2" />
+                     <div>
+                      <h3 className="text-lg font-semibold">Association ou collectivité</h3>
+                      <p className="mb-0">Souhaitant informer et communiquer
+                      facilement</p>
+                    </div>    
+                  </div>
+                </li>
+              </ul>
+            </div> */}
+            <div className="grid lg:grid-cols-2 gap-x-10 gap-y-4">
+              <ul className="flex flex-col gap-y-4">
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <GrTools className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">Artisans</h3>
+                  </div>     
+                  <p className="mb-0">Plombier, électricien, maçon, peintre, menuisier...</p>
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs border-b-4 border-captive-blue">
+                  <div className="flex items-center gap-x-2">
+                     <IoStorefrontOutline className="size-6 text-captive-blue" />                
+                    <h3 className="text-lg font-semibold">Commerçant local</h3>
+                  </div>
+                      <p className="mb-0">Restaurant, salon de coiffure, boutique,
+                      fleuriste...</p>    
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">Profession libérale</h3>
+                  </div>     
+                  <p className="mb-0">Avocat, médecin, architecte, consultant...</p>
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="font-semibold">Indépendant / auto-entrepreneur</h3>
+                  </div>     
+                  <p className="mb-0">Coach, photographe,
+                      graphiste...</p>
+                </li>
+              </ul>
+              <ul className="flex flex-col gap-y-4">
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">Professionnel du bien-être</h3>
+                  </div>     
+                  <p className="mb-0">Ostéopathe, naturopathe,
+                      esthéticienne...</p>
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">TPE / PME</h3>
+                  </div>     
+                  <p className="mb-0">Souhaitant une présence professionnelle
+                      en ligne</p>
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">Association ou collectivité</h3>
+                  </div>     
+                  <p className="mb-0">Souhaitant informer et communiquer
+                      facilement</p>
+                </li>
+                <li className="py-1 w-full bg-white p-4 rounded-lg shadow-xs">
+                  <div className="flex items-center gap-x-2">
+                    <MdOutlineHealthAndSafety className="size-6 text-captive-blue" />
+                    <h3 className="text-lg font-semibold">Association ou collectivité</h3>
+                  </div>     
+                  <p className="mb-0">Souhaitant informer et communiquer
+                      facilement</p>
                 </li>
               </ul>
             </div>
@@ -192,7 +291,7 @@ function Page() {
             <Image
               src={SiteProfessionnels}
               alt="Logo Shopify"
-              className="justify-self-center place-self-center lg:w-[80%]"
+              className="justify-self-center place-self-center lg:w-[90%]"
               width={800}
               height={800}
               style={{
@@ -206,10 +305,10 @@ function Page() {
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             NOTRE ENGAGEMENT
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-8 lg:mb-6">
+          <h2 className="heading__center mb-4">
             Notre accompagnement personnalisé pour votre site vitrine
           </h2>
           <p className="text-lg font-semibold text-center">
@@ -218,9 +317,9 @@ function Page() {
           </p>
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-x-10 gap-y-10 mt-12 lg:px-28 xl:px-36">
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary flex flex-col justify-center">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue flex flex-col justify-center">
             <div className="flex justify-center mb-6">
-              <IconDesign className="fill-captive-secondary text-center w-20 h-20" />
+              <IconDesign className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Personnalisation du design du site
@@ -231,9 +330,9 @@ function Page() {
               visiteurs.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue">
             <div className="flex justify-center mb-6">
-              <IconPages className="fill-captive-secondary text-center w-20 h-20" />
+              <IconPages className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Création des pages essentielles
@@ -244,9 +343,9 @@ function Page() {
               encore vos réalisations.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue">
             <div className="flex justify-center mb-6">
-              <IconConfiguration className="fill-captive-secondary text-center w-20 h-20" />
+              <IconConfiguration className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Configuration complète du site
@@ -257,9 +356,9 @@ function Page() {
               légales, RGPD, et autres paramètres essentiels.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue">
             <div className="flex justify-center mb-6">
-              <IconSeo className="fill-captive-secondary text-center w-20 h-20" />
+              <IconSeo className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Référencement de base (SEO) sur Google
@@ -270,9 +369,9 @@ function Page() {
               en ligne.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue">
             <div className="flex justify-center mb-6">
-              <IconDeployement className="fill-captive-secondary text-center w-20 h-20" />
+              <IconDeployement className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Mise en ligne de votre site vitrine
@@ -283,9 +382,9 @@ function Page() {
               visible 24h/24 sur le web.
             </p>
           </div>
-          <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-secondary">
+          <div className="bg-captive-primary p-6 rounded-lg shadow-xs border-b-4 border-captive-blue">
             <div className="flex justify-center mb-6">
-              <IconTraining className="fill-captive-secondary text-center w-20 h-20" />
+              <IconTraining className="fill-captive-blue text-center w-20 h-20" />
             </div>
             <h3 className="text-center text-xl mb-4 text-shikam-normal font-semibold">
               Formation à l’utilisation du site
@@ -299,8 +398,8 @@ function Page() {
         </div>
       </section>
       <section className="my-10 lg:px-40 xl:px-68">
-        <div className="bg-gradient-to-r from-blue-900 to-blue-600 flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
-          <h2 className="text-3xl text-white text-center lg:text-left font-semibold">
+        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
+          <h2 className="heading__center text-white mb-2 px-0">
             Prêt à donner de la visibilité à votre activité ?
           </h2>
           <p className="text-white text-center lg:px-20 text-lg">
@@ -308,7 +407,7 @@ function Page() {
             site vitrine qui mettra en valeur vos services et vous aidera à
             attirer de nouveaux clients.
           </p>
-          <button className="text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-captive-secondary-hover hover:text-white transition-all duration-75 ease-in-out">
+          <button className="px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-captive-secondary-hover hover:text-white transition-all duration-75 ease-in-out">
             <Link
               href="tel:0757837110"
               className="flex gap-3 items-center text-lg font-bold"

@@ -1,17 +1,21 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { BsCart4 } from "react-icons/bs";
+import { MdOutlineQrCode } from "react-icons/md";
+import { PiDesktopTowerBold } from "react-icons/pi";
 
 function PricingWebSite() {
   return (
     <>
-      <section className="px-8 bg-captive-primary lg:py-16 lg:px-32 py-8">
+      <section className="px-8 lg:py-16 lg:px-32 py-8">
         <div className="container">
           <div className="flex items-center flex-col">
-            <span className="text-captive-secondary text-center font-semibold text-md">
+            <span className="heading__span">
               NOS TARIFS
             </span>
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-10 lg:mb-16">
+            <h2 className="heading__center">
               Un site web clé en main et adapté à votre activité pour booster
               votre visibilité en ligne
             </h2>
@@ -25,21 +29,28 @@ function PricingWebSite() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
               >
-                <div className="h-full p-6 rounded-lg bg-white flex flex-col relative shadow-md">
-                  <h3 className="tracking-widest title-font font-bold text-xl">
-                    Site web vitrine
-                  </h3>
+                <div className="h-full p-6 rounded-lg bg-captive-secondary flex flex-col relative shadow-md text-white">
+                  <div className="mb-4 flex gap-x-4 items-center">
+                    <div>
+                      <div className="border-4 border-captive-blue rounded-full p-4">
+                        <PiDesktopTowerBold className="size-8 text-white"/>
+                      </div>
+                    </div>
+                    <h3 className="tracking-widest title-font font-bold text-xl">
+                      Site web vitrine
+                    </h3>
+                  </div>
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
                       <span className="text-sm mb-1">A partir de</span>
-                      <p className="text-5xl mr-2">1 200€</p>
+                      <p className="text-4xl mr-2">1 800€</p>
                     </div>
-                    <span className="text-lg ml-1 font-normal">ht</span>
+                    {/* <span className="text-lg ml-1 font-normal">ht</span> */}
                   </div>
                   <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -49,7 +60,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -59,7 +70,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -72,7 +83,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -82,7 +93,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -93,7 +104,7 @@ function PricingWebSite() {
 
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-blue mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -105,6 +116,14 @@ function PricingWebSite() {
                       </span>
                     </li>
                   </ul>
+                  <div className="flex justify-center">
+                    <Link 
+                    href="/site-vitrine" 
+                    className="border-2 border-captive-blue text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    >
+                      Découvrir
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -116,21 +135,27 @@ function PricingWebSite() {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ ease: "easeOut", duration: 0.5 }}
               >
-                <div className="h-full p-6 rounded-lg bg-blue-100 flex flex-col relative shadow-md">
-                  <h3 className="tracking-widest title-font font-bold text-xl">
-                    Site e-commerce
-                  </h3>
-                  <div className="leading-none flex items-center mb-4 border-b border-blue-300">
+                <div className="h-full p-6 rounded-lg bg-captive-secondary flex flex-col relative shadow-md text-white">
+                  <div className="mb-4 flex gap-x-4 items-center">
+                    <div>
+                      <div className="border-4 border-captive-violet rounded-full p-4">
+                        <BsCart4 className="size-8 text-white"/>
+                      </div>
+                    </div>
+                    <h3 className="tracking-widest title-font font-bold text-xl">
+                      Site e-commerce
+                    </h3>
+                  </div>
+                  <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
                       <span className="text-sm mb-1">A partir de</span>
-                      <p className="text-5xl mr-2">1 400€</p>
+                      <p className="text-4xl mr-2">1 800€</p>
                     </div>
-                    <span className="text-lg ml-1 font-normal">ht</span>
                   </div>
                   <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -140,7 +165,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -150,7 +175,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -163,7 +188,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -173,7 +198,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -183,7 +208,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -195,7 +220,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -205,7 +230,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-violet mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -216,6 +241,14 @@ function PricingWebSite() {
                       </span>
                     </li>
                   </ul>
+                  <div className="flex justify-center">
+                    <Link 
+                    href="/e-commerce" 
+                    className="border-2 border-captive-violet text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    >
+                      Découvrir
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -228,19 +261,27 @@ function PricingWebSite() {
                 transition={{ ease: "easeOut", duration: 0.5 }}
               >
                 <div className="h-full p-6 rounded-lg bg-captive-secondary flex flex-col relative shadow-md text-white">
-                  <h3 className="tracking-widest title-font font-bold text-xl">
-                    Plateforme / Application web
-                  </h3>
+
+                  <div className="mb-4 flex gap-x-4 items-center">
+                    <div>
+                      <div className="border-4 border-captive-ciel rounded-full p-4">
+                        <MdOutlineQrCode className="size-8 text-white"/>
+                      </div>
+                    </div>
+                    <h3 className="tracking-widest title-font font-bold text-xl">
+                      Application web
+                    </h3>
+                  </div>
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
                       <span className="text-sm mb-1">Tarif</span>
-                      <p className="text-3xl mr-2">Nous consulter</p>
+                      <p className="text-4xl mr-2">Sur devis</p>
                     </div>
                   </div>
                   <ul className="space-y-2 flex-grow mb-6">
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -250,7 +291,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -260,7 +301,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -270,7 +311,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -280,7 +321,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -290,7 +331,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -300,7 +341,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -310,7 +351,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -320,7 +361,7 @@ function PricingWebSite() {
                     </li>
                     <li className="flex items-center">
                       <svg
-                        className="w-3 h-3 fill-current text-green-500 mr-3 flex-shrink-0"
+                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
                         viewBox="0 0 12 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -329,6 +370,14 @@ function PricingWebSite() {
                       <span>Application interactive temps réel</span>
                     </li>
                   </ul>
+                  <div className="flex justify-center">
+                    <Link 
+                    href="/e-commerce" 
+                    className="border-2 border-captive-ciel text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    >
+                      Découvrir
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>

@@ -1,25 +1,17 @@
 "use client";
-import LogoCaptive from "@/public/images/captive_web_Logo-optimise.svg";
-import Image from "next/image";
+import CaptiveLogo from "@/components/svg/CaptiveLogo";
 import Link from "next/link";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 
 function FooterTwo() {
   return (
     <footer>
-      <div className="bg-captive-primary">
+      <div className="bg-captive-secondary text-white">
         <div className="grid grid-cols-1 px-6 bg-opacity-90 md:grid-cols-4 gap-y-10 py-14 text-md md:gap-x-20 lg:px-12 xl:px-20 2xl:px-44 3xl:px-52">
           <div className="flex flex-col">
-            <Image
-              src={LogoCaptive}
-              alt="Logo captive Web"
-              className="rounded-xl"
-              width={120}
-              height={100}
-              priority
-            />
+            <CaptiveLogo className="w-40 lg:w-40 fill-white" />
             <p className="mt-4 mb-2 text-sm font-light">
-              Création de site web pour les professionnels
+              Création de sites web pour les professionnels
             </p>
           </div>
           <div>
@@ -29,7 +21,7 @@ function FooterTwo() {
               <Link href="/e-commerce">Site e-commerce</Link>
               <Link href="/application-web">SaaS / Application web</Link>
               <Link href="/tarifs">Tarifs</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Nous contactez</Link>
             </div>
           </div>
 

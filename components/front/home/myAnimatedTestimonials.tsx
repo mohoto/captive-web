@@ -8,35 +8,35 @@ import LogoWorkFormation from "@/public/images/testimonials/logo-work-formation.
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const testimonials = [
   {
     quote:
-      "This platform revolutionized our data analysis process. The speed and accuracy are unparalleled. A must-have for any data-driven team.",
+      "Nous avions besoin d’un site élégant et facile à utiliser pour lancer notre marque. Le résultat est au-delà de nos attentes ! Design moderne, parcours client fluide… Nos clientes adorent. Merci pour cet accompagnement de A à Z. ",
     name: "SIAY",
-    designation: "Data Scientist at QuantumLeap",
+    designation: "Vente en ligne de vêtements",
     src: LogoSiay,
   },
   {
     quote:
-      "The user interface is incredibly intuitive, which made the onboarding process for my team a breeze. We were up and running in hours, not days.",
-    name: "Make Energy",
-    designation: "Head of Operations at Synergy Corp",
+      "Site propre, rassurant et bien référencé. On reçoit beaucoup plus de demandes depuis sa mise en ligne. Merci pour votre écoute, votre réactivité et la qualité du travail fourni ! ",
+    name: "Mak Energy",
+    designation: "Entreprise de traitements anti-nuisibles",
     src: LogoMakeEnergy,
   },
   {
     quote:
-      "Customer support is top-notch. They are responsive, knowledgeable, and genuinely invested in our success. It feels like a true partnership.",
+      "Nous cherchions une vitrine impactante pour nos collections. Le site est canon, rapide, responsive, et vraiment fidèle à notre univers. L’équipe a su comprendre notre style et le retranscrire parfaitement.",
     name: "Parisian Mode",
-    designation: "Client Success Manager at Horizon",
+    designation: "Vente en ligne de vêtements",
     src: LogoParisianMode,
   },
   {
     quote:
-      "I'm impressed by the constant stream of updates and new features. The development team is clearly passionate and listens to user feedback.",
+      "Nous voulions un site clair pour présenter nos services et rassurer nos clients. Tout a été pensé pour nous : design pro, contenu bien structuré, et des formulaires simples pour recevoir des devis. C’est devenu un vrai atout pour notre activité.",
     name: "Nest Renove",
-    designation: "Software Engineer at CodeCrafters",
+    designation: "Entreprise de rénovation énergétique",
     src: LogoNestRenove,
   },
   {
@@ -74,11 +74,11 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (!autoplay) return;
     const interval = setInterval(handleNext, 5000);
     return () => clearInterval(interval);
-  }, [autoplay, handleNext]);
+  }, [autoplay, handleNext]); */
 
   const isActive = (index: number) => index === active;
 
@@ -140,11 +140,11 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
               className="flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-2xl font-bold text-captive-secondary">
                   {testimonials[active].name}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -184,13 +184,13 @@ const AnimatedTestimonialsDemo: React.FC = () => {
 
 const MyAnimatedTestimonials: React.FC = () => {
   return (
-    <section className="my-10 px-8 lg:px-32">
+    <section className="py-16 px-8 lg:px-32 bg-captive-primary">
       <div className="flex items-center flex-col">
-        <span className="text-captive-secondary text-center font-semibold text-md">
+        <span className="heading__span">
           AVIS CLIENTS
         </span>
-        <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-12 mb-12">
-          Nos clients en parlent le mieux
+        <h2 className="heading__center">
+          Nos client témoignent des résultats
         </h2>
       </div>
       <div className="relative">

@@ -50,12 +50,12 @@ function CarouselEcom() {
   return (
     <Carousel className="xl:px-16">
       <CarouselContent>
-        <CarouselItem className="pt-20">
+        <CarouselItem className="pt-10">
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
-                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-secondary" />
+                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-violet" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
                   Gestion des produits, commandes et stocks
@@ -124,22 +124,18 @@ function CarouselEcom() {
                 alt="Agence Shikam publicité sur les réseaux sociaux"
                 className="object-contain"
                 width={800}
-                height={600}
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
+                height={800}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-20">
+        <CarouselItem className="pt-10">
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
-                  <BsCreditCard2Front className="h-10 w-10 text-captive-secondary" />
+                  <BsCreditCard2Front className="h-10 w-10 text-captive-violet" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
                   Paiements sécurisés intégrés
@@ -200,22 +196,18 @@ function CarouselEcom() {
                 alt="Agence Shikam publicité sur les réseaux sociaux"
                 className="object-contain"
                 width={800}
-                height={600}
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
+                height={800}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-20">
+        <CarouselItem className="pt-10">
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
-                  <TbTruckDelivery className="h-10 w-10 text-captive-secondary" />
+                  <TbTruckDelivery className="h-10 w-10 text-captive-violet" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
                   Gestion simplifiée des livraisons
@@ -285,22 +277,18 @@ function CarouselEcom() {
                 alt="Agence Shikam publicité sur les réseaux sociaux"
                 className="object-contain"
                 width={800}
-                height={600}
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
+                height={800}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-20">
+        <CarouselItem className="pt-10">
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
-                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-secondary" />
+                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-violet" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
                   Outils marketing intégrés
@@ -351,22 +339,18 @@ function CarouselEcom() {
                 alt="Agence Shikam publicité sur les réseaux sociaux"
                 className="object-contain"
                 width={800}
-                height={600}
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
+                height={800}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-20">
+        <CarouselItem className="pt-10">
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
-                  <MdOutlineSettingsApplications className="h-10 w-10 text-captive-secondary" />
+                  <MdOutlineSettingsApplications className="h-10 w-10 text-captive-violet" />
                 </div>
                 <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
                   Applications complémentaires
@@ -418,11 +402,7 @@ function CarouselEcom() {
                 alt="Agence Shikam publicité sur les réseaux sociaux"
                 className="object-contain"
                 width={800}
-                height={600}
-                style={{
-                  maxWidth: "70%",
-                  height: "auto",
-                }}
+                height={800}
                 priority
               />
             </div>

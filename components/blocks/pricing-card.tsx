@@ -19,7 +19,8 @@ interface PricingFeature {
 interface PricingCardProps {
   title: string;
   description: string;
-  price: number;
+  price: string;
+  note?: string;
   originalPrice?: number;
   features: PricingFeature[];
   buttonText?: string;
@@ -30,6 +31,7 @@ export function PricingCard({
   title,
   description,
   price,
+  note,
   originalPrice,
   features,
   buttonText = "Get Started",
@@ -109,16 +111,18 @@ export function PricingCard({
                   </div>
                 </div>
               </CardHeader>
-              <motion.div className="mt-6 space-y-2" variants={itemVariants}>
-                <span className="block text-sm">A partir de</span>
-                <div className="flex items-baseline">
-                  <span className="text-5xl font-extrabold text-captive-secondary">
-                    €{price}
-                  </span>
+              <motion.div className="mt-6 space-y-8" variants={itemVariants}>
+                <div>
+                  <span className="block text-sm">A partir de :</span>
+                  <div className="flex items-baseline">
+                    <span className="text-5xl font-semibold text-captive-secondary">
+                      {price}€
+                    </span>
+                  </div>
                 </div>
+                <p className="text-sm">{note}</p>
               </motion.div>
             </div>
-            <motion.div className="mt-8" variants={itemVariants}></motion.div>
           </motion.div>
           <Separator className="lg:my-6 lg:hidden" />
           <motion.div
@@ -135,11 +139,13 @@ export function PricingCard({
                     {feature.items.map((item, index) => (
                       <motion.li
                         key={index}
-                        className="flex items-center"
+                        className="flex"
                         variants={listItemVariants}
                         custom={index + featureIndex * feature.items.length}
                       >
-                        <Check className="mr-2 h-4 w-4 text-primary" />
+                        <div>
+                          <Check className="mr-2 h-4 w-4 text-primary mt-1" />
+                        </div>
                         <span className="text-sm">{item}</span>
                       </motion.li>
                     ))}

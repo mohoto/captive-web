@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BsCheck } from "react-icons/bs";
+import { FaCirclePlus } from "react-icons/fa6";
 import ServicesImage from "../../../public/images/home/captive-web_sites_web.png";
 
 function Services() {
@@ -7,10 +7,10 @@ function Services() {
     <section className="lg:px-32 px-8 bg-captive-primary py-16">
       <div className="container">
         <div className="flex items-center flex-col">
-          <span className="text-captive-secondary text-center font-semibold text-md">
+          <span className="heading__span">
             AGENCE WEB POUR LES PROS
           </span>
-          <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center lg:px-48 2xl:px-64 xl:leading-10 mb-10 lg:mb-12">
+          <h2 className="heading__center">
             Votre site web clé en main
           </h2>
         </div>
@@ -38,45 +38,32 @@ function Services() {
               </p>
               <div className="grid md:grid-cols-2 mt-10">
                 <ul>
-                  <li className="py-1 w-full flex items-center">
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">Site web vitrine</p>
                   </li>
-                  <li className="py-1 w-full flex items-center">
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">Site web e-commerce</p>
                   </li>
-                  <li className="py-1 w-full flex items-center">
-                    {/* <BsCheck className="h-8 w-8 text-shikam-normal"/> */}
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">
                       Site personnalisé/plateforme
                     </p>
                   </li>
                 </ul>
                 <ul>
-                  <li className="py-1 w-full flex items-center">
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">Adapté à votre activité</p>
                   </li>
-                  <li className="py-1 w-full flex items-center">
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">Adapté au mobile</p>
                   </li>
-                  <li className="py-1 w-full flex items-center">
-                    <div className="bg-captive-secondary rounded-full mr-2">
-                      <BsCheck className=" w-5 h-5 text-white" />
-                    </div>
+                  <li className="py-1 w-full flex items-center gap-x-2">
+                    <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                     <p className="text-lg !mb-0">Reférencé sur Google</p>
                   </li>
                 </ul>

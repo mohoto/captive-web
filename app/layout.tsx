@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${poppins.variable} text-blue-900 antialiased`}>
+      <body className={`${poppins.variable} antialiased`}>
         <NavbarTwo />
         {children}
         <FooterTwo />
