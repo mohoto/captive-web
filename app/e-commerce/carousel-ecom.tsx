@@ -50,8 +50,8 @@ function CarouselEcom() {
   return (
     <Carousel className="xl:px-16">
       <CarouselContent>
-        <CarouselItem className="pt-10">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
+        <CarouselItem className="pt-20">
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
@@ -61,9 +61,9 @@ function CarouselEcom() {
                   Gestion des produits, commandes et stocks
                 </h3>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-5">
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Avec Shopify, vous centralisez la gestion de votre boutique
                     et accéder aux fonctionnalités depuis un seul tableau de
                     bord :
@@ -91,7 +91,7 @@ function CarouselEcom() {
                   </ul>
                 </div>
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Vous pouvez aussi suivre en temps réel :
                   </p>
                   <ul>
@@ -122,16 +122,20 @@ function CarouselEcom() {
               <Image
                 src={ShopifyOne}
                 alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain"
+                className="object-contain lg:w-[80%] w-auto"
                 width={800}
                 height={800}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-10">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
+        <CarouselItem className="pt-20">
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
@@ -141,9 +145,9 @@ function CarouselEcom() {
                   Paiements sécurisés intégrés
                 </h3>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-5">
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Avec Shopify, vous pouvez accepter tous les moyens de
                     paiement courants, sans configuration technique compliquée.
                     Les paiements sont rapides, sécurisés, et adaptés aux
@@ -194,16 +198,20 @@ function CarouselEcom() {
               <Image
                 src={ShopifyTwo}
                 alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain"
+                className="object-contain lg:w-[80%] w-auto"
                 width={800}
                 height={800}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-10">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
+        <CarouselItem className="pt-20">
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
@@ -213,9 +221,9 @@ function CarouselEcom() {
                   Gestion simplifiée des livraisons
                 </h3>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-5">
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Avec Shopify, la gestion des livraisons est claire, flexible
                     et adaptée à tous types de commerce. Vous configurez vos
                     modes d’expédition facilement, que vous vendiez en local ou
@@ -263,7 +271,7 @@ function CarouselEcom() {
                   </ul>
                 </div>
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Vous gardez ainsi le contrôle sur vos envois, tout en
                     offrant une expérience de livraison fluide et
                     professionnelle.
@@ -275,16 +283,20 @@ function CarouselEcom() {
               <Image
                 src={ShopifyThree}
                 alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain"
+                className="object-contain lg:w-[80%] w-auto"
                 width={800}
                 height={800}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-10">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
+        <CarouselItem className="pt-20">
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
@@ -294,9 +306,9 @@ function CarouselEcom() {
                   Outils marketing intégrés
                 </h3>
               </div>
-              <div className="flex flex-col gap-y-8">
+              <div className="flex flex-col gap-y-5">
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Shopify embarque des fonctionnalités marketing puissantes.
                     Vous pouvez ainsi attirer plus de visiteurs et les
                     transformer en clients fidèles :
@@ -337,16 +349,20 @@ function CarouselEcom() {
               <Image
                 src={ShopifyFour}
                 alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain"
+                className="object-contain lg:w-[80%] w-auto"
                 width={800}
                 height={800}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 priority
               />
             </div>
           </div>
         </CarouselItem>
-        <CarouselItem className="pt-10">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20">
+        <CarouselItem className="pt-20">
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
               <div className="lg:mb-12 my-6">
                 <div className="bg-white p-1 inline-block rounded-md">
@@ -358,7 +374,7 @@ function CarouselEcom() {
               </div>
               <div className="flex flex-col gap-y-8">
                 <div>
-                  <p className="mt-3 text-lg font-semibold mb-6">
+                  <p className="mt-3 font-semibold mb-6">
                     Le Shopify App Store propose des milliers d’extensions pour
                     enrichir votre boutique. Toutes ces applications
                     s’installent en quelques clics et vous permettent de
@@ -400,9 +416,13 @@ function CarouselEcom() {
               <Image
                 src={ShopifyFive}
                 alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain"
+                className="object-contain lg:w-[80%] w-auto"
                 width={800}
                 height={800}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
                 priority
               />
             </div>

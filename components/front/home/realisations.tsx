@@ -8,13 +8,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { IoHomeOutline, IoShirtOutline } from "react-icons/io5";
+import { IoHomeOutline, IoSchoolOutline, IoShirtOutline } from "react-icons/io5";
 import { VscTools } from "react-icons/vsc";
 
+import MakenergySite from "@/public/images/home/sites-web/MAK-ENERGY-site-web.png";
 import NestRenovSite from "@/public/images/home/sites-web/NEST_RENOVE_site_web.png";
-import MakenergySite from "../../../public/images/home/sites-web/MAK-ENERGY-site-web.png";
-import ParisianSite from "../../../public/images/home/sites-web/PARISIAN-MODE_site_web.png";
-import SiaySite from "../../../public/images/home/sites-web/SIAY-site-web.png";
+import ParisianSite from "@/public/images/home/sites-web/PARISIAN-MODE_site_web.png";
+import SiaySite from "@/public/images/home/sites-web/SIAY-site-web.png";
+import WorkformationSite from "@/public/images/home/sites-web/WORK_FORMATION_site_web.png";
 
 function Realisations() {
   return (
@@ -24,7 +25,7 @@ function Realisations() {
           <span className="heading__span">
             NOS RÉALISATIONS
           </span>
-          <h2 className="heading__center">
+          <h2 className="heading__center mb-28">
             Des sites web faits sur mesure pour chaque client
           </h2>
         </div>
@@ -42,6 +43,7 @@ function Realisations() {
                           src={SiaySite}
                           alt="Site web SIAY"
                           className="w-full shadow-md"
+                          priority
                         />
                       </div>
                     </div>
@@ -82,6 +84,7 @@ function Realisations() {
                           src={MakenergySite}
                           alt="Site web Make Energy"
                           className="w-full"
+                          priority
                         />
                       </div>
                     </div>
@@ -122,6 +125,7 @@ function Realisations() {
                           src={NestRenovSite}
                           alt="Site web Nest Renove"
                           className="w-full"
+                          priority
                         />
                       </div>
                     </div>
@@ -142,7 +146,7 @@ function Realisations() {
                       </p>
                       <button className="text-shikam-normal border-shikam-normal px-4 py-2 rounded-full text-sm border-2 hover:bg-captive-secondary hover:text-white transition-all duration-75 ease-in-out">
                         <Link
-                          href="https://thermostat-landing-cbetrtuqt-mohotos-projects.vercel.app/"
+                          href="https://thermostat-landing-cbetrtuqt-mohotos-projects.vercel.app"
                           className="text-md"
                           target="blank"
                         >
@@ -162,6 +166,7 @@ function Realisations() {
                           src={ParisianSite}
                           alt="Site web Parisian Mode"
                           className="w-full"
+                          priority
                         />
                       </div>
                     </div>
@@ -182,11 +187,47 @@ function Realisations() {
                       </p>
                       <button className="text-shikam-normal border-shikam-normal px-4 py-2 rounded-full text-sm border-2 hover:bg-captive-secondary hover:text-white transition-all duration-75 ease-in-out">
                         <Link
-                          href="https://parisian-mode.fr/,"
+                          href="https://parisian-mode.fr"
                           className="text-md"
                           target="blank"
                         >
                           parisian-mode.fr
+                        </Link>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem className="lg:basis-1/3 px-8">
+                <div className="!border-0 shadow-none">
+                  <div className="flex aspect-square items-center justify-center p-0">
+                    <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
+                      <div className="absolute inset-0 overflow-y-scroll max-h-full group-hover:animate-scroll-image">
+                        <Image
+                          src={WorkformationSite}
+                          alt="Site web Parisian Mode"
+                          className="w-full"
+                          priority
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4  rounded-lg bg-white">
+                    <div>
+                      <div className="flex items-center gap-3 mb-4">
+                        <IoSchoolOutline className="h-5 w-5 text-captive-secondary" />
+                        <h3 className="font-bold text-2xl text-captive-secondary">WORK FORMATION</h3>
+                      </div>
+                      <p className="mb-6">
+                        Nous avons conçu un site dynamique et attractif pour Work Formation, un centre de formation qui accompagne particuliers et professionnels. La mise en page moderne et visuelle met en avant chaque programme de formation. Le site capte l’attention dès la première visite et valorise leur expertise.
+                      </p>
+                      <button className="text-shikam-normal border-shikam-normal px-4 py-2 rounded-full text-sm border-2 hover:bg-captive-secondary hover:text-white transition-all duration-75 ease-in-out">
+                        <Link
+                          href="https://workformation-8yrh1fqqj-mohotos-projects.vercel.app"
+                          className="text-md"
+                          target="blank"
+                        >
+                          workformation.fr
                         </Link>
                       </button>
                     </div>

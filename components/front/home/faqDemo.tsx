@@ -215,7 +215,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
         {
           question: "Combien de temps faut-il pour créer mon site ?",
           answer:
-            "En moyenne, un site vitrine est prêt en 1 à 3 semaines selon la complexité et la réactivité pour valider les contenus. Nous nous adaptons à votre rythme et vos délais.",
+            "En moyenne, un site vitrine et un site e-commerce est prêt en 1 à 3 semaines selon la complexité et la réactivité pour valider les contenus. Nous nous adaptons à votre rythme et vos délais.",
           category: "Délai",
         },
         {
@@ -258,9 +258,9 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             className="max-w-3xl mx-auto text-center mb-12"
           >
             <div className="inline-flex items-center justify-center p-2 rounded-full bg-captive-primary mb-4">
-              <HelpCircle className="h-6 w-6 text-captive-blue" />
+              <HelpCircle className="h-12 w-12 text-captive-blue" />
             </div>
-            <h2 className="2xl:text-3xl lg:text-3xl text-2xl font-bold text-center xl:leading-10 mb-12">
+            <h2 className="heading__center px-0">
               {title}
             </h2>
             {description && (

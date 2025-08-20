@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote:
-      "Site propre, rassurant et bien référencé. On reçoit beaucoup plus de demandes depuis sa mise en ligne. Merci pour votre écoute, votre réactivité et la qualité du travail fourni ! ",
+      "Site propre, rassurant et bien référencé. On reçoit beaucoup plus de demandes depuis sa mise en ligne. Merci pour votre écoute, votre réactivité et la qualité du travail fourni.",
     name: "Mak Energy",
     designation: "Entreprise de traitements anti-nuisibles",
     src: LogoMakeEnergy,
@@ -34,16 +34,16 @@ const testimonials = [
   },
   {
     quote:
-      "Nous voulions un site clair pour présenter nos services et rassurer nos clients. Tout a été pensé pour nous : design pro, contenu bien structuré, et des formulaires simples pour recevoir des devis. C’est devenu un vrai atout pour notre activité.",
+      "Nous voulions un site clair pour présenter nos services et rassurer nos clients. Tout a été pensé pour nous : design pro, contenu bien structuré, et un formulaire adapté pour recevoir des devis. C’est devenu un vrai atout pour notre activité.",
     name: "Nest Renove",
     designation: "Entreprise de rénovation énergétique",
     src: LogoNestRenove,
   },
   {
     quote:
-      "The ROI was almost immediate. It streamlined our workflows so effectively that we cut project delivery times by nearly 30%.",
+      "L’équipe a su comprendre nos besoins et traduire notre vision en un site moderne, professionnel et impactant. Nous avons eu de nombreux retours positifs de nos clients. Un vrai atout pour notre communication digitale.",
     name: "Work Formation",
-    designation: "CFO at Apex Financial",
+    designation: "Centre de formation professionnelle",
     src: LogoWorkFormation,
   },
 ];
@@ -85,7 +85,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
   const randomRotate = () => `${Math.floor(Math.random() * 16) - 8}deg`;
 
   return (
-    <div className="px-4 pt-12 pb-20 font-sans md:px-8 lg:px-12">
+    <div className="px-4 pt-12 pb-10 lg:pb-20 font-sans md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-20">
         <div className="flex items-center justify-center">
           <div className="relative lg:h-80 lg:w-full max-w-xs h-72 w-72">
@@ -160,14 +160,14 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
             <button
               onClick={handlePrev}
               aria-label="Previous testimonial"
-              className="group flex h-10 w-10 items-center justify-center rounded-full bg-muted transition-colors hover:bg-muted/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
               <ArrowLeft className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:-translate-x-1" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next testimonial"
-              className="group flex h-10 w-10 items-center justify-center rounded-full bg-muted transition-colors hover:bg-muted/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
               <ArrowRight className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:translate-x-1" />
             </button>
@@ -189,7 +189,7 @@ const MyAnimatedTestimonials: React.FC = () => {
         <span className="heading__span">
           AVIS CLIENTS
         </span>
-        <h2 className="heading__center">
+        <h2 className="heading__center mb-6">
           Nos client témoignent des résultats
         </h2>
       </div>

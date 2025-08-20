@@ -1,31 +1,28 @@
-import localFont from "next/font/local";
+import GoogleBusinessImage from "@/public/images/home/captive_web-google-mybusiness.png";
 import Image from "next/image";
 import { MdOutlineAdsClick, MdOutlineVisibility } from "react-icons/md";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
-import GoogleBusinessImage from "../../../public/images/home/Shikam-google-mybusiness.webp";
 
-const icomoonFont = localFont({
-  src: "../../../fonts/icomoon.ttf",
-});
+
 
 function GoogleBusiness() {
   return (
     <section className="px-8 lg:px-32 py-16">
       <div className="grid lg:grid-cols-2 2xl:gap-x-20 lg:gap-x-10 place-items-center gap-y-4">
-        <div className="w-full sm:max-w-md md:max-w-xl mx-auto">
+        <div className="w-full lg:w-[70%]">
           <Image
             src={GoogleBusinessImage}
             alt="Service Google Business"
             className="rounded-xl w-full h-auto object-contain"
             style={{
-              maxWidth: "80%",
+              maxWidth: "100%",
               height: "auto",
             }}
             priority
           />
         </div>
         <div className="flex flex-col items-stretch">
-          <h2 className="text-3xl mb-4">
+          <h2 className="mb-4">
             <span className="text-[#437ee2]">Google My Business </span>
             inclus avec la création de votre site web
           </h2>

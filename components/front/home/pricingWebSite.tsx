@@ -16,7 +16,7 @@ function PricingWebSite() {
               NOS TARIFS
             </span>
             <h2 className="heading__center">
-              Un site web clé en main et adapté à votre activité pour booster
+              Un site web clé en main et adapté à votre activité pour propulser 
               votre visibilité en ligne
             </h2>
           </div>
@@ -359,20 +359,10 @@ function PricingWebSite() {
                       </svg>
                       <span>Plateforme communautaire / réseau social</span>
                     </li>
-                    <li className="flex items-center">
-                      <svg
-                        className="w-3 h-3 fill-current text-captive-ciel mr-3 flex-shrink-0"
-                        viewBox="0 0 12 12"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                      </svg>
-                      <span>Application interactive temps réel</span>
-                    </li>
                   </ul>
                   <div className="flex justify-center">
                     <Link 
-                    href="/e-commerce" 
+                    href="/application-web" 
                     className="border-2 border-captive-ciel text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
                     >
                       Découvrir

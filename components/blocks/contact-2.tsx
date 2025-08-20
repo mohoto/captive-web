@@ -18,12 +18,12 @@ export const Contact2 = ({
   title = "Contact Us",
   description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
   phone = "(123) 34567890",
-  email = "email@example.com",
+  email = "contact@captive-web.fr",
 }: Contact2Props) => {
   return (
     <section className="py-32">
       <div className="container">
-        <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
+        <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-10">
           <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
             <div className="text-center lg:text-left">
               <h1 className="mb-6 font-semibold lg:mb-1 lg:text-4xl text-4xl">
@@ -56,16 +56,14 @@ export const Contact2 = ({
               </ul>
             </div>
           </div>
-          <div className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border p-10">
-            <div className="flex gap-4">
-              <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="firstname">Prénom</Label>
-                <Input type="text" id="firstname" placeholder="Prénom" />
-              </div>
-              <div className="grid w-full items-center gap-1.5">
-                <Label htmlFor="lastname">Nom</Label>
-                <Input type="text" id="lastname" placeholder="Nom" />
-              </div>
+          <div className="flex flex-col gap-6 rounded-lg border p-10">
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="lastname">Nom</Label>
+              <Input type="text" id="lastname" placeholder="Nom" />
+            </div>
+            <div className="grid w-full items-center gap-1.5">
+              <Label htmlFor="firstname">Prénom</Label>
+              <Input type="text" id="firstname" placeholder="Prénom" />
             </div>
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="email">Email</Label>

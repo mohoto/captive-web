@@ -23,7 +23,7 @@ export function PricingCardEcom() {
         },
         {
           title: "A votre charge",
-          items: ["Nom de domaine : 10€/an", "Abonnement Shopify : 25 €/mois"],
+          items: ["Nom de domaine : 10€/an", "Abonnement Shopify : 33 €/mois ou 29 €/mois pour un paiement annuel"],
         },
       ]}
       buttonText="Get Started"

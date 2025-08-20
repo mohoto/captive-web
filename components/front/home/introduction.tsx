@@ -10,13 +10,12 @@ function Introduction() {
   return (
     <section className="my-10 px-8 lg:px-32">
       <div className="grid lg:grid-cols-2 2xl:gap-x-20 lg:gap-x-10 items-center gap-y-4">
-        <div>
+        <div className="justify-self-center w-full lg:w-[70%]">
           <Image
             src={BusinessImage}
-            alt="Agence Shikam publicité sur les réseaux sociaux"
-            className="rounded-xl"
+            alt="Aggence wweb Captive Web"
             style={{
-              maxWidth: "90%",
+              maxWidth: "100%",
               height: "auto",
             }}
             priority

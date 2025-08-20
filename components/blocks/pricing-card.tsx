@@ -115,7 +115,7 @@ export function PricingCard({
                 <div>
                   <span className="block text-sm">A partir de :</span>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-semibold text-captive-secondary">
+                    <span className="text-4xl font-semibold text-captive-secondary">
                       {price}€
                     </span>
                   </div>
@@ -126,7 +126,7 @@ export function PricingCard({
           </motion.div>
           <Separator className="lg:my-6 lg:hidden" />
           <motion.div
-            className="bg-captive-primary p-6 lg:w-3/5 lg:p-10"
+            className=" p-6 lg:w-3/5 lg:p-10 bg-captive-secondary text-white"
             variants={itemVariants}
           >
             <div className="space-y-6">
@@ -144,7 +144,7 @@ export function PricingCard({
                         custom={index + featureIndex * feature.items.length}
                       >
                         <div>
-                          <Check className="mr-2 h-4 w-4 text-primary mt-1" />
+                          <Check className="mr-2 h-4 w-4 text-white mt-1" />
                         </div>
                         <span className="text-sm">{item}</span>
                       </motion.li>

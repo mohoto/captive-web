@@ -30,10 +30,9 @@ function FooterTwo() {
               INFORMATIONS LÉGALES
             </h5>
             <div className="flex flex-col mt-6 space-y-2 text-lg md:text-base">
-              <Link href="/conditions-generales-de-vente">
+              <Link href="/conditions-generales-vente">
                 Conditions générales de vente
               </Link>
-              <Link href="/reglement-interieur">Règlement intérieur</Link>
               <Link href="/politique-confidentialite">
                 Politique de confidentialité
               </Link>
@@ -47,17 +46,15 @@ function FooterTwo() {
                 <HiOutlineMail className="h-4 mr-2" />
                 Email :
               </p>
-              <p>contact@shikam.fr</p>
+              <p>contact@captive-web.fr</p>
             </div>
             <div className="text-lg md:text-base">
               <p className="flex items-center mb-1">
                 <HiOutlineLocationMarker className="h-4 mr-2" />
-                Adresse :
+                Mobile :
               </p>
               <p>
-                30 bd de sébastopol
-                <br />
-                75004 PARIS
+                07 57 83 71 10
               </p>
             </div>
           </div>

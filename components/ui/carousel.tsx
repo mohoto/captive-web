@@ -187,7 +187,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-secondary-hover",
+        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-blue",
         orientation === "horizontal"
           ? "-translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -226,7 +226,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-secondary-hover",
+        "absolute size-12 rounded-full bg-captive-secondary hover:bg-captive-blue",
         orientation === "horizontal"
           ? "-translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -255,5 +255,6 @@ export {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  type CarouselApi,
+  type CarouselApi
 };
+
