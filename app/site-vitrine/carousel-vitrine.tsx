@@ -179,7 +179,7 @@ function CarouselVitrine() {
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
-                    En tant qu&#39;indépendant, votre site web est votre meilleur commercial. Il travaille pour vous 24h/24 en présentant vos services, votre portfolio et vos témoignages clients. Optimisé pour les moteurs de recherche, il vous aide à trouver de nouveaux clients et à vous démarquer de la concurrence dans votre domaine d'expertise.
+                    En tant qu&#39;indépendant, votre site web est votre meilleur commercial. Il travaille pour vous 24h/24 en présentant vos services, votre portfolio et vos témoignages clients. Optimisé pour les moteurs de recherche, il vous aide à trouver de nouveaux clients et à vous démarquer de la concurrence dans votre domaine d&#39;expertise.
                   </p>
                   <p><span className="font-semibold">Avantages clés : </span>Portfolio créatif • Témoignages clients • Blog expertise • Génération de leads</p>
                 </div>
@@ -290,7 +290,7 @@ function CarouselVitrine() {
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
-                    Votre mission mérite d&#39;être connue et soutenue. Un site web facilite la communication avec vos membres, présente vos actions et permet de recruter de nouveaux bénévoles ou adhérents. Système d'adhésion en ligne, agenda des événements, espace membre : nous créons des outils adaptés au monde associatif et aux budgets serrés.
+                    Votre mission mérite d&#39;être connue et soutenue. Un site web facilite la communication avec vos membres, présente vos actions et permet de recruter de nouveaux bénévoles ou adhérents. Système d&#39;adhésion en ligne, agenda des événements, espace membre : nous créons des outils adaptés au monde associatif et aux budgets serrés.
                   </p>
                   <p><span className="font-semibold">Avantages clés : </span>Communication simplifiée • Recrutement de bénévoles • Adhésions en ligne • Agenda événements</p>
                 </div>
