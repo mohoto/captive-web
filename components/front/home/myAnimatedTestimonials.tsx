@@ -119,7 +119,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-[70%] w-[70%] mx-auto rounded-3xl object-cover shadow-2xl"
+                    className="h-[70%] w-[70%] lg:h-[85%] lg:w-[85%] mx-auto rounded-3xl object-cover shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.src = `https://placehold.co/500x500/e2e8f0/64748b?text=${testimonial.name.charAt(
                         0
@@ -156,7 +156,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className="flex gap-4 pt-12">
+          <div className="flex gap-4 pt-4">
             <button
               onClick={handlePrev}
               aria-label="Previous testimonial"
