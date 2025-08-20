@@ -86,7 +86,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
 
   return (
     <div className="px-4 pt-12 pb-10 lg:pb-20 font-sans md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-20">
+      <div className="relative grid grid-cols-1 gap-y-0 md:grid-cols-2 md:gap-x-20">
         <div className="flex items-center justify-center">
           <div className="relative lg:h-80 lg:w-full max-w-xs h-72 w-72">
             <AnimatePresence>
@@ -119,7 +119,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover shadow-2xl"
+                    className="h-[70%] w-[70%] mx-auto rounded-3xl object-cover shadow-2xl"
                     onError={(e) => {
                       e.currentTarget.src = `https://placehold.co/500x500/e2e8f0/64748b?text=${testimonial.name.charAt(
                         0
