@@ -19,9 +19,9 @@ function FooterTwo() {
             <div className="flex flex-col mt-6 space-y-2 text-lg md:text-base">
               <Link href="/site-vitrine">Site vitrine</Link>
               <Link href="/e-commerce">Site e-commerce</Link>
-              <Link href="/application-web">SaaS / Application web</Link>
+              <Link href="/application-web">Application web</Link>
               <Link href="/tarifs">Tarifs</Link>
-              <Link href="/contact">Nous contactez</Link>
+              <Link href="/contact">Nous contacter</Link>
             </div>
           </div>
 
