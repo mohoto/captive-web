@@ -1,4 +1,14 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Politique de confidentialité - CAPTIVE WEB",
+  description: "Politique de confidentialité CAPTIVE. Protection des données personnelles conforme RGPD pour nos clients.",
+  robots: {
+    index: true,
+    follow: false,
+  }
+};
 
 export default function Page() {
   return(
