@@ -1,6 +1,8 @@
 import ServicesImage from "@/public/images/home/captive-web_sites_web.png";
 import Image from "next/image";
-import { FaCirclePlus } from "react-icons/fa6";
+import { BsCart4 } from "react-icons/bs";
+import { MdOutlineQrCode } from "react-icons/md";
+import { PiDesktopTowerBold } from "react-icons/pi";
 
 function Services() {
   return (
@@ -8,7 +10,7 @@ function Services() {
       <div className="container">
         <div className="flex items-center flex-col">
           <span className="heading__span">
-            AGENCE WEB POUR LES PROS
+            POUR LES PROFESSIONNELS
           </span>
           <h2 className="heading__center">
             Votre site web clé en main
@@ -29,30 +31,22 @@ function Services() {
             />
           </div>
           <div className="order-2 lg:order-1">
-            <h3 className="lg:text-xl mb-6 font-semibold text-xl">
-              De la conception à la mise en ligne, nous gérons l&#39;intégralité de votre projet
-            </h3>
-            <p>
-              Que vous soyez <span className="font-semibold">artisan, commerçant, indépendant, auto-entrepreneur ou dirigeant de PME/TPE</span>, nous prenons en charge intégralement la création et la mise en ligne de votre site web. Concentrez-vous sur votre cœur de métier, nous créons votre présence en ligne.
-            </p>
-            <div className="grid md:grid-cols-2 mt-10">
-              <ul>
-                <li className="py-1 w-full flex items-center gap-x-2">
-                  <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
-                  <p className="!mb-0">Site web vitrine</p>
+            <div className="mb-12">
+              <ul className="flex gap-2 lg:flex-row flex-col">
+                <li className="py-1 w-full flex items-center gap-x-2 text-lg">
+                  <PiDesktopTowerBold className="size-8 text-captive-blue"/>
+                  Site web vitrine
                 </li>
-                <li className="py-1 w-full flex items-center gap-x-2">
-                  <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
-                  <p className="!mb-0">Site web e-commerce</p>
+                <li className="py-1 w-full flex items-center gap-x-2 text-lg">
+                  <BsCart4 className="size-8 text-captive-violet"/>
+                  Site e-commerce
                 </li>
-                <li className="py-1 w-full flex items-center gap-x-2">
-                  <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
-                  <p className="!mb-0">
-                    Site personnalisé/plateforme
-                  </p>
+                <li className="py-1 w-full flex items-center gap-x-2 text-lg">
+                  <MdOutlineQrCode className="size-8 text-captive-ciel"/>
+                  Application web
                 </li>
               </ul>
-              <ul>
+              {/* <ul>
                 <li className="py-1 w-full flex items-center gap-x-2">
                   <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                   <p className="!mb-0">Adapté à votre activité</p>
@@ -65,8 +59,14 @@ function Services() {
                   <FaCirclePlus className=" w-5 h-5 text-captive-blue" />
                   <p className="!mb-0">Reférencé sur Google</p>
                 </li>
-              </ul>
+              </ul> */}
             </div>
+            <h3 className="lg:text-xl mb-6 font-semibold text-xl">
+              De la conception à la mise en ligne, nous gérons l&#39;intégralité de votre projet
+            </h3>
+            <p>
+              Que vous soyez <span className="font-semibold">artisan, commerçant, indépendant, auto-entrepreneur ou dirigeant de PME/TPE</span>, nous prenons en charge intégralement la création et la mise en ligne de votre site web. Concentrez-vous sur votre cœur de métier, nous créons votre présence en ligne.
+            </p>
           </div>
         </div>
       </div>
