@@ -19,9 +19,6 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://captive-web.fr/sitemap.xml',
-    ],
   },
   // Personnalisation par page
   transform: async (config, path) => {
