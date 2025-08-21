@@ -11,8 +11,8 @@ import Services from "@/components/front/home/services";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Conditions générales de vente - CAPTIVE WEB",
-  description: "Conditions générales de vente de CAPTIVE, agence de création de sites web à Cachan. Transparence et professionnalisme.",
+  title: "Captive Web - Création sites web | Vitrine, E-commerce, Apps",
+  description: "Captive Web crée votre site vitrine, e-commerce ou application web sur mesure. Solutions clé en main pour artisans, commerçants, TPE/PME. Devis gratuit.",
 };
 
 export default function Page() {
