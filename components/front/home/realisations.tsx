@@ -75,7 +75,7 @@ function Realisations() {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="lg:basis-1/3 px-8">
+              <CarouselItem className="lg:basis-1/3 lg:px-8">
                 <div className="!border-0 shadow-none">
                   <div className="flex aspect-square items-center justify-center p-0">
                     <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
@@ -116,7 +116,7 @@ function Realisations() {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="lg:basis-1/3 px-8">
+              <CarouselItem className="lg:basis-1/3 lg:px-8">
                 <div className="!border-0 shadow-none">
                   <div className="flex aspect-square items-center justify-center p-0">
                     <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
@@ -157,7 +157,7 @@ function Realisations() {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="lg:basis-1/3 px-8">
+              <CarouselItem className="lg:basis-1/3 lg:px-8">
                 <div className="!border-0 shadow-none">
                   <div className="flex aspect-square items-center justify-center p-0">
                     <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
@@ -198,7 +198,7 @@ function Realisations() {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="lg:basis-1/3 px-8">
+              <CarouselItem className="lg:basis-1/3 lg:px-8">
                 <div className="!border-0 shadow-none">
                   <div className="flex aspect-square items-center justify-center p-0">
                     <div className="w-full max-w-md h-[350px] overflow-hidden group relative rounded">
