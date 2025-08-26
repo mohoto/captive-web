@@ -7,7 +7,7 @@ export function PricingCardEcom() {
     <PricingCard
       title="Site e-commerce"
       description="Création de votre site web vitrine en moins de 15 jours"
-      price="1 800"
+      price="1 500"
       note="OFFERT : configuration de votre compte Google My Business pour aumente votre visibilité dans les recherches locales sur Google."
       originalPrice={199}
       features={[
@@ -23,7 +23,10 @@ export function PricingCardEcom() {
         },
         {
           title: "A votre charge",
-          items: ["Nom de domaine : 10€/an", "Abonnement Shopify : 33 €/mois ou 29 €/mois pour un paiement annuel"],
+          items: [
+            "Nom de domaine : 10€/an",
+            "Abonnement Shopify : 33 €/mois ou 29 €/mois pour un paiement annuel",
+          ],
         },
       ]}
       buttonText="Get Started"

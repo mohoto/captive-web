@@ -12,11 +12,9 @@ function PricingWebSite() {
       <section className="px-8 lg:py-16 lg:px-32 py-8">
         <div className="container">
           <div className="flex items-center flex-col">
-            <span className="heading__span">
-              NOS TARIFS
-            </span>
+            <span className="heading__span">NOS TARIFS</span>
             <h2 className="heading__center">
-              Un site web clé en main et adapté à votre activité pour propulser 
+              Un site web clé en main et adapté à votre activité pour propulser
               votre visibilité en ligne
             </h2>
           </div>
@@ -33,7 +31,7 @@ function PricingWebSite() {
                   <div className="mb-4 flex gap-x-4 items-center">
                     <div>
                       <div className="border-4 border-captive-blue rounded-full p-4">
-                        <PiDesktopTowerBold className="size-8 text-white"/>
+                        <PiDesktopTowerBold className="size-8 text-white" />
                       </div>
                     </div>
                     <h3 className="tracking-widest title-font font-bold text-xl">
@@ -43,7 +41,7 @@ function PricingWebSite() {
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
                       <span className="text-sm mb-1">A partir de</span>
-                      <p className="text-4xl mr-2">1 800€</p>
+                      <p className="text-4xl mr-2">1 500€</p>
                     </div>
                     {/* <span className="text-lg ml-1 font-normal">ht</span> */}
                   </div>
@@ -117,9 +115,9 @@ function PricingWebSite() {
                     </li>
                   </ul>
                   <div className="flex justify-center">
-                    <Link 
-                    href="/site-vitrine" 
-                    className="border-2 border-captive-blue text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    <Link
+                      href="/site-vitrine"
+                      className="border-2 border-captive-blue text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
                     >
                       Découvrir
                     </Link>
@@ -139,7 +137,7 @@ function PricingWebSite() {
                   <div className="mb-4 flex gap-x-4 items-center">
                     <div>
                       <div className="border-4 border-captive-violet rounded-full p-4">
-                        <BsCart4 className="size-8 text-white"/>
+                        <BsCart4 className="size-8 text-white" />
                       </div>
                     </div>
                     <h3 className="tracking-widest title-font font-bold text-xl">
@@ -149,7 +147,7 @@ function PricingWebSite() {
                   <div className="leading-none flex items-center mb-4 border-b">
                     <div className="flex flex-col mb-2">
                       <span className="text-sm mb-1">A partir de</span>
-                      <p className="text-4xl mr-2">1 800€</p>
+                      <p className="text-4xl mr-2">1 500€</p>
                     </div>
                   </div>
                   <ul className="space-y-2 flex-grow mb-6">
@@ -242,9 +240,9 @@ function PricingWebSite() {
                     </li>
                   </ul>
                   <div className="flex justify-center">
-                    <Link 
-                    href="/e-commerce" 
-                    className="border-2 border-captive-violet text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    <Link
+                      href="/e-commerce"
+                      className="border-2 border-captive-violet text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
                     >
                       Découvrir
                     </Link>
@@ -261,11 +259,10 @@ function PricingWebSite() {
                 transition={{ ease: "easeOut", duration: 0.5 }}
               >
                 <div className="h-full p-6 rounded-lg bg-captive-secondary flex flex-col relative shadow-md text-white">
-
                   <div className="mb-4 flex gap-x-4 items-center">
                     <div>
                       <div className="border-4 border-captive-ciel rounded-full p-4">
-                        <MdOutlineQrCode className="size-8 text-white"/>
+                        <MdOutlineQrCode className="size-8 text-white" />
                       </div>
                     </div>
                     <h3 className="tracking-widest title-font font-bold text-xl">
@@ -361,9 +358,9 @@ function PricingWebSite() {
                     </li>
                   </ul>
                   <div className="flex justify-center">
-                    <Link 
-                    href="/application-web" 
-                    className="border-2 border-captive-ciel text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
+                    <Link
+                      href="/application-web"
+                      className="border-2 border-captive-ciel text-cwhite hover:bg-white hover:text-captive-secondary transition-colors duration-300 px-4 py-2 rounded-lg text-center font-semibold block"
                     >
                       Découvrir
                     </Link>
