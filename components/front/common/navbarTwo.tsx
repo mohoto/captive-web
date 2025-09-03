@@ -191,7 +191,7 @@ export default function NavbarTwo() {
         <div className="order-2 lg:order-3">
           <button className="px-6 py-2 rounded-full shadow-xs transition-all duration-75 ease-out bg-captive-primary group hover:bg-captive-secondary">
             <Link
-              href="tel:0757837110"
+              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20depuis%20votre%20site%20web"
               className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
             >
               <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
