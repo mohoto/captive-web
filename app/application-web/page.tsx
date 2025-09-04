@@ -13,7 +13,8 @@ import CarouselApp from "./carousel-app";
 
 export const metadata: Metadata = {
   title: "Développement Application Web Sur Mesure | Captive Web",
-  description: "Applications web professionnelles : e-learning, marketplace, SaaS, système de réservation. Solutions sur mesure par Captive Web. Expertise garantie.",
+  description:
+    "Applications web professionnelles : e-learning, marketplace, SaaS, système de réservation. Solutions sur mesure par Captive Web. Expertise garantie.",
 };
 
 function Page() {
@@ -23,7 +24,8 @@ function Page() {
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
             <h1 className="heading__page">
-              Transformez vos processus métier avec une application web personnalisée
+              Transformez vos processus métier avec une application web
+              personnalisée
             </h1>
             <p className="text-lg text-center lg:text-left">
               Développement d&#39;applications web complexes et interactives.
@@ -59,20 +61,20 @@ function Page() {
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="mb-6">
-              Applications Web sur mesure
-            </h2>
+            <h2 className="mb-6">Applications Web sur mesure</h2>
             <p>
-              Vous avez besoin d&#39;une solution digitale qui va au-delà d&#39;un simple site vitrine ? Nos applications web sur mesure répondent à vos besoins spécifiques et automatisent vos processus d&#39;entreprise. De la plateforme e-learning au logiciel SaaS, nous développons des solutions complètes et évolutives.
+              Vous avez besoin d&#39;une solution digitale qui va au-delà
+              d&#39;un simple site vitrine ? Nos applications web sur mesure
+              répondent à vos besoins spécifiques et automatisent vos processus
+              d&#39;entreprise. De la plateforme e-learning au logiciel SaaS,
+              nous développons des solutions complètes et évolutives.
             </p>
           </div>
         </div>
       </section>
       <section className="pt-16 pb-10 px-8 lg:px-32 bg-captive-primary">
         <div className="flex items-center flex-col">
-          <span className="heading__span">
-            VOTRE SOLUTION
-          </span>
+          <span className="heading__span">VOTRE SOLUTION</span>
           <h2 className="heading__center mb-8">
             Une application web pour chaque besoin professionnel
           </h2>
@@ -81,14 +83,13 @@ function Page() {
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="heading__span">
-            NOTRE ENGAGEMENT
-          </span>
+          <span className="heading__span">NOTRE ENGAGEMENT</span>
           <h2 className="heading__center mb-4">
             Pourquoi choisir nos applications web ?
           </h2>
           <p className="text-lg font-semibold text-center">
-            Une approche complète qui combine expertise technique, accompagnement personnalisé et vision long terme.
+            Une approche complète qui combine expertise technique,
+            accompagnement personnalisé et vision long terme.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 lg:gap-x-10 gap-y-10 mt-12 lg:px-28 xl:px-36">
@@ -100,7 +101,9 @@ function Page() {
               Développement sur mesure
             </h3>
             <p className="text-center">
-              Chaque application est conçue spécifiquement pour vos besoins, sans compromis sur les fonctionnalités essentielles à votre activité.
+              Chaque application est conçue spécifiquement pour vos besoins,
+              sans compromis sur les fonctionnalités essentielles à votre
+              activité.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-ciel">
@@ -111,7 +114,8 @@ function Page() {
               Technologies modernes
             </h3>
             <p className="text-center">
-              Nous utilisons les dernières technologies web pour garantir performance, sécurité et évolutivité de votre application.
+              Nous utilisons les dernières technologies web pour garantir
+              performance, sécurité et évolutivité de votre application.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-ciel">
@@ -122,7 +126,8 @@ function Page() {
               Accompagnement complet
             </h3>
             <p className="text-center">
-              De l&#39;analyse de vos besoins à la maintenance, nous vous accompagnons à chaque étape de votre projet digital.
+              De l&#39;analyse de vos besoins à la maintenance, nous vous
+              accompagnons à chaque étape de votre projet digital.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-ciel">
@@ -133,7 +138,8 @@ function Page() {
               Formation incluse
             </h3>
             <p className="text-center">
-              Nous formons vos équipes à l&#39;utilisation de votre nouvelle application pour une adoption réussie.
+              Nous formons vos équipes à l&#39;utilisation de votre nouvelle
+              application pour une adoption réussie.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-ciel">
@@ -144,7 +150,9 @@ function Page() {
               Maintenance et support
             </h3>
             <p className="text-center">
-              Votre application reste performante grâce à notre service de maintenance continue : mises à jour de sécurité, corrections de bugs et optimisations techniques.
+              Votre application reste performante grâce à notre service de
+              maintenance continue : mises à jour de sécurité, corrections de
+              bugs et optimisations techniques.
             </p>
           </div>
           <div className="bg-captive-primary p-6 rounded-lg shadow-md border-b-4 border-captive-ciel">
@@ -155,7 +163,9 @@ function Page() {
               Évolutivité garantie
             </h3>
             <p className="text-center">
-              Votre application grandit avec votre entreprise : ajout de nouvelles fonctionnalités, intégration de nouveaux services et adaptation aux besoins futurs.
+              Votre application grandit avec votre entreprise : ajout de
+              nouvelles fonctionnalités, intégration de nouveaux services et
+              adaptation aux besoins futurs.
             </p>
           </div>
         </div>
@@ -166,15 +176,16 @@ function Page() {
             Discutons de votre projet
           </h2>
           <p className="text-white text-center lg:px-20 text-lg">
-            Vous avez un projet d&#39;application web en tête ? Contactez-nous pour un audit gratuit de vos besoins et un devis personnalisé.
+            Vous avez un projet d&#39;application web en tête ? Contactez-nous
+            pour un audit gratuit de vos besoins et un devis personnalisé.
           </p>
-          <button className="text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-captive-blue hover:text-white transition-all duration-75 ease-in-out">
+          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
             <Link
-              href="tel:0757837110"
-              className="flex gap-3 items-center text-lg font-bold"
+              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20%creation20de%20site%20web"
+              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
             >
-              <RiWhatsappFill className="h-8 w-8 text-green-700" />
-              07 57 83 71 10
+              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
+              WhatsApp
             </Link>
           </button>
         </div>

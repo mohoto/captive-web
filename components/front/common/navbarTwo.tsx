@@ -189,13 +189,13 @@ export default function NavbarTwo() {
           </div>
         )}
         <div className="order-2 lg:order-3">
-          <button className="px-6 py-2 rounded-full shadow-xs transition-all duration-75 ease-out bg-captive-primary group hover:bg-captive-secondary">
+          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
             <Link
-              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20depuis%20votre%20site%20web"
+              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20%creation20de%20site%20web"
               className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
             >
               <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
-              07 57 83 71 10
+              WhatsApp
             </Link>
           </button>
         </div>

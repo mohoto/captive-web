@@ -15,7 +15,8 @@ import CarouselVitrine from "./carousel-vitrine";
 
 export const metadata: Metadata = {
   title: "Site Vitrine Professionnel | Captive Web - Création sur mesure",
-  description: "Créez votre site vitrine professionnel avec Captive Web. Design moderne, responsive, optimisé SEO. Idéal pour artisans, professions libérales et PME.",
+  description:
+    "Créez votre site vitrine professionnel avec Captive Web. Design moderne, responsive, optimisé SEO. Idéal pour artisans, professions libérales et PME.",
 };
 
 function Page() {
@@ -122,9 +123,7 @@ function Page() {
       </section>
       <section className="py-16 px-8 lg:px-32 bg-captive-primary">
         <div className="flex items-center flex-col">
-          <span className="heading__span">
-            SITE WEB PRO
-          </span>
+          <span className="heading__span">SITE WEB PRO</span>
           <h2 className="heading__center mb-8">
             Un site web vitrine : pour qui ?
           </h2>
@@ -133,9 +132,7 @@ function Page() {
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="heading__span">
-            NOTRE ENGAGEMENT
-          </span>
+          <span className="heading__span">NOTRE ENGAGEMENT</span>
           <h2 className="heading__center mb-4">
             Notre accompagnement personnalisé pour votre site vitrine
           </h2>
@@ -235,13 +232,13 @@ function Page() {
             site vitrine qui mettra en valeur vos services et vous aidera à
             attirer de nouveaux clients.
           </p>
-          <button className="px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-captive-blue hover:text-white transition-all duration-75 ease-in-out">
+          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
             <Link
-              href="tel:0757837110"
-              className="flex gap-3 items-center text-lg font-bold"
+              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20%creation20de%20site%20web"
+              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
             >
-              <RiWhatsappFill className="h-8 w-8 text-green-700" />
-              07 57 83 71 10
+              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
+              WhatsApp
             </Link>
           </button>
         </div>

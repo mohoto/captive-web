@@ -1,7 +1,9 @@
 "use client";
 import CaptiveLogo from "@/components/svg/CaptiveLogo";
+import { Phone } from "lucide-react";
 import Link from "next/link";
-import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiWhatsappFill } from "react-icons/ri";
 
 function FooterTwo() {
   return (
@@ -50,12 +52,18 @@ function FooterTwo() {
             </div>
             <div className="text-lg md:text-base">
               <p className="flex items-center mb-1">
-                <HiOutlineLocationMarker className="h-4 mr-2" />
+                <Phone color="#ffffff" className="h-4 mr-2" />
                 Mobile :
               </p>
-              <p>
-                07 57 83 71 10
-              </p>
+              <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
+                <Link
+                  href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20%creation20de%20site%20web"
+                  className="flex gap-2 items-center text-lg font-semibold text-blue-950 group-hover:text-white"
+                >
+                  <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
+                  WhatsApp
+                </Link>
+              </button>
             </div>
           </div>
         </div>
