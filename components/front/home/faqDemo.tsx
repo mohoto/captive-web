@@ -1,7 +1,7 @@
 "use client";
 
+import { CaretDown, Question } from "@phosphor-icons/react/dist/ssr";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, HelpCircle } from "lucide-react";
 import * as React from "react";
 
 // Utility function for class names
@@ -89,12 +89,6 @@ interface FaqSectionProps extends React.HTMLAttributes<HTMLElement> {
   title?: string;
   description?: string;
   items?: FaqItem[];
-  contactInfo?: {
-    title: string;
-    description?: string;
-    buttonText: string;
-    onContact?: () => void;
-  };
 }
 
 // Individual FAQ Item Component
@@ -159,7 +153,7 @@ const FaqItemComponent = React.forwardRef<
             "transition-colors duration-200"
           )}
         >
-          <ChevronDown className="h-4 w-4" />
+          <CaretDown className="h-4 w-4" weight="bold" />
         </motion.div>
       </Button>
 
@@ -237,12 +231,6 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
           category: "Configuration",
         },
       ],
-      contactInfo = {
-        title: "Still have questions?",
-        description: "We're here to help you get the answers you need",
-        buttonText: "Contact Support",
-        onContact: () => console.log("Contact support clicked"),
-      },
       ...props
     },
     ref
@@ -258,7 +246,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
             className="max-w-3xl mx-auto text-center mb-12"
           >
             <div className="inline-flex items-center justify-center p-2 rounded-full bg-captive-primary mb-4">
-              <HelpCircle className="h-12 w-12 text-captive-blue" />
+              <Question className="h-12 w-12 text-captive-blue" weight="bold" />
             </div>
             <h2 className="heading__center px-0">
               {title}

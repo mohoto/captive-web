@@ -1,23 +1,22 @@
+import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
-import { RiWhatsappFill } from "react-icons/ri";
 
 function Banner() {
   return (
-    <section className="lg:px-8 -mt-10">
+    <section className="px-8 pt-4 pb-8 lg:px-32 lg:pt-8 lg:pb-12">
       <div className="container">
-        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between lg:rounded-lg flex-col gap-y-4">
-          <h2 className="text-3xl text-white text-center lg:text-left">
-            Besoin d&#39;un site web pour votre activité ?
+        <div className="flex flex-col items-center justify-between gap-y-5 rounded-2xl bg-captive-secondary px-8 py-10 lg:flex-row lg:px-14">
+          <h2 className="text-center text-white lg:text-left">
+            Besoin d&apos;un site web pour votre activité ?
           </h2>
-          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
-            <Link
-              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
-              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
-            >
-              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
-              WhatsApp
-            </Link>
-          </button>
+          <Link
+            href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
+            target="_blank"
+            className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-captive-secondary transition-colors duration-200 hover:bg-captive-primary"
+          >
+            <WhatsappLogo className="h-5 w-5 text-green-600" weight="fill" />
+            Discuter sur WhatsApp
+          </Link>
         </div>
       </div>
     </section>

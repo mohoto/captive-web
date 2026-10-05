@@ -5,8 +5,8 @@ import LogoNestRenove from "@/public/images/testimonials/logo-nest-renove.png";
 import LogoParisianMode from "@/public/images/testimonials/logo-parisian-mode.png";
 import LogoSiay from "@/public/images/testimonials/logo-siay.png";
 import LogoWorkFormation from "@/public/images/testimonials/logo-work-formation.png";
+import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 
@@ -144,7 +144,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
               className="flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-2xl font-bold text-captive-secondary">
+                <h3 className="text-2xl font-bold text-neutral-900">
                   {testimonials[active].name}
                 </h3>
                 <p className="text-sm text-muted-foreground">
@@ -162,14 +162,14 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
               aria-label="Previous testimonial"
               className="group flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
-              <ArrowLeft className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:-translate-x-1" />
+              <ArrowLeft className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:-translate-x-1" weight="bold" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next testimonial"
               className="group flex h-10 w-10 items-center justify-center rounded-full bg-white transition-colors hover:bg-white/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
-              <ArrowRight className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="h-5 w-5 text-foreground transition-transform duration-300 group-hover:translate-x-1" weight="bold" />
             </button>
           </div>
         </div>
@@ -186,9 +186,6 @@ const MyAnimatedTestimonials: React.FC = () => {
   return (
     <section className="py-16 px-8 lg:px-32 bg-captive-primary">
       <div className="flex items-center flex-col">
-        <span className="heading__span">
-          AVIS CLIENTS
-        </span>
         <h2 className="heading__center mb-6">
           Nos client témoignent des résultats
         </h2>

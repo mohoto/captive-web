@@ -7,9 +7,8 @@ export function PricingCardVitrine() {
     <PricingCard
       title="Site web vitrine"
       description="Création de votre site web vitrine en moins de 15 jours"
-      price="1 500"
+      price="590"
       note="OFFERT : configuration de votre compte Google My Business pour aumente votre visibilité dans les recherches locales sur Google."
-      originalPrice={199}
       features={[
         {
           title: "Inclus",
@@ -23,7 +22,7 @@ export function PricingCardVitrine() {
         },
         {
           title: "A votre charge",
-          items: ["Nom de domaine : 10€/an", "Hébergement Wordpress : 40 €/an"],
+          items: ["Nom de domaine : 10\u00a0€/an", "Hébergement Wordpress : 40 €/an"],
         },
       ]}
       buttonText="Get Started"

@@ -116,7 +116,7 @@ export function PricingCard({
                   <span className="block text-sm">A partir de :</span>
                   <div className="flex items-baseline">
                     <span className="text-4xl font-semibold text-captive-secondary">
-                      {price}€
+                      {price}&nbsp;€
                     </span>
                   </div>
                 </div>
