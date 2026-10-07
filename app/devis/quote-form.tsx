@@ -26,7 +26,7 @@ import {
   Sparkle,
   WhatsappLogo,
 } from "@phosphor-icons/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const WAIT_MESSAGES = [
   "Analyse de votre activité…",
@@ -84,6 +84,8 @@ export function QuoteForm() {
   const [recsKey, setRecsKey] = useState("");
   const [analysing, setAnalysing] = useState(false);
   const [waitIndex, setWaitIndex] = useState(0);
+  const formRef = useRef<HTMLDivElement>(null);
+  const lastIndex = useRef(0);
 
   const domains = project ? domainsFor(project) : [];
   const domain = domains.find((d) => d.id === domainId);
@@ -157,6 +159,21 @@ export function QuoteForm() {
     });
   }
 
+  // À chaque changement d'étape, on remonte en haut du formulaire.
+  useEffect(() => {
+    if (lastIndex.current === index) return;
+    lastIndex.current = index;
+    const el = formRef.current;
+    if (!el) return;
+    // L'en-tête devient fixe (et sort du flux) au-delà de 170 px de défilement : on mesure
+    // donc la position comme si l'en-tête était dans le flux, et on reste sous ce seuil
+    // pour que le haut du formulaire ne passe jamais sous l'en-tête.
+    const header = document.querySelector("header");
+    const headerFixed = !!header && getComputedStyle(header).position === "fixed";
+    const absoluteTop = el.getBoundingClientRect().top + window.scrollY + (headerFixed ? header.offsetHeight : 0);
+    window.scrollTo({ top: Math.min(Math.max(absoluteTop - 100, 0), 165), behavior: "auto" });
+  }, [index]);
+
   useEffect(() => {
     if (!analysing) return;
     const timer = setInterval(() => setWaitIndex((i) => i + 1), 2200);
@@ -194,7 +211,12 @@ export function QuoteForm() {
       // Hors ligne ou erreur serveur : on poursuit sans présélection.
     }
     setRecs(Object.fromEntries(list.map((r) => [r.id, r.reason])));
-    setSelected(Object.fromEntries(list.map((r) => [r.id, 1])));
+    // Rien n'est coché à la place du client : seules les options incluses (0 €) le sont déjà.
+    setSelected(
+      Object.fromEntries(
+        options.filter((o) => o.included && list.some((r) => r.id === o.id)).map((o) => [o.id, 1])
+      )
+    );
     setRecsKey(key);
     setAnalysing(false);
     setIndex((i) => i + 1);
@@ -202,7 +224,7 @@ export function QuoteForm() {
 
   function validateContact() {
     const next: Partial<Record<keyof Contact, string>> = {};
-    if (contact.name.trim().length < 2) next.name = "Indiquez votre nom.";
+    if (contact.name.trim().length < 2) next.name = "Indiquez votre nom et prénom.";
     if (contact.phone.replace(/\D/g, "").length < 9) next.phone = "Indiquez un numéro de téléphone valide.";
     if (contact.email && !/^\S+@\S+\.\S+$/.test(contact.email)) next.email = "Adresse e-mail invalide.";
     setErrors(next);
@@ -210,6 +232,7 @@ export function QuoteForm() {
   }
 
   function next() {
+    if (step.kind === "site" && !existingSite) return;
     if (step.kind === "activity") {
       if (!domain) {
         setActivityError("Choisissez un domaine d'activité.");
@@ -249,7 +272,7 @@ export function QuoteForm() {
       });
     }
     if (total !== null) lines.push("", `Estimation : ${formatPrice(total)} TTC`);
-    lines.push("", `Nom : ${contact.name}`, `Téléphone : ${contact.phone}`);
+    lines.push("", `Nom et prénom : ${contact.name}`, `Téléphone : ${contact.phone}`);
     if (contact.email) lines.push(`E-mail : ${contact.email}`);
     if (contact.message.trim()) lines.push("", `Message : ${contact.message.trim()}`);
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
@@ -260,7 +283,7 @@ export function QuoteForm() {
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold transition-colors duration-200";
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-captive-secondary/10 bg-white shadow-xl shadow-captive-secondary/10">
+    <div ref={formRef} className="overflow-hidden rounded-3xl border border-captive-secondary/10 bg-white shadow-xl shadow-captive-secondary/10">
       <div className="bg-captive-secondary px-6 py-5 text-white lg:px-10 lg:py-6">
         <div className="mb-3 flex items-center justify-between gap-3 text-sm text-white/70">
           <span>
@@ -426,14 +449,15 @@ export function QuoteForm() {
               <p className="mb-5 flex items-start gap-2 rounded-xl bg-captive-blue/10 p-4 text-sm text-captive-secondary">
                 <Sparkle className="mt-0.5 h-5 w-5 shrink-0 text-captive-blue" weight="fill" />
                 <span>
-                  Voici les options adaptées à votre activité ({activity}). Celles qui
-                  sont recommandées sont déjà cochées : ajustez à votre guise.
+                  Voici les options adaptées à votre activité ({activity}). Celles que
+                  nous recommandons sont signalées « Recommandé » : cochez celles qui vous intéressent.
                 </span>
               </p>
             )}
             <div className="grid gap-3">
               {options
                 .filter((o) => o.group === step.group.id && isVisible(o))
+                .sort((a, b) => Number(!!recs[b.id]) - Number(!!recs[a.id]))
                 .map((option) => {
                   const qty = selected[option.id] ?? 0;
                   const active = qty > 0;
@@ -515,7 +539,7 @@ export function QuoteForm() {
               Comment vous recontacter ?
             </h2>
             <div className="grid gap-5">
-              <Field label="Nom" error={errors.name}>
+              <Field label="Nom et prénom" error={errors.name}>
                 <Input
                   id="quote-name"
                   autoComplete="name"
@@ -617,8 +641,8 @@ export function QuoteForm() {
             <button
               type="button"
               onClick={next}
-              disabled={analysing}
-              className={cn(buttonBase, "bg-captive-secondary text-white hover:bg-captive-secondary-hover disabled:opacity-70")}
+              disabled={analysing || (step.kind === "site" && !existingSite)}
+              className={cn(buttonBase, "bg-captive-secondary text-white hover:bg-captive-secondary-hover disabled:cursor-not-allowed disabled:opacity-50")}
             >
               {analysing
                 ? WAIT_MESSAGES[waitIndex % WAIT_MESSAGES.length]
