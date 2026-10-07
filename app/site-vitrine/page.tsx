@@ -1,16 +1,15 @@
+import Banner from "@/components/front/home/banner";
 import IconConfiguration from "@/components/svg/IconConfiguration";
 import IconDeployement from "@/components/svg/IconDeployement";
 import IconDesign from "@/components/svg/IconDesign";
 import IconPages from "@/components/svg/IconPages";
 import IconSeo from "@/components/svg/IconSeo";
 import IconTraining from "@/components/svg/IconTraining";
-import SiteVitrineExplication from "@/public/images/site-vitrine/captive-web_site_vitrine_explication.png";
-import SiteVitrineIntro from "@/public/images/site-vitrine/captive-web_site_vitrine_introduction.png";
-import SiteVitrinePresentation from "@/public/images/site-vitrine/captive-web_site_vitrine_presentation.png";
+import SiteVitrineExplication from "@/public/images/site-vitrine/vitrine-explication.webp";
+import SiteVitrineIntro from "@/public/images/site-vitrine/vitrine-introduction.webp";
+import SiteVitrinePresentation from "@/public/images/site-vitrine/vitrine-hero.webp";
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { RiWhatsappFill } from "react-icons/ri";
 import CarouselVitrine from "./carousel-vitrine";
 
 export const metadata: Metadata = {
@@ -25,8 +24,9 @@ function Page() {
       <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="heading__page">
-              Gagnez en visibilité et en confiance avec un site web clé en main
+            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-secondary sm:text-4xl lg:text-left lg:text-[2.5rem]">
+              Gagnez en visibilité et en confiance avec un{" "}
+              <span className="text-captive-blue">site web clé en main</span>
             </h1>
             <p className="text-lg text-center lg:text-left">
               Plus qu’un simple site, nous créons un outil de communication
@@ -37,12 +37,9 @@ function Page() {
           <div className="flex justify-end">
             <Image
               src={SiteVitrinePresentation}
-              alt="Captive web création site e-commerce"
-              className="lg:w-[70%]"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
+              alt="Une gérante de boutique de décoration présente le site web de sa boutique sur sa tablette, avec des cartes : demander un devis, prendre rendez-vous et un aperçu de site web"
+              className="aspect-[4/5] w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
+              sizes="(min-width: 1024px) 35vw, 90vw"
               priority
             />
           </div>
@@ -52,20 +49,15 @@ function Page() {
         <div className="grid lg:grid-cols-2 lg:gap-x-10 gap-y-4 lg:items-center">
           <Image
             src={SiteVitrineIntro}
-            alt="Illustration site web e-commerce"
-            className="justify-self-center place-self-center rounded-lg order-2 lg:order-1 lg:w-[80%]"
-            width={800}
-            height={800}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-            priority
+            alt="Un menuisier souriant dans son atelier, une tablette en main affichant le site de son entreprise, avec des cartes : livré en 7 jours, site en ligne et un aperçu de site web"
+            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
+            sizes="(min-width: 1024px) 35vw, 90vw"
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="mb-6">
-              Un site web professionnel sans prise de tête
+            <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+              Un site web professionnel{" "}
+              <span className="text-captive-blue">sans prise de tête</span>
             </h2>
             <p>
               Vous êtes artisan, commerçant local, indépendant ou à la tête
@@ -84,9 +76,9 @@ function Page() {
         </div>
         <div className="grid lg:grid-cols-2 lg:gap-x-10 gap-y-4 lg:items-center mt-10">
           <div className="place-self-center order-1">
-            <h2 className="mb-6">
-              Que vous vendiez un service, un savoir-faire ou votre expertise :
-              soyez visible
+            <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+              Que vous vendiez un service, un savoir-faire ou votre expertise :{" "}
+              <span className="text-captive-blue">soyez visible</span>
             </h2>
             <p>
               Un site vitrine est idéal pour toutes les entreprises ou
@@ -109,32 +101,27 @@ function Page() {
           </div>
           <Image
             src={SiteVitrineExplication}
-            alt="Logo Shopify"
-            className="justify-self-center place-self-center order-2 lg:w-[70%]"
-            width={800}
-            height={800}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-            priority
+            alt="Une consultante souriante dans un espace de coworking devant son ordinateur affichant son site, avec des cartes : trouvé sur Google, nous contacter et un aperçu de site web"
+            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:w-[75%]"
+            sizes="(min-width: 1024px) 35vw, 90vw"
           />
         </div>
       </section>
       <section className="py-16 px-8 lg:px-32 bg-captive-primary">
-        <div className="flex items-center flex-col">
-          <span className="heading__span">SITE WEB PRO</span>
-          <h2 className="heading__center mb-8">
-            Un site web vitrine : pour qui ?
+        <div className="xl:px-16">
+          <h2 className="mb-2 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+            Un site web vitrine :{" "}
+            <span className="text-captive-blue">pour qui ?</span>
           </h2>
         </div>
         <CarouselVitrine />
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="heading__span">NOTRE ENGAGEMENT</span>
-          <h2 className="heading__center mb-4">
-            Notre accompagnement personnalisé pour votre site vitrine
+          <h2 className="heading__center mb-4 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+            Notre accompagnement{" "}
+            <span className="text-captive-blue">personnalisé</span> pour votre
+            site vitrine
           </h2>
           <p className="text-lg font-semibold text-center">
             Notre mission : vous livrer un site clé en main, professionnel,
@@ -222,27 +209,17 @@ function Page() {
           </div>
         </div>
       </section>
-      <section className="my-10 lg:px-40 xl:px-68">
-        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
-          <h2 className="heading__center text-white mb-2 px-0">
-            Prêt à donner de la visibilité à votre activité ?
-          </h2>
-          <p className="text-white text-center lg:px-20 text-lg">
-            Contactez-nous pour discuter de votre projet. Nous réalisonserons un
-            site vitrine qui mettra en valeur vos services et vous aidera à
-            attirer de nouveaux clients.
-          </p>
-          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
-            <Link
-              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
-              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
-            >
-              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
-              WhatsApp
-            </Link>
-          </button>
-        </div>
-      </section>
+      <Banner
+        className="py-10 lg:py-14"
+        titleClassName="text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold"
+        title={
+          <>
+            Prêt à donner de la visibilité à votre{" "}
+            <span className="text-captive-ciel">activité</span> ?
+          </>
+        }
+        description="Contactez-nous pour discuter de votre projet. Nous réaliserons un site vitrine qui mettra en valeur vos services et vous aidera à attirer de nouveaux clients."
+      />
     </>
   );
 }

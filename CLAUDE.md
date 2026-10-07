@@ -5,19 +5,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Common Development Commands
 
 ### Development
-- `npm run dev` - Start development server with Turbopack (uses `--turbopack` flag)
+- `npm run dev` - Start development server (Turbopack is the default bundler in Next.js 16)
 - `npm run build` - Build the application for production
 - `npm run start` - Start production server
 - `npm run postbuild` - Generate sitemap after build (automatically runs after build)
-- `npm run lint` - Run ESLint for code quality checks
+- `npm run lint` - Run ESLint (`eslint .`, flat config in `eslint.config.mjs`) for code quality checks
 
 ### Development Server
-The project uses Next.js 15 with Turbopack enabled by default for faster development builds. Access the application at `http://localhost:3000`.
+The project uses Next.js 16 with Turbopack enabled by default for faster development builds. Access the application at `http://localhost:3000`.
 
 ## Architecture Overview
 
 ### Tech Stack
-- **Framework**: Next.js 15 with App Router and React 19
+- **Framework**: Next.js 16 with App Router and React 19
 - **Language**: TypeScript with strict mode enabled
 - **Styling**: Tailwind CSS v4 with custom design tokens and tw-animate-css
 - **UI Components**: Radix UI primitives with shadcn/ui patterns ("new-york" style)

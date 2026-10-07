@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-21T01:11:34Z",
+  "title": "Design System: Captive Web",
+  "extensions": {
+    "colorMeta": {
+      "deep-signature-violet": {
+        "role": "primary",
+        "displayName": "Deep Signature Violet",
+        "canonical": "oklch(0.2012 0.1106 271.27)",
+        "tonalRamp": [
+          "oklch(15% 0.09 271.27)",
+          "oklch(20.12% 0.1106 271.27)",
+          "oklch(28% 0.13 271.27)",
+          "oklch(38% 0.16 271.27)",
+          "oklch(50% 0.18 271.27)",
+          "oklch(65% 0.15 271.27)",
+          "oklch(80% 0.09 271.27)",
+          "oklch(95% 0.03 271.27)"
+        ]
+      },
+      "deep-signature-violet-hover": {
+        "role": "primary-hover",
+        "displayName": "Deep Signature Violet — Hover",
+        "canonical": "oklch(42.4% 0.199 265.638)"
+      },
+      "action-blue": {
+        "role": "secondary",
+        "displayName": "Action Blue",
+        "canonical": "oklch(0.6194 0.2085 255.62)",
+        "tonalRamp": [
+          "oklch(15% 0.09 255.62)",
+          "oklch(25% 0.13 255.62)",
+          "oklch(35% 0.16 255.62)",
+          "oklch(48% 0.19 255.62)",
+          "oklch(61.94% 0.2085 255.62)",
+          "oklch(72% 0.15 255.62)",
+          "oklch(85% 0.08 255.62)",
+          "oklch(95% 0.03 255.62)"
+        ]
+      },
+      "confirmation-green": {
+        "role": "tertiary",
+        "displayName": "Confirmation Green",
+        "canonical": "oklch(0.8328 0.283374 142.4953)"
+      },
+      "sky-tint": {
+        "role": "tertiary",
+        "displayName": "Sky Tint",
+        "canonical": "oklch(0.8264 0.0935 205.01)"
+      },
+      "soft-violet-accent": {
+        "role": "tertiary",
+        "displayName": "Soft Violet Accent",
+        "canonical": "oklch(0.5885 0.2988 308.43)"
+      },
+      "paper-neutral": {
+        "role": "neutral",
+        "displayName": "Paper Neutral",
+        "canonical": "oklch(97% 0.001 106.424)",
+        "tonalRamp": [
+          "oklch(15% 0.001 106.424)",
+          "oklch(30% 0.001 106.424)",
+          "oklch(45% 0.001 106.424)",
+          "oklch(60% 0.001 106.424)",
+          "oklch(75% 0.001 106.424)",
+          "oklch(88% 0.001 106.424)",
+          "oklch(97% 0.001 106.424)",
+          "oklch(99.5% 0.0005 106.424)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "Titre principal du hero (h1), en Inter." },
+      "display": { "displayName": "Title / h2", "purpose": "Titres de section, en Plus Jakarta Sans via la règle globale h1–h6." },
+      "body": { "displayName": "Body", "purpose": "Paragraphes de contenu, Inter." }
+    },
+    "shadows": [
+      { "name": "commercial-lift", "value": "0 4px 12px rgba(0,0,0,0.08)", "purpose": "Réservé aux blocs à forte intention d'achat (pricing card) ; ne pas généraliser." }
+    ],
+    "motion": [
+      { "name": "spring-block", "value": "spring(stiffness:260, damping:20)", "purpose": "Apparition des blocs principaux au scroll (Framer Motion)." },
+      { "name": "spring-list-item", "value": "spring(stiffness:100, damping:10)", "purpose": "Apparition en cascade des items de liste (features de pricing)." },
+      { "name": "hover-transition", "value": "200ms ease (Tailwind duration-200)", "purpose": "Transitions de couleur/position au survol des boutons et liens." }
+    ],
+    "breakpoints": [
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (pill, on violet)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal sur fond violet (hero) — fond blanc plein, texte violet de marque, flèche qui glisse au survol.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Demander un devis <svg class=\"ds-btn-primary-icon\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; background: #ffffff; color: oklch(0.2012 0.1106 271.27); padding: 14px 28px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.2s ease; } .ds-btn-primary:hover { background: oklch(97% 0.001 106.424); } .ds-btn-primary-icon { transition: transform 0.2s ease; } .ds-btn-primary:hover .ds-btn-primary-icon { transform: translateX(4px); }"
+    },
+    {
+      "name": "Secondary Button (pill, ghost, on violet)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "CTA secondaire sur fond violet — bordure blanche translucide, fond transparent.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Voir les tarifs</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 8px; border-radius: 9999px; background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.25); padding: 14px 28px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: border-color 0.2s ease, background 0.2s ease; } .ds-btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }"
+    },
+    {
+      "name": "Icon Tile",
+      "kind": "custom",
+      "refersTo": "icon-tile",
+      "description": "Tuile d'icône colorée représentant une offre (site vitrine, e-commerce, application) — fond teinté à faible opacité, icône pleine.",
+      "html": "<div class=\"ds-icon-tile\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg></div>",
+      "css": ".ds-icon-tile { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 0.5rem; background: oklch(0.6194 0.2085 255.62 / 0.10); color: oklch(0.6194 0.2085 255.62); flex-shrink: 0; }"
+    },
+    {
+      "name": "Offer Row Card",
+      "kind": "card",
+      "description": "Ligne compacte présentant une offre (icône + libellé), utilisée dans le bloc Services.",
+      "html": "<div class=\"ds-offer-row\"><div class=\"ds-icon-tile\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg></div><span class=\"ds-offer-row-label\">Site web vitrine</span></div>",
+      "css": ".ds-offer-row { display: flex; align-items: center; gap: 12px; border-radius: 0.75rem; border: 1px solid oklch(0.2012 0.1106 271.27 / 0.10); background: #ffffff; padding: 14px 16px; } .ds-offer-row-label { font-weight: 500; color: oklch(0.205 0 0); }"
+    },
+    {
+      "name": "Pricing Card (commercial lift)",
+      "kind": "card",
+      "description": "Carte de tarification à forte intention d'achat — seule surface autorisée à porter une ombre.",
+      "html": "<div class=\"ds-pricing-card\"><h3 class=\"ds-pricing-card-title\">Site web vitrine</h3><p class=\"ds-pricing-card-desc\">Création de votre site web vitrine en moins de 15 jours</p><div class=\"ds-pricing-card-price\">900€</div></div>",
+      "css": ".ds-pricing-card { border-radius: 0.75rem; background: oklch(97% 0.001 106.424); box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; max-width: 320px; } .ds-pricing-card-title { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui; font-weight: 800; font-size: 1.25rem; color: #0d1f3c; margin: 0 0 8px; } .ds-pricing-card-desc { color: oklch(0.556 0 0); font-size: 0.9375rem; margin: 0 0 16px; } .ds-pricing-card-price { font-size: 2rem; font-weight: 700; color: oklch(0.2012 0.1106 271.27); }"
+    },
+    {
+      "name": "Decorative Dashed Circle",
+      "kind": "custom",
+      "description": "Motif orbital décoratif — cercle pointillé encadrant l'image du hero.",
+      "html": "<svg class=\"ds-dashed-circle\" viewBox=\"0 0 100 100\" aria-hidden=\"true\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"0.5\" stroke-dasharray=\"2.2 2.2\"/></svg>",
+      "css": ".ds-dashed-circle { color: oklch(0.8264 0.0935 205.01 / 0.70); width: 100%; height: 100%; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le Studio Digital Accessible",
+    "overview": "Captive Web s'adresse à des artisans, commerçants et dirigeants de TPE/PME qui n'ont pas de culture technique et se méfient du jargon. Le système visuel répond par des couleurs franches et vivantes posées sur un fond épuré quasi-blanc, des formes systématiquement arrondies (boutons en pilule, cartes à coins généreux, images circulaires), et un vocabulaire orbital récurrent — cercles pointillés, sphères flottantes — qui évoque le mouvement et la mise en orbite d'un projet, sans jamais verser dans le décoratif gratuit. Rien n'est anguleux ou froid ; tout invite à cliquer. Le violet profond de marque (captive-secondary) ancre l'identité sur les zones à forte intention (hero, CTA primaires), tandis que le bleu vif sert d'accent d'action sur les fonds clairs du reste du site. Vert, ciel et violet clair restent des touches secondaires, réservées aux icônes et petits tags, jamais des couleurs de fond dominantes.",
+    "keyCharacteristics": [
+      "Formes arrondies partout : jamais d'angle droit sur un élément interactif ou un conteneur de contenu.",
+      "Une couleur de marque dominante (violet profond) + un accent d'action (bleu vif), le reste en soutien ponctuel.",
+      "Surfaces plates par défaut ; l'ombre est un signal rare et intentionnel.",
+      "Mouvement discret et ressorti (Framer Motion spring) à l'apparition, jamais agressif.",
+      "Français exclusif, ton professionnel et rassurant — aucune aspérité visuelle ou verbale qui intimiderait un non-technicien."
+    ],
+    "rules": [
+      { "name": "La Règle du Violet Dominant", "body": "Le Deep Signature Violet ne partage jamais une même surface de premier plan avec l'Action Blue à parts égales : l'un porte la marque (fonds, CTA), l'autre porte l'action (liens, accents), jamais les deux en concurrence sur le même élément.", "section": "colors" },
+      { "name": "La Règle Titre/Corps", "body": "Tout élément h1–h6 hérite de Plus Jakarta Sans par la règle globale de globals.css ; ne jamais forcer une police différente sur un titre sans mettre à jour cette règle centrale plutôt que de la contourner au cas par cas.", "section": "typography" },
+      { "name": "La Règle du Plat par Défaut", "body": "Une surface est plate au repos ; une ombre n'apparaît que pour signaler qu'un bloc porte une décision commerciale (prix, offre), jamais pour du contenu informatif standard.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do garder les boutons et CTA en pilule (rounded-full) — c'est la signature de forme du site, jamais de bouton à coins carrés ou légèrement arrondis pour un CTA principal.",
+      "Do réserver le Deep Signature Violet aux surfaces qui portent la marque (hero, CTA pleins) et l'Action Blue aux accents d'interaction sur fond clair.",
+      "Do garder les surfaces plates par défaut ; n'introduire une ombre que pour signaler un bloc à forte valeur commerciale.",
+      "Do utiliser le vocabulaire orbital (cercles pointillés, sphères) avec parcimonie, en accompagnement d'une image, jamais comme motif de fond répété partout.",
+      "Do garder tout le contenu en français, ton professionnel et rassurant, sans jargon technique."
+    ],
+    "donts": [
+      "Don't utiliser d'angles droits sur un bouton, une tuile d'icône ou une carte de contenu.",
+      "Don't faire porter le Deep Signature Violet et l'Action Blue à parts égales sur un même élément — l'un domine, l'autre accente.",
+      "Don't ajouter des ombres décoratives sur des cartes de contenu standard ; ce signal est réservé aux blocs commerciaux (pricing).",
+      "Don't remplacer ou modifier le logo ou la palette captive-* sans validation explicite — ce sont des contraintes de marque confirmées, pas des choix ouverts.",
+      "Don't inventer des témoignages, chiffres ou preuves sociales ; seuls les clients et partenaires réels documentés sont utilisables."
+    ]
+  }
+}

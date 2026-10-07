@@ -1,16 +1,15 @@
+import Banner from "@/components/front/home/banner";
 import IconConfiguration from "@/components/svg/IconConfiguration";
 import IconDeployement from "@/components/svg/IconDeployement";
 import IconDesign from "@/components/svg/IconDesign";
 import IconPages from "@/components/svg/IconPages";
 import IconSeo from "@/components/svg/IconSeo";
 import IconTraining from "@/components/svg/IconTraining";
-import EcomIntro from "@/public/images/e-commerce/captive-web_e-commerce_presentation_2.png";
-import EcomPresentation from "@/public/images/e-commerce/captive-web_presentation_e-commerce.png";
+import EcomIntro from "@/public/images/e-commerce/ecom-introduction.webp";
+import EcomPresentation from "@/public/images/e-commerce/ecom-hero.webp";
 import ShopifyLogo from "@/public/images/e-commerce/shopify_logo.png";
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { RiWhatsappFill } from "react-icons/ri";
 import CarouselEcom from "./carousel-ecom";
 
 export const metadata: Metadata = {
@@ -25,9 +24,11 @@ function Page() {
       <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="heading__page">
-              Lancez votre e&#8209;commerce avec une boutique en ligne
-              professionnelle
+            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-secondary sm:text-4xl lg:text-left lg:text-[2.5rem]">
+              Lancez votre e&#8209;commerce avec une{" "}
+              <span className="text-captive-blue">
+                boutique en ligne professionnelle
+              </span>
             </h1>
             <p className="text-lg text-center lg:text-left">
               Une solution clé en main pour vendre rapidement, simplement et
@@ -37,12 +38,9 @@ function Page() {
           <div className="flex justify-end">
             <Image
               src={EcomPresentation}
-              alt="Captive web création site e-commerce"
-              className="lg:w-[70%]"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
+              alt="Une créatrice de mode présente sa boutique de vêtements en ligne sur sa tablette, avec des cartes : nouvelle commande, livraison à domicile et un aperçu de boutique en ligne"
+              className="aspect-[4/5] w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
+              sizes="(min-width: 1024px) 35vw, 90vw"
               priority
             />
           </div>
@@ -52,20 +50,15 @@ function Page() {
         <div className="grid lg:grid-cols-2 lg:gap-x-10 gap-y-8 lg:items-center">
           <Image
             src={EcomIntro}
-            alt="Illustration site web e-commerce"
-            className="justify-self-center place-self-center rounded-lg order-2 lg:order-1 lg:w-[70%]"
-            width={500}
-            height={500}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-            priority
+            alt="Un vendeur de compléments alimentaires pour sportifs souriant dans sa boutique, un ordinateur affichant sa boutique en ligne, avec des cartes : ouvert 24h/24, clients partout et un aperçu de boutique en ligne"
+            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
+            sizes="(min-width: 1024px) 35vw, 90vw"
           />
 
           <div className="order-1 lg:order-2">
-            <h2 className="mb-6">
-              Pourquoi se lancer dans l’e&#8209;commerce ?
+            <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+              Pourquoi se lancer dans l’
+              <span className="text-captive-blue">e&#8209;commerce</span> ?
             </h2>
             <p>
               L’e-commerce est aujourd’hui un levier incontournable pour
@@ -81,12 +74,14 @@ function Page() {
             </p>
           </div>
           <div className="place-self-center order-3">
-            <h2 className="mb-6">
-              Pourquoi choisir Shopify pour votre site e&#8209;commerce ?
+            <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+              Pourquoi choisir{" "}
+              <span className="text-captive-blue">Shopify</span> pour votre
+              site e&#8209;commerce ?
             </h2>
             <p>
               Shopify est l’une des plateformes e-commerce les plus puissantes
-              et intuitives du marché. En choisissant Shopify, ous optez pour
+              et intuitives du marché. En choisissant Shopify, vous optez pour
               une solution fiable, évolutive et facile à prendre en main. Votre
               boutique est simple à gérer, même sans compétences techniques.
             </p>
@@ -98,31 +93,26 @@ function Page() {
           <Image
             src={ShopifyLogo}
             alt="Logo Shopify"
-            className="justify-self-center place-self-center order-4 lg:w-[60%]"
-            width={800}
-            height={800}
-            style={{
-              maxWidth: "70%",
-              height: "auto",
-            }}
-            priority
+            className="justify-self-center place-self-center order-4 w-3/5 max-w-xs lg:w-[45%]"
+            sizes="(min-width: 1024px) 20vw, 60vw"
           />
         </div>
       </section>
       <section className="pt-16 px-8 lg:px-32 bg-captive-primary">
-        <div className="flex items-center flex-col">
-          <span className="heading__span">VOTRE BOUTIQUE</span>
-          <h2 className="heading__center mb-8">
-            Shopify : une plateforme complète, pensée pour les commerçants
+        <div className="xl:px-16">
+          <h2 className="mb-2 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+            Shopify : une plateforme{" "}
+            <span className="text-captive-blue">complète</span>, pensée pour
+            les commerçants
           </h2>
         </div>
         <CarouselEcom />
       </section>
       <section className="py-12 px-8 lg:px-32">
         <div className="flex items-center flex-col">
-          <span className="heading__span">NOTRE ENGAGEMENT</span>
-          <h2 className="heading__center mb-4">
-            Notre accompagnement personnalisé sur Shopify
+          <h2 className="heading__center mb-4 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+            Notre accompagnement{" "}
+            <span className="text-captive-blue">personnalisé</span> sur Shopify
           </h2>
           <p className="text-lg font-semibold text-center">
             Notre mission : vous livrer une boutique clé en main, prête à
@@ -206,27 +196,17 @@ function Page() {
           </div>
         </div>
       </section>
-      <section className="my-10 lg:px-40 xl:px-68">
-        <div className="bg-captive-secondary flex lg:flex px-10 py-6 items-center justify-between rounded-lg flex-col gap-y-4">
-          <h2 className="heading__center text-white mb-2 px-0">
-            Prêt à lancer votre e-commerce ?
-          </h2>
-          <p className="text-white text-center lg:px-20 text-lg">
-            Contactez-nous pour discuter de votre projet. Nous vous guiderons de
-            A à Z pour que votre boutique Shopify reflète votre image et vous
-            aide à atteindre vos objectifs.
-          </p>
-          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
-            <Link
-              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
-              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
-            >
-              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
-              WhatsApp
-            </Link>
-          </button>
-        </div>
-      </section>
+      <Banner
+        className="py-10 lg:py-14"
+        titleClassName="text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold"
+        title={
+          <>
+            Prêt à lancer votre{" "}
+            <span className="text-captive-ciel">e&#8209;commerce</span> ?
+          </>
+        }
+        description="Contactez-nous pour discuter de votre projet. Nous vous guiderons de A à Z pour que votre boutique Shopify reflète votre image et vous aide à atteindre vos objectifs."
+      />
     </>
   );
 }

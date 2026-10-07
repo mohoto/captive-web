@@ -6,61 +6,48 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import ShopifyFive from "@/public/images/e-commerce/shopify_applications_complementaires.png";
-import ShopifyTwo from "@/public/images/e-commerce/shopify_gestion_paiements.png";
-import ShopifyOne from "@/public/images/e-commerce/shopify_gestion_produits_commandes.png";
-import ShopifyThree from "@/public/images/e-commerce/shopify_gestion_produits_livraisons.png";
-import ShopifyFour from "@/public/images/e-commerce/shopify_outils_marketing.png";
+import ShopifyFive from "@/public/images/e-commerce/ecom-applications.webp";
+import ShopifyTwo from "@/public/images/e-commerce/ecom-paiement.webp";
+import ShopifyOne from "@/public/images/e-commerce/ecom-gestion.webp";
+import ShopifyThree from "@/public/images/e-commerce/ecom-livraison.webp";
+import ShopifyFour from "@/public/images/e-commerce/ecom-marketing.webp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsCheck, BsCreditCard2Front } from "react-icons/bs";
-import { MdOutlineSettingsApplications } from "react-icons/md";
-import { TbDeviceDesktopAnalytics, TbTruckDelivery } from "react-icons/tb";
-
+import { BsCheck } from "react-icons/bs";
 interface CarouselInfo {
   total: number;
   items: HTMLElement[];
 }
-
 function CarouselEcom() {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
-
   /* const handleNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, info.total - 1));
   };
-
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   }; */
-
   useEffect(() => {
     // Cette partie ne s’exécute que côté client
     const nodeList = document.querySelectorAll<HTMLElement>(
       '[data-slot="carousel-item"]'
     );
     const elements = Array.from(nodeList);
-
     // (Optionnel) on ajoute data-index à chaque div
     elements.forEach((el, idx) => (el.dataset.index = String(idx)));
-
     setInfo({ total: elements.length, items: elements });
   }, []);
-
   return (
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-violet" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Gestion des produits, commandes et stocks
                 </h3>
-              </div>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -118,33 +105,25 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={ShopifyOne}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-auto"
-                width={800}
-                height={800}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                alt="Une gérante de boutique de mode dans sa réserve, une tablette en main affichant la gestion de ses produits et stocks, avec des cartes : stocks à jour, nouvelle commande et un aperçu de boutique en ligne"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
                 priority
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <BsCreditCard2Front className="h-10 w-10 text-captive-violet" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Paiements sécurisés intégrés
                 </h3>
-              </div>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -194,33 +173,25 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={ShopifyTwo}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-auto"
-                width={800}
-                height={800}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un gérant de concept store souriant, une tablette en main affichant le paiement de sa boutique en ligne, avec des cartes : paiement sécurisé, carte bancaire et un aperçu de boutique en ligne"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbTruckDelivery className="h-10 w-10 text-captive-violet" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Gestion simplifiée des livraisons
                 </h3>
-              </div>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -270,42 +241,27 @@ function CarouselEcom() {
                     </li>
                   </ul>
                 </div>
-                <div>
-                  <p className="mt-3 font-semibold mb-6">
-                    Vous gardez ainsi le contrôle sur vos envois, tout en
-                    offrant une expérience de livraison fluide et
-                    professionnelle.
-                  </p>
-                </div>
               </div>
             </div>
-            <div className="flex g:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={ShopifyThree}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-auto"
-                width={800}
-                height={800}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une commerçante prépare un colis dans son atelier, avec des cartes : colis expédié, livraison suivie et un aperçu de boutique en ligne"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-violet" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Outils marketing intégrés
                 </h3>
-              </div>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -345,33 +301,25 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={ShopifyFour}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-auto"
-                width={800}
-                height={800}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un commerçant en ligne souriant devant son ordinateur affichant sa boutique, avec des cartes : codes promo, newsletter clients et un aperçu de boutique en ligne"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <MdOutlineSettingsApplications className="h-10 w-10 text-captive-violet" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Applications complémentaires
                 </h3>
-              </div>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -412,18 +360,13 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={ShopifyFive}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-auto"
-                width={800}
-                height={800}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une e-commerçante souriante devant son ordinateur affichant les avis de ses clients, avec des cartes : avis clients, programme de fidélité et un aperçu de boutique en ligne"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
@@ -447,5 +390,4 @@ function CarouselEcom() {
     </Carousel>
   );
 }
-
 export default CarouselEcom;

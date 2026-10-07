@@ -6,65 +6,50 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import SiteArtisan from "@/public/images/site-vitrine/captive-web_site_web_artisan.png";
-import SiteAssociation from "@/public/images/site-vitrine/captive-web_site_web_association.png";
-import SiteCommercant from "@/public/images/site-vitrine/captive-web_site_web_commercant.png";
-import SiteIndependant from "@/public/images/site-vitrine/captive-web_site_web_independant.png";
-import SitePme from "@/public/images/site-vitrine/captive-web_site_web_pme_tpe.png";
-import SiteLiberale from "@/public/images/site-vitrine/captive-web_site_web_profession_liberale.png";
-import SiteSante from "@/public/images/site-vitrine/captive-web_site_web_professionnel_sante.png";
+import SiteArtisan from "@/public/images/site-vitrine/vitrine-artisan.webp";
+import SiteAssociation from "@/public/images/site-vitrine/vitrine-association.webp";
+import SiteCommercant from "@/public/images/site-vitrine/vitrine-commercant.webp";
+import SiteIndependant from "@/public/images/site-vitrine/vitrine-independant.webp";
+import SitePme from "@/public/images/site-vitrine/vitrine-pme.webp";
+import SiteLiberale from "@/public/images/site-vitrine/vitrine-profession-liberale.webp";
+import SiteSante from "@/public/images/site-vitrine/vitrine-bien-etre.webp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { AiOutlineShop } from "react-icons/ai";
-import { GrUserFemale, GrUserManager, GrUserWorker } from "react-icons/gr";
-import { LuHandHelping } from "react-icons/lu";
-import { MdOutlineHealthAndSafety, MdOutlineMapsHomeWork } from "react-icons/md";
-
 interface CarouselInfo {
   total: number;
   items: HTMLElement[];
 }
-
 function CarouselVitrine() {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
-
   /* const handleNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, info.total - 1));
   };
-
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   }; */
-
   useEffect(() => {
     // Cette partie ne s’exécute que côté client
     const nodeList = document.querySelectorAll<HTMLElement>(
       '[data-slot="carousel-item"]'
     );
     const elements = Array.from(nodeList);
-
     // (Optionnel) on ajoute data-index à chaque div
     elements.forEach((el, idx) => (el.dataset.index = String(idx)));
-
     setInfo({ total: elements.length, items: elements });
   }, []);
-
   return (
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Artisans et bâtiment
+            </h3>
+            <p className="font-semibold mb-0">Plombier, électricien, maçon, peintre, menuisier, carreleur, couvreur, serrurier</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <GrUserWorker className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Artisans
-                </h3>
-                <p className="font-semibold">Plombier, électricien, maçon, peintre, menuisier, carreleur, couvreur, serrurier</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -74,34 +59,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteArtisan}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%]"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
+                alt="Un peintre en bâtiment souriant dans un salon fraîchement peint, une tablette en main affichant le site de son entreprise, avec des cartes : demander un devis, voir nos réalisations et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
                 priority
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Commerçant local
+            </h3>
+            <p className="font-semibold mb-0">Restaurant, salon de coiffure, fleuriste, boulangerie, magasin de vêtements, pharmacie, opticien</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <AiOutlineShop className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Commerçant local
-                </h3>
-                <p className="font-semibold">Restaurant, salon de coiffure, fleuriste, boulangerie, magasin de vêtements, pharmacie, opticien</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -111,34 +88,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteCommercant}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une boulangère souriante derrière le comptoir de sa boulangerie, une tablette en main affichant le site de sa boutique, avec des cartes : commander en ligne, horaires d'ouverture et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Profession libérale
+            </h3>
+            <p className="font-semibold mb-0">Avocat, médecin, architecte, consultant, expert-comptable, notaire, psychologue</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <GrUserManager className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Profession libérale
-                </h3>
-                <p className="font-semibold">Avocat, médecin, architecte, consultant, expert-comptable, notaire, psychologue</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -148,34 +117,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteLiberale}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un avocat souriant dans son cabinet, une tablette en main affichant le site de son cabinet, avec des cartes : prendre rendez-vous, nos expertises et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Indépendant / Auto-entrepreneur
+            </h3>
+            <p className="font-semibold mb-0">Coach, photographe, graphiste, rédacteur, traducteur, développeur, formateur, VTC</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <GrUserFemale className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Indépendant / Auto-entrepreneur
-                </h3>
-                <p className="font-semibold">Coach, photographe, graphiste, rédacteur, traducteur, développeur, formateur, VTC</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -185,34 +146,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteIndependant}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un photographe indépendant souriant dans son studio, une tablette en main affichant son portfolio en ligne, avec des cartes : voir mon portfolio, me contacter et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Professionnel du bien-être
+            </h3>
+            <p className="font-semibold mb-0">Ostéopathe, naturopathe, esthéticienne, masseur, sophrologue, diététicien, coach sportif</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <MdOutlineHealthAndSafety className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Professionnel du bien-être
-                </h3>
-                <p className="font-semibold">Ostéopathe, naturopathe, esthéticienne, masseur, sophrologue, diététicien, coach sportif</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -222,34 +175,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteSante}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un praticien de bien-être souriant dans son cabinet lumineux, une tablette en main affichant le site de son cabinet, avec des cartes : prendre rendez-vous, nos soins et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              PME / TPE
+            </h3>
+            <p className="font-semibold mb-0">Entreprises souhaitant une présence professionnelle en ligne</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <MdOutlineMapsHomeWork className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  PME / TPE
-                </h3>
-                <p className="font-semibold">Entreprises souhaitant une présence professionnelle en ligne</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -259,34 +204,26 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SitePme}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une dirigeante de PME souriante dans son atelier-bureau, une tablette en main affichant le site de son entreprise, avec des cartes : demander un devis, notre équipe et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+              Association ou collectivité
+            </h3>
+            <p className="font-semibold mb-0">Souhaitant informer et communiquer facilement</p>
+          </div>
           <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
             <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <LuHandHelping className="h-10 w-10 text-captive-blue" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-3">
-                  Association ou collectivité
-                </h3>
-                <p className="font-semibold">Souhaitant informer et communiquer facilement</p>
-              </div>
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -296,18 +233,13 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={SiteAssociation}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[70%] w-auto"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "80%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un président d'association souriant dans une salle communautaire, une tablette en main affichant le site de son association, avec des cartes : nous rejoindre, faire un don et un aperçu de site web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
@@ -331,5 +263,4 @@ function CarouselVitrine() {
     </Carousel>
   );
 }
-
 export default CarouselVitrine;

@@ -6,64 +6,51 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import AppMetier from "@/public/images/application-web/applcation_web_application_metier.png";
-import AppCollaborative from "@/public/images/application-web/applcation_web_collaborative.png";
-import AppFormation from "@/public/images/application-web/applcation_web_formation.png";
-import AppLivraison from "@/public/images/application-web/applcation_web_livraison.png";
-import AppMarketplace from "@/public/images/application-web/applcation_web_marketplace.png";
-import AppReservation from "@/public/images/application-web/applcation_web_reservation.png";
-import AppSaas from "@/public/images/application-web/captive-web_applcation_web_introduction.png";
+import AppMetier from "@/public/images/application-web/app-metier.webp";
+import AppCollaborative from "@/public/images/application-web/app-communautaire.webp";
+import AppFormation from "@/public/images/application-web/app-elearning.webp";
+import AppLivraison from "@/public/images/application-web/app-temps-reel.webp";
+import AppMarketplace from "@/public/images/application-web/app-marketplace.webp";
+import AppReservation from "@/public/images/application-web/app-reservation.webp";
+import AppSaas from "@/public/images/application-web/app-saas.webp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsCartCheck, BsCheck } from "react-icons/bs";
-import { IoCalendarOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
-import { TbAutomation, TbDeviceDesktopAnalytics, TbSchool, TbUsersPlus } from "react-icons/tb";
-
+import { BsCheck } from "react-icons/bs";
 interface CarouselInfo {
   total: number;
   items: HTMLElement[];
 }
-
 function CarouselApp() {
   const [info, setInfo] = useState<CarouselInfo>({ total: 0, items: [] });
   const [currentIndex, setCurrentIndex] = useState(0);
-
   /* const handleNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, info.total - 1));
   };
-
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   }; */
-
   useEffect(() => {
     // Cette partie ne s’exécute que côté client
     const nodeList = document.querySelectorAll<HTMLElement>(
       '[data-slot="carousel-item"]'
     );
     const elements = Array.from(nodeList);
-
     // (Optionnel) on ajoute data-index à chaque div
     elements.forEach((el, idx) => (el.dataset.index = String(idx)));
-
     setInfo({ total: elements.length, items: elements });
   }, []);
-
   return (
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbSchool className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Plateforme E-learning
                 </h3>
-                <p>Créez votre école en ligne</p>
-              </div>
+            <p className="font-semibold mb-0">Créez votre école en ligne</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -110,34 +97,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppFormation}
-                alt="Agence Shikam publicité sur les réseaux sociaux"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
+                alt="Une formatrice souriante dans sa salle de formation, une tablette en main affichant sa plateforme e-learning, avec des cartes : cours en ligne, suivi des élèves et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
                 priority
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <BsCartCheck className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Marketplace
                 </h3>
-                <p>Votre propre place de marché</p>
-              </div>
+            <p className="font-semibold mb-0">Votre propre place de marché</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -184,34 +163,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppMarketplace}
-                alt="Interface de marketplace avec plusieurs boutiques et produits"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un fondateur de marketplace souriant dans un espace de travail, une tablette en main affichant sa place de marché, avec des cartes : plusieurs vendeurs, paiement sécurisé et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <IoCalendarOutline className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Système de réservation complexe
                 </h3>
-                <p>Automatisez la gestion des rendez-vous</p>
-              </div>
+            <p className="font-semibold mb-0">Automatisez la gestion des rendez-vous</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -258,34 +229,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppReservation}
-                alt="Interface de réservation avec calendrier et créneaux disponibles"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un gérant de centre d'activités souriant à son accueil, une tablette en main affichant son calendrier de réservation, avec des cartes : réservation en ligne, rappels automatiques et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbAutomation className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Application Métier
                 </h3>
-                <p>Digitalisez vos processus internes</p>
-              </div>
+            <p className="font-semibold mb-0">Digitalisez vos processus internes</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -332,34 +295,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppMetier}
-                alt="Dashboard d&#39;application métier avec graphiques et données"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une responsable logistique souriante dans son bureau d'entrepôt, une tablette en main affichant son application métier, avec des cartes : rapports automatiques, équipes connectées et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <IoChatboxEllipsesOutline className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Applications temps réel
                 </h3>
-                <p>Interaction instantanée</p>
-              </div>
+            <p className="font-semibold mb-0">Interaction instantanée</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -406,34 +361,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppLivraison}
-                alt="Interface d&#39;application temps réel avec chat et notifications"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Un responsable de service de livraison souriant devant sa camionnette, un smartphone en main affichant une application en temps réel, avec des cartes : messagerie en direct, notifications instantanées et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbDeviceDesktopAnalytics className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Solutions SaaS
                 </h3>
-                <p>Votre logiciel accessible partout</p>
-              </div>
+            <p className="font-semibold mb-0">Votre logiciel accessible partout</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -480,34 +427,26 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppSaas}
-                alt="Interface SaaS avec dashboard et options d&#39;abonnement"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une fondatrice de start-up souriante devant son ordinateur affichant son application SaaS, avec des cartes : abonnements récurrents, espace client et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
-              <div className="lg:mb-12 my-6">
-                <div className="bg-white p-1 inline-block rounded-md">
-                  <TbUsersPlus className="h-10 w-10 text-captive-ciel" />
-                </div>
-                <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary">
+          <div className="mb-8 lg:mb-10">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Plateforme communautaire
                 </h3>
-                <p>Fédérez votre communauté</p>
-              </div>
+            <p className="font-semibold mb-0">Fédérez votre communauté</p>
+          </div>
+          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
+            <div className="lg:w-1/2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -554,18 +493,13 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center">
+            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
               <Image
                 src={AppCollaborative}
-                alt="Interface de réseau social avec feed et profils utilisateurs"
-                className="object-contain lg:w-[80%] w-full"
-                width={800}
-                height={600}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                priority
+                alt="Une animatrice de communauté souriante dans un centre associatif, une tablette en main affichant sa plateforme communautaire, avec des cartes : profils des membres, fil d'actualité et un aperçu d'application web"
+                className="aspect-[4/5] w-full max-w-sm rounded-2xl object-cover"
+                sizes="(min-width: 1024px) 30vw, 80vw"
+                loading="lazy"
               />
             </div>
           </div>
@@ -589,5 +523,4 @@ function CarouselApp() {
     </Carousel>
   );
 }
-
 export default CarouselApp;
