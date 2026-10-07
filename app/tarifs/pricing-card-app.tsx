@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { motion, useInView, Variants } from "framer-motion";
 import { Check } from "lucide-react";
+import { AppWindow } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 
 
@@ -77,27 +78,32 @@ export function PricingCardApp() {
           >
             <div>
               <CardHeader className="p-0">
-                <div className="flex items-start justify-between">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-captive-ciel text-white">
+                    <AppWindow className="h-6 w-6" weight="bold" />
+                  </span>
                   <div>
-                    <CardTitle className="text-3xl font-bold text-captive-secondary">
-                      Application web 
+                    <CardTitle className="text-xl leading-tight font-bold text-captive-secondary">
+                      Application sur mesure
                     </CardTitle>
-                    <CardDescription className="mt-2">
-                      Création de votre application web sur mesure
+                    <CardDescription className="mt-1 text-sm leading-snug">
+                      TPE/PME aux besoins sur mesure
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
-              <motion.div className="mt-6 space-y-8" variants={itemVariants}>
-                <div>
-                  <span className="block text-sm">Tarif :</span>
-                  <div className="flex items-baseline">
-                    <span className="text-3xl font-semibold text-captive-secondary">
-                      Sur devis
-                    </span>
-                  </div>
+              <motion.div className="mt-7" variants={itemVariants}>
+                <div className="border-y border-captive-secondary/15 py-6">
+                  <span className="block text-sm text-neutral-900/60">
+                    Tarif
+                  </span>
+                  <span className="block text-5xl font-bold tracking-tight text-captive-secondary">
+                    Sur devis
+                  </span>
                 </div>
-                <p className="text-sm">Contactez-nous pour un audit gratuit de vos besoins et un devis personnalisé.</p>
+                <p className="mt-6 mb-0 text-sm">
+                  Contactez-nous pour un audit gratuit de vos besoins et un devis personnalisé.
+                </p>
               </motion.div>
             </div>
           </motion.div>

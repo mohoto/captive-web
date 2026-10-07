@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { PricingCardApp } from "./pricing-card-app";
 import { PricingCardEcom } from "./pricing-card-ecom";
 import { PricingCardVitrine } from "./pricing-card-vitrine";
+import { PricingOptions } from "./pricing-options";
 
 export const metadata: Metadata = {
   title: "Tarifs Création Site Web | Prix Transparent - Captive Web",
@@ -14,6 +15,7 @@ function Page() {
       <PricingCardVitrine />
       <PricingCardEcom />
       <PricingCardApp />
+      <PricingOptions />
     </section>
   );
 }

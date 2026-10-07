@@ -1,23 +1,25 @@
 "use client";
 
 import { PricingCard } from "@/components/blocks/pricing-card";
+import { Basket } from "@phosphor-icons/react";
 
 export function PricingCardEcom() {
   return (
     <PricingCard
       title="Site e-commerce"
-      description="Création de votre site web vitrine en moins de 15 jours"
+      description="Commerçants et marques qui vendent en ligne"
+      highlight="Livré en 7 jours"
+      icon={Basket}
+      iconTone="bg-captive-violet/10 text-captive-violet"
       price="590"
-      note="OFFERT : configuration de votre compte Google My Business pour aumente votre visibilité dans les recherches locales sur Google."
       features={[
         {
           title: "Inclus",
           items: [
-            "4 pages : page d'accueil, pages catégories, page produit, page panier",
-            "Référencement du nom de votre entreprise sur Google",
-            "Formation sur Shopify pour la gestion de votre boutique",
-            "Formulaire de contact",
-            "Configuration de la plateforme shopify",
+            "Site adapté à votre activité et à vos couleurs",
+            "4 pages : accueil, catégories, produit, panier",
+            "Configuration Shopify incluses",
+            "Référencement de votre site sur Google",
           ],
         },
         {

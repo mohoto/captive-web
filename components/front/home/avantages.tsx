@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Image, { type StaticImageData } from "next/image";
-import Link from "next/link";
 import * as React from "react";
 
 import ArtisansImage from "@/public/images/home/secteurs/secteur-artisans.webp";
@@ -31,13 +30,13 @@ const secteurs: Secteur[] = [
   {
     title: "Artisans et bâtiment",
     image: ArtisansImage,
-    alt: "Quatre artisans du bâtiment : un plombier, un chauffagiste, une paysagiste et un couvreur, avec des boutons d'action incrustés",
+    alt: "Un électricien souriant devant un tableau électrique ouvert, une tablette en main affichant le site de son entreprise, avec des cartes : prendre rendez-vous, demander un devis et un aperçu de site web",
     activites: [
+      "Électricien",
       "Plombier",
+      "Couvreur",
       "Chauffagiste",
       "Paysagiste",
-      "Couvreur",
-      "Électricien",
       "Maçon",
       "Peintre en bâtiment",
       "Menuisier",
@@ -47,7 +46,7 @@ const secteurs: Secteur[] = [
   {
     title: "Commerces et e-commerce",
     image: CommercesImage,
-    alt: "Quatre commerçants : une fleuriste, une gérante de boutique de mode, un caviste et une libraire, avec des boutons d'action incrustés",
+    alt: "Une fleuriste souriante dans sa boutique, une tablette en main affichant le site de sa boutique de fleurs, avec des cartes : commander en ligne, livraison à domicile et un aperçu de site web",
     activites: [
       "Fleuriste",
       "Boutique de mode",
@@ -62,7 +61,7 @@ const secteurs: Secteur[] = [
   {
     title: "Restauration et hôtellerie",
     image: RestaurationImage,
-    alt: "Quatre professionnels de la restauration et de l'hôtellerie : un restaurateur, un boulanger, une traiteur et une gérante de chambres d'hôtes, avec des boutons d'action incrustés",
+    alt: "Un restaurateur souriant dans son bistro, une tablette en main affichant le site de son restaurant, avec des cartes : réserver une table, voir la carte et un aperçu de site web",
     activites: [
       "Restaurant",
       "Boulangerie",
@@ -77,7 +76,7 @@ const secteurs: Secteur[] = [
   {
     title: "Santé et bien-être",
     image: SanteImage,
-    alt: "Quatre praticiens de santé et de bien-être : une kinésiologue, un ostéopathe, une psychologue et une infirmière libérale, avec des boutons d'action incrustés",
+    alt: "Une kinésiologue souriante dans son cabinet lumineux, une tablette en main affichant le site de son cabinet, avec des cartes : prendre rendez-vous, nos soins et un aperçu de site web",
     activites: [
       "Kinésiologue",
       "Ostéopathe",
@@ -92,11 +91,11 @@ const secteurs: Secteur[] = [
   {
     title: "Beauté et services à la personne",
     image: BeauteImage,
-    alt: "Quatre professionnels de la beauté : un coiffeur, une esthéticienne, un barbier et une prothésiste ongulaire, avec des boutons d'action incrustés",
+    alt: "Un barbier souriant dans son salon, une tablette en main affichant le site de son salon, avec des cartes : réserver un créneau, nos prestations et un aperçu de site web",
     activites: [
+      "Barbier",
       "Coiffeur",
       "Esthéticienne",
-      "Barbier",
       "Onglerie",
       "Garde d'enfants",
       "Aide à domicile",
@@ -105,11 +104,11 @@ const secteurs: Secteur[] = [
   {
     title: "Professions libérales et conseil",
     image: ProfessionsImage,
-    alt: "Quatre professions libérales : une avocate, un expert-comptable, une architecte et un agent immobilier, avec des boutons d'action incrustés",
+    alt: "Une architecte souriante dans son agence, une tablette en main affichant le site de son cabinet, avec des cartes : demander un devis, voir nos réalisations et un aperçu de site web",
     activites: [
+      "Architecte",
       "Avocat",
       "Expert-comptable",
-      "Architecte",
       "Agent immobilier",
       "Notaire",
       "Consultant",
@@ -120,10 +119,10 @@ const secteurs: Secteur[] = [
   {
     title: "Formation et sport",
     image: FormationImage,
-    alt: "Quatre professionnels de la formation et du sport : un moniteur d'auto-école, un coach sportif, une formatrice et un professeur particulier, avec des boutons d'action incrustés",
+    alt: "Un coach sportif souriant dans une salle de sport, une tablette en main affichant le site de ses coachings, avec des cartes : réserver une séance, nos programmes et un aperçu de site web",
     activites: [
-      "Auto-école",
       "Coach sportif",
+      "Auto-école",
       "Centre de formation",
       "Cours particuliers",
       "Salle de sport",
@@ -133,7 +132,7 @@ const secteurs: Secteur[] = [
   {
     title: "Associations et événementiel",
     image: AssociationsImage,
-    alt: "Quatre acteurs de l'associatif et de l'événementiel : une présidente d'association, une wedding planner, un DJ et un organisateur d'événements, avec des boutons d'action incrustés",
+    alt: "Une présidente d'association souriante dans une salle communautaire, une tablette en main affichant le site de son association, avec des cartes : nous rejoindre, voir l'agenda et un aperçu de site web",
     activites: [
       "Association",
       "Wedding planner",
@@ -163,8 +162,13 @@ function Avantages() {
   const secteur = secteurs[current];
 
   return (
-    <section className="bg-captive-secondary px-8 py-20 lg:px-32 lg:py-28">
-      <div className="container mx-auto">
+    <section className="relative bg-captive-secondary px-8 py-20 lg:px-32 lg:py-28">
+      {/* Même fond dégradé que la section Hero */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[1000px] max-h-full bg-gradient-to-b from-captive-secondary-hover/40 via-captive-secondary to-captive-secondary"
+        aria-hidden="true"
+      />
+      <div className="container relative mx-auto">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-start lg:gap-20">
           <div className="lg:sticky lg:top-28">
             <h2 className="max-w-2xl text-white">
@@ -173,8 +177,7 @@ function Avantages() {
             </h2>
             <p className="mt-4 max-w-xl text-lg text-white/70">
               Quel que soit votre métier, nous concevons le site qui vous
-              correspond. Faites défiler les domaines : voici des exemples
-              d&apos;activités pour lesquelles un site web fait la différence.
+              correspond.
             </p>
           </div>
 
@@ -187,13 +190,13 @@ function Avantages() {
               <CarouselContent>
                 {secteurs.map((s, index) => (
                   <CarouselItem key={s.title}>
-                    <h3 className="mb-4 text-xl font-semibold text-white sm:text-2xl">
+                    <h3 className="mb-4 text-xl leading-tight font-bold tracking-tight text-white sm:text-2xl">
                       {s.title}
                     </h3>
                     <Image
                       src={s.image}
                       alt={s.alt}
-                      className="aspect-[3/4] h-auto w-full rounded-2xl object-cover"
+                      className="aspect-[4/5] h-auto w-full rounded-2xl object-cover"
                       sizes="(min-width: 1024px) 34vw, 90vw"
                       priority={false}
                       loading={index === 0 ? "eager" : "lazy"}
@@ -251,14 +254,7 @@ function Avantages() {
 
             <p className="mt-10 mb-0 max-w-xl text-white/70">
               Votre activité n&apos;est pas dans la liste ? Elle mérite aussi
-              son site :{" "}
-              <Link
-                href="/contact"
-                className="font-semibold text-white underline decoration-captive-ciel decoration-2 underline-offset-4 transition-colors hover:text-captive-ciel"
-              >
-                parlons de votre projet
-              </Link>
-              .
+              son site.
             </p>
           </div>
         </div>

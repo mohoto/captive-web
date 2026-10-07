@@ -22,8 +22,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 import { useState } from "react";
-import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { RiWhatsappFill } from "react-icons/ri";
+import { IoMdArrowForward, IoMdClose, IoMdMenu } from "react-icons/io";
+import { WhatsappLogo } from "@phosphor-icons/react";
+
+const mobileLinks = [
+  { href: "/", label: "Accueil" },
+  { href: "/site-vitrine", label: "Site vitrine" },
+  { href: "/e-commerce", label: "Site e-commerce" },
+  { href: "/application-web", label: "Application sur mesure" },
+  { href: "/tarifs", label: "Tarifs" },
+  { href: "/contact", label: "Nous contacter" },
+];
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -107,7 +116,7 @@ export default function NavbarTwo() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link href="/application-web">APPLICATION WEB</Link>
+                  <Link href="/application-web">APPLICATION SUR MESURE</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -138,66 +147,69 @@ export default function NavbarTwo() {
               <DrawerTrigger>
                 <IoMdMenu className="h-8 w-8" />
               </DrawerTrigger>
-              <DrawerContent>
-                <DrawerHeader>
-                  <DrawerTitle className="flex justify-end">
-                    <DrawerClose asChild>
-                      <IoMdClose className="h-8 w-8" />
-                    </DrawerClose>
+              <DrawerContent className="data-[vaul-drawer-direction=right]:w-full data-[vaul-drawer-direction=right]:sm:max-w-none">
+                <DrawerHeader className="flex-row items-center justify-between border-b px-6 py-4">
+                  <DrawerTitle asChild>
+                    <Link href="/" onClick={() => setOpenMenu(false)}>
+                      <CaptiveLogo className="w-24 fill-captive-secondary" />
+                    </Link>
                   </DrawerTitle>
+                  <DrawerClose
+                    aria-label="Fermer le menu"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-captive-primary text-captive-secondary"
+                  >
+                    <IoMdClose className="h-6 w-6" />
+                  </DrawerClose>
                 </DrawerHeader>
-                <div className="px-4 flex flex-col text-lg gap-y-3">
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
+                <nav className="flex flex-1 flex-col overflow-y-auto px-6 py-4">
+                  {mobileLinks.map(({ href, label }) => {
+                    const active = pathname === href;
+                    return (
+                      <Link
+                        key={href}
+                        href={href}
+                        onClick={() => setOpenMenu(false)}
+                        className={cn(
+                          "flex items-center justify-between border-b py-5 text-xl font-semibold transition-colors",
+                          active
+                            ? "text-captive-blue"
+                            : "text-captive-secondary active:text-captive-blue"
+                        )}
+                      >
+                        {label}
+                        <IoMdArrowForward className="h-5 w-5 opacity-50" />
+                      </Link>
+                    );
+                  })}
+                </nav>
+                <div className="border-t px-6 py-5">
+                  <Link
+                    href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2.5 rounded-full bg-captive-secondary px-6 py-4 text-lg font-semibold text-white"
                   >
-                    <Link href="/">Accueil</Link>
-                  </div>
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    <Link href="/site-vitrine">Site vitrine</Link>
-                  </div>
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    <Link href="/e-commerce">Site e-commerce</Link>
-                  </div>
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    <Link href="/application-web">Application web</Link>
-                  </div>
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    <Link href="/tarifs">Tarifs</Link>
-                  </div>
-                  <div
-                    className="hover:bg-captive-primary focus:bg-captive-primary rounded-md p-2"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    <Link href="/contact">Nous contacter</Link>
-                  </div>
+                    <WhatsappLogo className="h-6 w-6 text-green-400" weight="fill" />
+                    Discuter sur WhatsApp
+                  </Link>
+                  <p className="mt-3 mb-0 text-center text-sm text-neutral-900/60">
+                    Devis gratuit et réponse rapide.
+                  </p>
                 </div>
               </DrawerContent>
             </Drawer>
           </div>
         )}
         <div className="order-2 lg:order-3">
-          <button className="group text-shikam-normal border-shikam-normal px-8 py-3 rounded-full border-2 bg-captive-primary hover:bg-green-700 hover:text-white transition-all duration-75 ease-in-out">
-            <Link
-              href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
-              className="flex gap-2 items-center text-lg font-semibold group-hover:text-white"
-            >
-              <RiWhatsappFill className="h-8 w-8 text-green-700 group-hover:text-white" />
-              WhatsApp
-            </Link>
-          </button>
+          <Link
+            href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-captive-secondary px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors duration-200 hover:bg-captive-secondary-hover sm:px-5 sm:text-base"
+          >
+            <WhatsappLogo className="h-5 w-5 text-green-400 sm:h-6 sm:w-6" weight="fill" />
+            WhatsApp
+          </Link>
         </div>
       </nav>
     </header>

@@ -1,8 +1,8 @@
 import {
   ArrowRight,
+  AppWindow,
   Basket,
   Check,
-  DeviceMobile,
   Monitor,
 } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
@@ -11,7 +11,7 @@ const offres = [
   {
     icon: Monitor,
     title: "Site web vitrine",
-    cible: "Artisans, indépendants et professions libérales",
+    cible: "Artisans, indépendants, professions libérales et TPE/PME",
     price: "590\u00a0€",
     priceLabel: "À partir de",
     href: "/site-vitrine",
@@ -42,14 +42,15 @@ const offres = [
     ],
   },
   {
-    icon: DeviceMobile,
-    title: "Application web",
+    icon: AppWindow,
+    title: "Application sur mesure",
     cible: "TPE/PME aux besoins sur mesure",
     price: "Sur devis",
     priceLabel: "Tarif",
     href: "/application-web",
     dark: false,
-    iconColor: "text-captive-blue",
+    iconBg: "bg-captive-ciel",
+    iconColor: "text-white",
     features: [
       "Plateforme e-learning, marketplace, SaaS",
       "Système de réservation ou de planning",
@@ -91,7 +92,7 @@ function PricingWebSite() {
                 <div className="flex items-center gap-4">
                   <span
                     className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
-                      dark ? "bg-white" : "bg-captive-blue/10"
+                      dark ? "bg-white" : offre.iconBg ?? "bg-captive-blue/10"
                     }`}
                   >
                     <Icon className={`h-6 w-6 ${offre.iconColor}`} weight="bold" />

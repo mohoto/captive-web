@@ -1,28 +1,33 @@
 "use client";
 
 import { PricingCard } from "@/components/blocks/pricing-card";
+import { Monitor } from "@phosphor-icons/react";
 
 export function PricingCardVitrine() {
   return (
     <PricingCard
       title="Site web vitrine"
-      description="Création de votre site web vitrine en moins de 15 jours"
+      description="Artisans, indépendants, professions libérales et TPE/PME"
+      highlight="Livré en 7 jours"
+      icon={Monitor}
       price="590"
-      note="OFFERT : configuration de votre compte Google My Business pour aumente votre visibilité dans les recherches locales sur Google."
       features={[
         {
           title: "Inclus",
           items: [
-            "5 pages statiques : Page accueil, à propos, 3 pages services",
-            "Référencement du nom de votre entreprise sur Google",
-            "Configuration des éléments techniques : nom de domaine, hébergement, sécurité (HTTPS)",
+            "Site adapté à votre activité et à vos couleurs",
+            "5 pages statiques : accueil, à propos, 3 pages services",
             "Formulaire de contact",
-            "Mise en ligne",
+            "Nom de domaine et hébergement pour la première année",
+            "Référencement de votre site sur Google",
           ],
         },
         {
           title: "A votre charge",
-          items: ["Nom de domaine : 10\u00a0€/an", "Hébergement Wordpress : 40 €/an"],
+          items: [
+            "À partir de la 2e année : nom de domaine 10\u00a0€/an",
+            "À partir de la 2e année : hébergement WordPress 40\u00a0€/an",
+          ],
         },
       ]}
       buttonText="Get Started"
