@@ -13,6 +13,8 @@ export type PricingOption = {
   included?: boolean;
   /** Reste dans la grille /tarifs mais n'est pas proposée dans le devis. */
   hideInQuote?: boolean;
+  /** Toujours proposée dans le devis, même si elle n'est pas recommandée. */
+  alwaysShow?: boolean;
   /** Option commandable en plusieurs exemplaires (ex. articles de blog). */
   unit?: string;
   /** Options incompatibles : choisir celle-ci retire les autres. */
@@ -41,7 +43,9 @@ export const projects: Record<
 
 export const wordpressGroups: OptionGroup[] = [
   { id: "contact", title: "Contact et formulaires", question: "Quels moyens de contact voulez-vous proposer à vos clients ?" },
+  { id: "pages", title: "Pages supplémentaires", question: "Avez-vous plus de 3 services à présenter ?" },
   { id: "reservation", title: "Réservation", question: "Vos clients doivent-ils pouvoir réserver en ligne ?" },
+  { id: "commande", title: "Commande en ligne", question: "Vos clients doivent-ils pouvoir commander en ligne, à livrer ou à emporter ?" },
   { id: "avis", title: "Avis clients", question: "Voulez-vous afficher les avis de vos clients ?" },
   { id: "langues", title: "Langues", question: "Votre site doit-il être disponible dans d'autres langues ?" },
   { id: "communication", title: "Newsletter et promotions", question: "Voulez-vous garder le contact et annoncer vos offres ?" },
@@ -51,8 +55,10 @@ export const wordpressGroups: OptionGroup[] = [
 
 export const wordpressOptions: PricingOption[] = [
   { id: "wp-telephone", group: "contact", name: "Contact par téléphone", description: "Numéro cliquable et bouton « Appeler » : vos clients vous joignent en un appel", price: 0, included: true },
+  { id: "wp-page", group: "pages", alwaysShow: true, name: "Page supplémentaire", description: "Au-delà des 3 pages de services incluses : une page dédiée (service, formation, plat…)", price: 30, unit: "page" },
   { id: "wp-reservation", group: "reservation", name: "Réservation en ligne", description: "Formulaire de réservation en ligne (rendez-vous, table, séance) avec créneaux et e-mails de confirmation", price: 140, excludes: ["wp-reservation-acompte"] },
   { id: "wp-reservation-acompte", group: "reservation", name: "Réservation avec acompte", description: "Réservation + paiement en ligne (Stripe / PayPal)", price: 280, excludes: ["wp-reservation"] },
+  { id: "wp-commande", group: "commande", name: "Commande en ligne (livraison ou à emporter)", description: "Module de commande : carte en ligne, livraison ou à emporter, créneaux, paiement en ligne, notification des commandes", price: 290 },
   { id: "wp-formulaire", group: "contact", name: "Formulaire de contact avancé", description: "Champs personnalisés, pièces jointes, anti-spam", price: 60, excludes: ["wp-devis"] },
   { id: "wp-devis", group: "contact", name: "Formulaire de devis élaboré", description: "Demande de devis en plusieurs étapes", price: 160, excludes: ["wp-formulaire"] },
   { id: "wp-whatsapp", group: "contact", name: "Bouton WhatsApp", description: "Bouton flottant avec message pré-rempli", price: 40 },
@@ -73,27 +79,22 @@ export const shopifyGroups: OptionGroup[] = [
   { id: "paiement", title: "Paiement et international", question: "Quelles facilités de paiement ou de vente à l'étranger voulez-vous ?" },
   { id: "avis", title: "Avis clients", question: "Voulez-vous rassurer vos acheteurs avec des avis vérifiés ?" },
   { id: "fidelite", title: "Fidélisation", question: "Comment voulez-vous faire revenir vos clients ?" },
-  { id: "visibilite", title: "Visibilité", question: "Comment voulez-vous faire connaître votre boutique ?" },
   { id: "catalogue", title: "Catalogue", question: "Avez-vous déjà des produits à importer ?" },
 ];
 
 export const shopifyOptions: PricingOption[] = [
   { id: "sh-avis", group: "avis", name: "Avis clients", description: "Étoiles et avis vérifiés sur les fiches produit", price: 90 },
-  { id: "sh-paniers", group: "panier", name: "Paniers abandonnés", description: "E-mails de relance automatiques", price: 140 },
-  { id: "sh-upsell", group: "panier", name: "Ventes additionnelles", description: "Produits complémentaires et packs au panier", price: 140 },
+  { id: "sh-upsell", group: "panier", name: "Ventes additionnelles", description: "Packs, offres au panier et produits complémentaires (application dédiée)", price: 140 },
   { id: "sh-fidelite", group: "fidelite", name: "Programme de fidélité", description: "Points, récompenses, parrainage", price: 180 },
-  { id: "sh-abonnement", group: "types", name: "Abonnement produit", description: "Vente récurrente (ex. mensuelle)", price: 210 },
-  { id: "sh-precommande", group: "types", name: "Précommande", description: "Vente avant stock + alerte retour en stock", price: 110 },
+  { id: "sh-abonnement", group: "types", name: "Abonnement produit", description: "Plans d'abonnement (ex. mensuel), gestion et e-mails dédiés", price: 210 },
+  { id: "sh-precommande", group: "types", name: "Précommande", description: "Parcours complet : message, date de livraison, alerte retour en stock", price: 110 },
   { id: "sh-perso", group: "types", name: "Produit personnalisable", description: "Gravure, texte, options au choix", price: 180 },
-  { id: "sh-livraison", group: "livraison", name: "Livraison avancée", description: "Zones, tarifs au poids, Colissimo / Mondial Relay", price: 140 },
-  { id: "sh-retrait", group: "livraison", name: "Retrait en magasin", description: "Click & collect avec créneaux", price: 110 },
-  { id: "sh-paiement", group: "paiement", name: "Paiement en plusieurs fois", description: "Alma / Klarna / PayPal 4x", price: 60 },
-  { id: "sh-devises", group: "paiement", name: "Multi-devises", description: "Prix et taxes par pays", price: 180 },
-  { id: "sh-cartes", group: "types", name: "Cartes cadeaux", description: "Configuration + e-mail personnalisé", price: 60 },
+  { id: "sh-livraison", group: "livraison", name: "Configuration de la livraison", description: "Tarifs par zone et au poids, étiquettes et points relais Colissimo / Mondial Relay (Shopify Shipping)", price: 90 },
+  { id: "sh-paiement", group: "paiement", name: "Paiement en plusieurs fois", description: "Activation et intégration d'Alma / Klarna / PayPal 4x", price: 60 },
+  { id: "sh-devises", group: "paiement", name: "Multi-devises", description: "Marchés internationaux : prix, taxes et devises par pays", price: 120 },
   { id: "sh-emailing", group: "fidelite", name: "Pack e-mailing", description: "Bienvenue, post-achat, newsletter (Klaviyo)", price: 210 },
-  { id: "sh-google", group: "visibilite", name: "Google Shopping + Meta Shop", description: "Catalogue connecté + pixels de suivi", price: 140 },
-  { id: "sh-blog", group: "visibilite", hideInQuote: true, name: "Blog boutique", description: "Mise en page + SEO des articles", price: 90 },
-  { id: "sh-import", group: "catalogue", name: "Import de produits (≤ 100)", description: "Import CSV et optimisation des fiches", price: 140 },
+  { id: "sh-blog", group: "panier", hideInQuote: true, name: "Blog boutique", description: "Mise en page + SEO des articles", price: 90 },
+  { id: "sh-import", group: "catalogue", name: "Import de produits (≤ 100)", description: "Import CSV, nettoyage et optimisation des fiches produit", price: 140 },
 ];
 
 export const quoteCatalog = (list: PricingOption[]) => list.filter((o) => !o.hideInQuote);

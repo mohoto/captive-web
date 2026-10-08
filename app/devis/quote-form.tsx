@@ -14,6 +14,7 @@ import {
 } from "@/lib/pricing";
 import { catalogOf, existingSiteChoices, hasSectorRules, type Recommendation } from "@/lib/recommend";
 import { OTHER_JOB, domainsFor } from "@/lib/activities";
+import { orderLabelFor, pageKindFor } from "@/lib/sectors";
 import { cn } from "@/lib/utils";
 import {
   ArrowLeft,
@@ -63,8 +64,36 @@ type Step =
   | { kind: "contact" }
   | { kind: "recap" };
 
+// Libellés des pages supplémentaires adaptés au domaine (services, formations, plats…).
+function withPageLabels(options: PricingOption[], groups: OptionGroup[], domain?: string, job?: string) {
+  const kind = pageKindFor(domain, job);
+  return {
+    groups: groups.map((g) =>
+      g.id === "pages"
+        ? { ...g, question: `Avez-vous plus de 3 ${kind.plural} à présenter ?` }
+        : g
+    ),
+    options: options.map((o) =>
+      o.id === "wp-commande" && orderLabelFor(job) ? { ...o, ...orderLabelFor(job) } : o
+    ).map((o) =>
+      o.id === "wp-page"
+        ? {
+            ...o,
+            name: `Page supplémentaire (${kind.singular})`,
+            description: `Votre offre inclut 3 pages de services. Ajoutez une page dédiée par ${kind.singular} en plus. Exemples de pages : ${kind.examples}.`,
+          }
+        : o
+    ),
+  };
+}
+
+// « Nombre d'articles », « Nombre de pages » (élision devant une voyelle).
+const nombreDe = (unit: string) => (/^[aeiouyhéèêàâîôû]/i.test(unit) ? `d'${unit}s` : `de ${unit}s`);
+
 function catalogFor(project: ProjectType | null, domain?: string, job?: string) {
-  if (project === "vitrine") return { groups: wordpressGroups, options: catalogOf("vitrine", domain, job) };
+  if (project === "vitrine") {
+    return withPageLabels(catalogOf("vitrine", domain, job), wordpressGroups, domain, job);
+  }
   if (project === "ecommerce") return { groups: shopifyGroups, options: catalogOf("ecommerce", domain, job) };
   return { groups: [] as OptionGroup[], options: [] as PricingOption[] };
 }
@@ -98,7 +127,7 @@ export function QuoteForm() {
   // celles retenues par l'analyse. Les options pertinentes sont présélectionnées.
   const sectorKnown = !!project && !!domain && hasSectorRules(project, domain.label);
   const hasRecs = Object.keys(recs).length > 0;
-  const isVisible = (o: PricingOption) => sectorKnown || !hasRecs || !!recs[o.id];
+  const isVisible = (o: PricingOption) => sectorKnown || !hasRecs || !!recs[o.id] || !!o.alwaysShow;
   const steps: Step[] = [
     { kind: "project" },
     { kind: "site" },
@@ -504,11 +533,11 @@ export function QuoteForm() {
                       </button>
                       {active && option.unit && (
                         <div className="mt-3 flex items-center justify-end gap-3 text-sm">
-                          <span className="text-neutral-900/60">Nombre d&apos;{option.unit}s</span>
+                          <span className="text-neutral-900/60">Nombre {nombreDe(option.unit)}</span>
                           <div className="flex items-center gap-2">
                             <button
                               type="button"
-                              aria-label={`Retirer un(e) ${option.unit}`}
+                              aria-label={`Retirer : ${option.unit}`}
                               onClick={() => setQuantity(option, -1)}
                               className="flex h-9 w-9 items-center justify-center rounded-full border border-captive-secondary/25"
                             >
@@ -517,7 +546,7 @@ export function QuoteForm() {
                             <span className="w-6 text-center font-semibold" aria-live="polite">{qty}</span>
                             <button
                               type="button"
-                              aria-label={`Ajouter un(e) ${option.unit}`}
+                              aria-label={`Ajouter : ${option.unit}`}
                               onClick={() => setQuantity(option, 1)}
                               className="flex h-9 w-9 items-center justify-center rounded-full border border-captive-secondary/25"
                             >

@@ -38,6 +38,7 @@ const offres = [
       "Site adapté à votre activité et à vos couleurs",
       "4 pages : accueil, catégories, produit, panier",
       "Configuration Shopify incluses",
+      "Configuration des cartes cadeaux",
       "Référencement de votre site sur Google",
     ],
   },
