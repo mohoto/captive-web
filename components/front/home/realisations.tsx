@@ -39,13 +39,13 @@ function Realisations() {
   return (
     <section className="bg-captive-primary px-8 py-20 lg:px-32 lg:py-28">
       <div className="container mx-auto">
-        <div className="mb-12 grid items-end gap-4 lg:mb-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="mb-12 lg:mb-16">
           <h2 className="mb-0 max-w-2xl">
             Des sites web faits{" "}
             <span className="text-captive-blue">sur mesure</span> pour chaque
             client
           </h2>
-          <p className="mb-0 max-w-md text-lg text-neutral-900/70">
+          <p className="mt-4 mb-0 max-w-xl text-lg text-neutral-900/70">
             Voici quelques sites que nous avons conçus et mis en ligne.
             Cliquez pour les visiter en direct.
           </p>
