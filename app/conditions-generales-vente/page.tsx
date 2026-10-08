@@ -80,7 +80,7 @@ export default function Page() {
                     <div className="rounded-xl border-l-4 border-amber-400 bg-amber-50 p-4">
                         <h3 className="mb-2 text-lg font-semibold text-amber-900">4.3 Acompte</h3>
                         <p className="text-amber-900 leading-relaxed">
-                            Un acompte représentant <strong>1/3 du montant total du devis</strong> sera exigible après signature du devis. Aucun travail ne sera entrepris avant réception de cet acompte.
+                            Un acompte représentant <strong>50 % du montant total du devis</strong> sera exigible à l&#39;acceptation du devis. Aucun travail ne sera entrepris avant réception de cet acompte.
                         </p>
                     </div>
                 </div>
@@ -100,13 +100,12 @@ export default function Page() {
                         <p className="text-neutral-900/80 leading-relaxed mb-2">Les paiements s&#39;effectuent selon l&#39;échéancier suivant :</p>
                         <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
                             <ul className="space-y-2 text-neutral-900/80">
-                                <li className="flex items-center"><span className="w-8 h-8 shrink-0 bg-captive-blue text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>1/3 à la commande (acompte)</li>
-                                <li className="flex items-center"><span className="w-8 h-8 shrink-0 bg-captive-blue text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>1/3 à la validation de la maquette/prototype</li>
-                                <li className="flex items-center"><span className="w-8 h-8 shrink-0 bg-captive-blue text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>1/3 à la livraison du site</li>
+                                <li className="flex items-center"><span className="w-8 h-8 shrink-0 bg-captive-blue text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>50 % à l&#39;acceptation du devis (acompte)</li>
+                                <li className="flex items-center"><span className="w-8 h-8 shrink-0 bg-captive-blue text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>50 % à la livraison du site</li>
                             </ul>
                         </div>
                         <p className="text-neutral-900/80 leading-relaxed mt-3">
-                            Le paiement est immédiat, par virement bancaire ou chèque, par virement bancaire ou chèque.
+                            Le paiement est immédiat, par virement bancaire ou chèque.
                         </p>
                     </div>
                     <div>
