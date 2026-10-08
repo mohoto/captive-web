@@ -52,11 +52,8 @@ function Realisations() {
         </div>
 
         <ul className="m-0 grid list-none gap-8 p-0 lg:grid-cols-3 lg:gap-7">
-          {realisations.map((realisation, index) => (
-            <li
-              key={realisation.name}
-              className={index === 1 ? "lg:mt-10" : undefined}
-            >
+          {realisations.map((realisation) => (
+            <li key={realisation.name}>
               <a
                 href={realisation.href}
                 target="_blank"
