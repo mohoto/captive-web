@@ -218,7 +218,7 @@ function Page() {
             <span className="text-captive-ciel">activité</span> ?
           </>
         }
-        description="Contactez-nous pour discuter de votre projet. Nous réaliserons un site vitrine qui mettra en valeur vos services et vous aidera à attirer de nouveaux clients."
+        description="Obtenez une estimation en quelques questions. Nous réaliserons un site vitrine qui mettra en valeur vos services et vous aidera à attirer de nouveaux clients."
       />
     </>
   );

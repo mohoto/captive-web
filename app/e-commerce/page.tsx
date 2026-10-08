@@ -205,7 +205,7 @@ function Page() {
             <span className="text-captive-ciel">e&#8209;commerce</span> ?
           </>
         }
-        description="Contactez-nous pour discuter de votre projet. Nous vous guiderons de A à Z pour que votre boutique Shopify reflète votre image et vous aide à atteindre vos objectifs."
+        description="Obtenez une estimation en quelques questions. Nous vous guiderons de A à Z pour que votre boutique Shopify reflète votre image et vous aide à atteindre vos objectifs."
       />
     </>
   );

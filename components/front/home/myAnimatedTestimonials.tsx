@@ -13,12 +13,28 @@ import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 
 const testimonials = [
+// Les 3 sites présentés dans « Des sites web faits sur mesure pour chaque client » en premier
   {
     quote:
       "Nous avions besoin d’un site élégant et facile à utiliser pour lancer notre marque. Le résultat est au-delà de nos attentes ! Design moderne, parcours client fluide… Nos clientes adorent. Merci pour cet accompagnement de A à Z. ",
     name: "SIAY",
     designation: "Vente en ligne de vêtements",
     src: LogoSiay,
+  },
+  {
+    quote:
+      "Nous voulions un site clair pour présenter nos formations et permettre aux futurs élèves de nous contacter facilement. Le résultat est professionnel, rapide et rassurant. Merci pour votre écoute et votre réactivité tout au long du projet.",
+    name: "Hype Auto Moto École",
+    designation: "Auto-moto école",
+    src: LogoHype,
+  },
+  {
+    quote:
+      "Je souhaitais un site apaisant, à l'image de ma pratique, pour présenter mes séances et faciliter la prise de rendez-vous. Le résultat est élégant et fidèle à mon univers. Merci pour votre accompagnement et votre disponibilité.",
+    name: "Zora Kinésiologie",
+    designation: "Cabinet de kinésiologie",
+    src: LogoZora,
+    contain: true,
   },
   {
     quote:
@@ -47,21 +63,6 @@ const testimonials = [
     name: "Work Formation",
     designation: "Centre de formation professionnelle",
     src: LogoWorkFormation,
-  },
-  {
-    quote:
-      "Nous voulions un site clair pour présenter nos formations et permettre aux futurs élèves de nous contacter facilement. Le résultat est professionnel, rapide et rassurant. Merci pour votre écoute et votre réactivité tout au long du projet.",
-    name: "Hype Auto-école",
-    designation: "Auto-école",
-    src: LogoHype,
-  },
-  {
-    quote:
-      "Je souhaitais un site apaisant, à l'image de ma pratique, pour présenter mes séances et faciliter la prise de rendez-vous. Le résultat est élégant et fidèle à mon univers. Merci pour votre accompagnement et votre disponibilité.",
-    name: "Zora Kinésiologie",
-    designation: "Cabinet de kinésiologie",
-    src: LogoZora,
-    contain: true,
   },
 ];
 
@@ -101,7 +102,10 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
 
   const isActive = (index: number) => index === active;
 
-  const randomRotate = () => `${Math.floor(Math.random() * 16) - 8}deg`;
+  // Inclinaison fixe par carte (et non aléatoire) : identique côté serveur et côté client,
+  // donc pas d'erreur d'hydratation, et les cartes ne bougent pas à chaque rendu.
+  const tilts = [-6, 4, -3, 7, -5, 2, -4];
+  const tiltFor = (index: number) => `${tilts[index % tilts.length]}deg`;
 
   return (
     <div className="px-4 pt-12 pb-10 lg:pb-20 font-sans md:px-8 lg:px-12">
@@ -116,7 +120,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                     opacity: 0,
                     scale: 0.9,
                     y: 50,
-                    rotate: randomRotate(),
+                    rotate: tiltFor(index),
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.5,
@@ -125,7 +129,7 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                     zIndex: isActive(index)
                       ? testimonials.length
                       : testimonials.length - Math.abs(index - active),
-                    rotate: isActive(index) ? "0deg" : randomRotate(),
+                    rotate: isActive(index) ? "0deg" : tiltFor(index),
                   }}
                   exit={{ opacity: 0, scale: 0.9, y: -50 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}

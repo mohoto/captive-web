@@ -168,6 +168,7 @@ function Page() {
       </section>
       <Banner
         className="py-10 lg:py-14"
+        cta="whatsapp"
         titleClassName="text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold"
         title={
           <>
