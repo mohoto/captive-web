@@ -56,7 +56,7 @@ function Services() {
             </ol>
           </div>
 
-          <div className="mx-auto w-full max-w-md lg:max-w-none">
+          <div className="mx-auto w-full max-w-md portrait-cap">
             <Image
               src={ServicesImage}
               alt="Une gérante de café sourit devant l'ordinateur affichant le site de son établissement ; des éléments graphiques indiquent « Livré en 7 jours » et « Site en ligne »"

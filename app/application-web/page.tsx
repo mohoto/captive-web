@@ -37,7 +37,7 @@ function Page() {
             <Image
               src={AppWebPresentation}
               alt="Une responsable d'exploitation présente le tableau de bord de son application web sur sa tablette, avec des cartes : tableau de bord, processus automatisés et un aperçu d'application web"
-              className="aspect-[4/5] w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
+              className="aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
               sizes="(min-width: 1024px) 35vw, 90vw"
               priority
             />
@@ -49,7 +49,7 @@ function Page() {
           <Image
             src={ApplicationWebIntro}
             alt="Un entrepreneur souriant devant son ordinateur affichant une application web, avec des cartes : solution sur mesure, évolutive et sécurisée, et un aperçu d'application web"
-            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
+            className="justify-self-center place-self-center aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
             sizes="(min-width: 1024px) 35vw, 90vw"
           />
 
@@ -70,7 +70,7 @@ function Page() {
       </section>
       <section className="pt-16 pb-10 px-8 lg:px-32 bg-captive-primary">
         <div className="xl:px-16">
-          <h2 className="mb-2 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+          <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Une application web pour chaque{" "}
             <span className="text-captive-blue">besoin professionnel</span>
           </h2>

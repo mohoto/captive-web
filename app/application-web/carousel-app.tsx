@@ -43,14 +43,14 @@ function CarouselApp() {
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Plateforme E-learning
                 </h3>
             <p className="font-semibold mb-0">Créez votre école en ligne</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -97,7 +97,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppFormation}
                 alt="Une formatrice souriante dans sa salle de formation, une tablette en main affichant sa plateforme e-learning, avec des cartes : cours en ligne, suivi des élèves et un aperçu d'application web"
@@ -109,14 +109,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Marketplace
                 </h3>
             <p className="font-semibold mb-0">Votre propre place de marché</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -163,7 +163,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppMarketplace}
                 alt="Un fondateur de marketplace souriant dans un espace de travail, une tablette en main affichant sa place de marché, avec des cartes : plusieurs vendeurs, paiement sécurisé et un aperçu d'application web"
@@ -175,14 +175,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Système de réservation complexe
                 </h3>
             <p className="font-semibold mb-0">Automatisez la gestion des rendez-vous</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -229,7 +229,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppReservation}
                 alt="Un gérant de centre d'activités souriant à son accueil, une tablette en main affichant son calendrier de réservation, avec des cartes : réservation en ligne, rappels automatiques et un aperçu d'application web"
@@ -241,14 +241,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Application Métier
                 </h3>
             <p className="font-semibold mb-0">Digitalisez vos processus internes</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -295,7 +295,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppMetier}
                 alt="Une responsable logistique souriante dans son bureau d'entrepôt, une tablette en main affichant son application métier, avec des cartes : rapports automatiques, équipes connectées et un aperçu d'application web"
@@ -307,14 +307,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Applications temps réel
                 </h3>
             <p className="font-semibold mb-0">Interaction instantanée</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -361,7 +361,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppLivraison}
                 alt="Un responsable de service de livraison souriant devant sa camionnette, un smartphone en main affichant une application en temps réel, avec des cartes : messagerie en direct, notifications instantanées et un aperçu d'application web"
@@ -373,14 +373,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Solutions SaaS
                 </h3>
             <p className="font-semibold mb-0">Votre logiciel accessible partout</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -427,7 +427,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppSaas}
                 alt="Une fondatrice de start-up souriante devant son ordinateur affichant son application SaaS, avec des cartes : abonnements récurrents, espace client et un aperçu d'application web"
@@ -439,14 +439,14 @@ function CarouselApp() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Plateforme communautaire
                 </h3>
             <p className="font-semibold mb-0">Fédérez votre communauté</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -493,7 +493,7 @@ function CarouselApp() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={AppCollaborative}
                 alt="Une animatrice de communauté souriante dans un centre associatif, une tablette en main affichant sa plateforme communautaire, avec des cartes : profils des membres, fil d'actualité et un aperçu d'application web"

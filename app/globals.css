@@ -3,6 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Images portrait (4/5) sur ordinateur : on limite leur hauteur à ~68 % de l'écran (36 rem au
+   maximum) pour qu'elles ne dépassent pas la fenêtre sur les grands écrans. Largeur = 0,8 × hauteur. */
+@utility portrait-cap {
+  @media (min-width: 1024px) {
+    max-width: min(100%, calc(0.8 * min(68vh, 36rem))) !important;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

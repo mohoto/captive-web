@@ -35,7 +35,7 @@ function Introduction() {
   return (
     <section className="px-8 py-20 lg:px-32 lg:py-28">
       <div className="container mx-auto grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-        <div className="order-2 flex w-full flex-col gap-4 sm:mx-auto sm:max-w-lg sm:gap-0 lg:order-1 lg:max-w-none">
+        <div className="order-2 flex w-full flex-col gap-4 sm:mx-auto sm:max-w-lg sm:gap-0 lg:order-1 portrait-cap">
           <Image
             src={EcommerceImage}
             alt="Une commerçante emballe un colis dans sa boutique de vêtements ; des éléments graphiques affichent une nouvelle commande, des avis cinq étoiles, une courbe de croissance et l'expédition"

@@ -42,14 +42,14 @@ function CarouselVitrine() {
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Artisans et bâtiment
             </h3>
             <p className="font-semibold mb-0">Plombier, électricien, maçon, peintre, menuisier, carreleur, couvreur, serrurier</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -59,7 +59,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteArtisan}
                 alt="Un peintre en bâtiment souriant dans un salon fraîchement peint, une tablette en main affichant le site de son entreprise, avec des cartes : demander un devis, voir nos réalisations et un aperçu de site web"
@@ -71,14 +71,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Commerçant local
             </h3>
             <p className="font-semibold mb-0">Restaurant, salon de coiffure, fleuriste, boulangerie, magasin de vêtements, pharmacie, opticien</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -88,7 +88,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteCommercant}
                 alt="Une boulangère souriante derrière le comptoir de sa boulangerie, une tablette en main affichant le site de sa boutique, avec des cartes : commander en ligne, horaires d'ouverture et un aperçu de site web"
@@ -100,14 +100,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Profession libérale
             </h3>
             <p className="font-semibold mb-0">Avocat, médecin, architecte, consultant, expert-comptable, notaire, psychologue</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -117,7 +117,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteLiberale}
                 alt="Un avocat souriant dans son cabinet, une tablette en main affichant le site de son cabinet, avec des cartes : prendre rendez-vous, nos expertises et un aperçu de site web"
@@ -129,14 +129,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Indépendant / Auto-entrepreneur
             </h3>
             <p className="font-semibold mb-0">Coach, photographe, graphiste, rédacteur, traducteur, développeur, formateur, VTC</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -146,7 +146,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteIndependant}
                 alt="Un photographe indépendant souriant dans son studio, une tablette en main affichant son portfolio en ligne, avec des cartes : voir mon portfolio, me contacter et un aperçu de site web"
@@ -158,14 +158,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Professionnel du bien-être
             </h3>
             <p className="font-semibold mb-0">Ostéopathe, naturopathe, esthéticienne, masseur, sophrologue, diététicien, coach sportif</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -175,7 +175,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteSante}
                 alt="Un praticien de bien-être souriant dans son cabinet lumineux, une tablette en main affichant le site de son cabinet, avec des cartes : prendre rendez-vous, nos soins et un aperçu de site web"
@@ -187,14 +187,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               PME / TPE
             </h3>
             <p className="font-semibold mb-0">Entreprises souhaitant une présence professionnelle en ligne</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -204,7 +204,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SitePme}
                 alt="Une dirigeante de PME souriante dans son atelier-bureau, une tablette en main affichant le site de son entreprise, avec des cartes : demander un devis, notre équipe et un aperçu de site web"
@@ -216,14 +216,14 @@ function CarouselVitrine() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
               Association ou collectivité
             </h3>
             <p className="font-semibold mb-0">Souhaitant informer et communiquer facilement</p>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 mb-6">
@@ -233,7 +233,7 @@ function CarouselVitrine() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={SiteAssociation}
                 alt="Un président d'association souriant dans une salle communautaire, une tablette en main affichant le site de son association, avec des cartes : nous rejoindre, faire un don et un aperçu de site web"

@@ -41,13 +41,13 @@ function CarouselEcom() {
     <Carousel className="xl:px-16">
       <CarouselContent>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Gestion des produits, commandes et stocks
                 </h3>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -105,7 +105,7 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={ShopifyOne}
                 alt="Une gérante de boutique de mode dans sa réserve, une tablette en main affichant la gestion de ses produits et stocks, avec des cartes : stocks à jour, nouvelle commande et un aperçu de boutique en ligne"
@@ -117,13 +117,13 @@ function CarouselEcom() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Paiements sécurisés intégrés
                 </h3>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -173,7 +173,7 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={ShopifyTwo}
                 alt="Un gérant de concept store souriant, une tablette en main affichant le paiement de sa boutique en ligne, avec des cartes : paiement sécurisé, carte bancaire et un aperçu de boutique en ligne"
@@ -185,13 +185,13 @@ function CarouselEcom() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Gestion simplifiée des livraisons
                 </h3>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -243,7 +243,7 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={ShopifyThree}
                 alt="Une commerçante prépare un colis dans son atelier, avec des cartes : colis expédié, livraison suivie et un aperçu de boutique en ligne"
@@ -255,13 +255,13 @@ function CarouselEcom() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Outils marketing intégrés
                 </h3>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-5">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -301,7 +301,7 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={ShopifyFour}
                 alt="Un commerçant en ligne souriant devant son ordinateur affichant sa boutique, avec des cartes : codes promo, newsletter clients et un aperçu de boutique en ligne"
@@ -313,13 +313,13 @@ function CarouselEcom() {
           </div>
         </CarouselItem>
         <CarouselItem className="pt-20">
-          <div className="mb-8 lg:mb-10">
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
+          <div className="order-1 lg:col-start-1 lg:row-start-1">
             <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
                   Applications complémentaires
                 </h3>
           </div>
-          <div className="flex lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-x-20 gap-y-10 lg:gap-y-0">
-            <div className="lg:w-1/2">
+            <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
               <div className="flex flex-col gap-y-8">
                 <div>
                   <p className="mt-3 font-semibold mb-6">
@@ -360,7 +360,7 @@ function CarouselEcom() {
                 </div>
               </div>
             </div>
-            <div className="flex lg:w-1/2 justify-center order-first lg:order-last">
+            <div className="order-2 flex justify-center lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
               <Image
                 src={ShopifyFive}
                 alt="Une e-commerçante souriante devant son ordinateur affichant les avis de ses clients, avec des cartes : avis clients, programme de fidélité et un aperçu de boutique en ligne"

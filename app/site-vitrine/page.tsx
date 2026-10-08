@@ -38,7 +38,7 @@ function Page() {
             <Image
               src={SiteVitrinePresentation}
               alt="Une gérante de boutique de décoration présente le site web de sa boutique sur sa tablette, avec des cartes : demander un devis, prendre rendez-vous et un aperçu de site web"
-              className="aspect-[4/5] w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
+              className="aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
               sizes="(min-width: 1024px) 35vw, 90vw"
               priority
             />
@@ -50,7 +50,7 @@ function Page() {
           <Image
             src={SiteVitrineIntro}
             alt="Un menuisier souriant dans son atelier, une tablette en main affichant le site de son entreprise, avec des cartes : livré en 7 jours, site en ligne et un aperçu de site web"
-            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
+            className="justify-self-center place-self-center aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
             sizes="(min-width: 1024px) 35vw, 90vw"
           />
 
@@ -102,14 +102,14 @@ function Page() {
           <Image
             src={SiteVitrineExplication}
             alt="Une consultante souriante dans un espace de coworking devant son ordinateur affichant son site, avec des cartes : trouvé sur Google, nous contacter et un aperçu de site web"
-            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:w-[75%]"
+            className="justify-self-center place-self-center aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover order-2 lg:w-[75%]"
             sizes="(min-width: 1024px) 35vw, 90vw"
           />
         </div>
       </section>
       <section className="py-16 px-8 lg:px-32 bg-captive-primary">
         <div className="xl:px-16">
-          <h2 className="mb-2 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+          <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Un site web vitrine :{" "}
             <span className="text-captive-blue">pour qui ?</span>
           </h2>

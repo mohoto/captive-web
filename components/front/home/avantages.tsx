@@ -161,6 +161,31 @@ function Avantages() {
 
   const secteur = secteurs[current];
 
+  // Métiers du domaine affiché + phrase d'invitation : sous le carrousel sur mobile,
+  // sous le titre (colonne de gauche) sur ordinateur.
+  const sectorExtras = (
+    <>
+      <div className="mt-10" aria-live="polite" aria-label={`Activités : ${secteur.title}`}>
+        <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+          {secteur.activites.map((activite) => (
+            <li
+              key={activite}
+              className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-sm text-white/85"
+            >
+              {activite}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p className="mt-10 mb-0 max-w-xl text-white/70">
+        Votre activité n&apos;est pas dans la liste ? Elle mérite aussi
+        son site.
+      </p>
+    </>
+  );
+
+
   return (
     <section className="relative bg-captive-secondary px-8 py-20 lg:px-32 lg:py-28">
       {/* Même fond dégradé que la section Hero */}
@@ -179,9 +204,10 @@ function Avantages() {
               Quel que soit votre métier, nous concevons le site qui vous
               correspond.
             </p>
+            <div className="hidden lg:block">{sectorExtras}</div>
           </div>
 
-          <div className="mx-auto w-full min-w-0 max-w-md lg:max-w-none">
+          <div className="mx-auto w-full min-w-0 max-w-md portrait-cap">
             <Carousel
               setApi={setApi}
               opts={{ loop: true }}
@@ -239,23 +265,8 @@ function Avantages() {
               </div>
             </div>
 
-            <div className="mt-10" aria-live="polite" aria-label={`Activités : ${secteur.title}`}>
-              <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
-                {secteur.activites.map((activite) => (
-                  <li
-                    key={activite}
-                    className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-sm text-white/85"
-                  >
-                    {activite}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <p className="mt-10 mb-0 max-w-xl text-white/70">
-              Votre activité n&apos;est pas dans la liste ? Elle mérite aussi
-              son site.
-            </p>
+            {/* Mobile : les métiers et le texte restent sous le carrousel */}
+            <div className="lg:hidden">{sectorExtras}</div>
           </div>
         </div>
       </div>

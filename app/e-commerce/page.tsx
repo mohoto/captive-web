@@ -39,7 +39,7 @@ function Page() {
             <Image
               src={EcomPresentation}
               alt="Une créatrice de mode présente sa boutique de vêtements en ligne sur sa tablette, avec des cartes : nouvelle commande, livraison à domicile et un aperçu de boutique en ligne"
-              className="aspect-[4/5] w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
+              className="aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover lg:w-[70%]"
               sizes="(min-width: 1024px) 35vw, 90vw"
               priority
             />
@@ -51,7 +51,7 @@ function Page() {
           <Image
             src={EcomIntro}
             alt="Un vendeur de compléments alimentaires pour sportifs souriant dans sa boutique, un ordinateur affichant sa boutique en ligne, avec des cartes : ouvert 24h/24, clients partout et un aperçu de boutique en ligne"
-            className="justify-self-center place-self-center aspect-[4/5] w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
+            className="justify-self-center place-self-center aspect-[4/5] portrait-cap w-full max-w-md rounded-2xl object-cover order-2 lg:order-1 lg:w-[75%]"
             sizes="(min-width: 1024px) 35vw, 90vw"
           />
 
@@ -100,7 +100,7 @@ function Page() {
       </section>
       <section className="pt-16 px-8 lg:px-32 bg-captive-primary">
         <div className="xl:px-16">
-          <h2 className="mb-2 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
+          <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Shopify : une plateforme{" "}
             <span className="text-captive-blue">complète</span>, pensée pour
             les commerçants
