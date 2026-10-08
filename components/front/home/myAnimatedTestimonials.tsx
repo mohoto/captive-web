@@ -1,9 +1,11 @@
 "use client";
 
+import LogoHype from "@/public/images/testimonials/hype-logo-fond-bleu.svg";
 import LogoMakeEnergy from "@/public/images/testimonials/logo-make-energy.png";
 import LogoNestRenove from "@/public/images/testimonials/logo-nest-renove.png";
 import LogoParisianMode from "@/public/images/testimonials/logo-parisian-mode.png";
 import LogoSiay from "@/public/images/testimonials/logo-siay.png";
+import LogoZora from "@/public/images/testimonials/home-3-logo.svg";
 import LogoWorkFormation from "@/public/images/testimonials/logo-work-formation.png";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { AnimatePresence, motion } from "framer-motion";
@@ -46,6 +48,21 @@ const testimonials = [
     designation: "Centre de formation professionnelle",
     src: LogoWorkFormation,
   },
+  {
+    quote:
+      "Nous voulions un site clair pour présenter nos formations et permettre aux futurs élèves de nous contacter facilement. Le résultat est professionnel, rapide et rassurant. Merci pour votre écoute et votre réactivité tout au long du projet.",
+    name: "Hype Auto-école",
+    designation: "Auto-école",
+    src: LogoHype,
+  },
+  {
+    quote:
+      "Je souhaitais un site apaisant, à l'image de ma pratique, pour présenter mes séances et faciliter la prise de rendez-vous. Le résultat est élégant et fidèle à mon univers. Merci pour votre accompagnement et votre disponibilité.",
+    name: "Zora Kinésiologie",
+    designation: "Cabinet de kinésiologie",
+    src: LogoZora,
+    contain: true,
+  },
 ];
 
 interface Testimonial {
@@ -53,6 +70,8 @@ interface Testimonial {
   name: string;
   designation: string;
   src: StaticImageData;
+  /** Logo sans fond : affiché en entier sur une carte blanche au lieu d'être rogné. */
+  contain?: boolean;
 }
 
 interface AnimatedTestimonialsProps {
@@ -119,7 +138,9 @@ const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-[70%] w-[70%] lg:h-[85%] lg:w-[85%] mx-auto rounded-3xl object-cover shadow-2xl"
+                    className={`h-[70%] w-[70%] lg:h-[85%] lg:w-[85%] mx-auto rounded-3xl shadow-2xl ${
+                      testimonial.contain ? "bg-white object-contain p-12" : "object-cover"
+                    }`}
                     onError={(e) => {
                       e.currentTarget.src = `https://placehold.co/500x500/e2e8f0/64748b?text=${testimonial.name.charAt(
                         0
@@ -185,9 +206,10 @@ const AnimatedTestimonialsDemo: React.FC = () => {
 const MyAnimatedTestimonials: React.FC = () => {
   return (
     <section className="py-16 px-8 lg:px-32 bg-captive-primary">
-      <div className="flex items-center flex-col">
-        <h2 className="heading__center mb-6">
-          Nos client témoignent des résultats
+      <div className="container mx-auto">
+        <h2 className="mb-6 max-w-2xl">
+          Nos clients témoignent des{" "}
+          <span className="text-captive-blue">résultats</span>
         </h2>
       </div>
       <div className="relative">
