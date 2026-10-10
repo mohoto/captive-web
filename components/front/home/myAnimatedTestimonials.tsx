@@ -6,6 +6,7 @@ import LogoNestRenove from "@/public/images/testimonials/logo-nest-renove.png";
 import LogoParisianMode from "@/public/images/testimonials/logo-parisian-mode.png";
 import LogoSiay from "@/public/images/testimonials/logo-siay.png";
 import LogoZora from "@/public/images/testimonials/home-3-logo.svg";
+import LogoTerreDeParfums from "@/public/images/testimonials/terre-de-parfums-favicon.svg";
 import LogoWorkFormation from "@/public/images/testimonials/logo-work-formation.png";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { AnimatePresence, motion } from "framer-motion";
@@ -34,6 +35,14 @@ const testimonials = [
     name: "Zora Kinésiologie",
     designation: "Cabinet de kinésiologie",
     src: LogoZora,
+    contain: true,
+  },
+  {
+    quote:
+      "Nous voulions une boutique élégante pour vendre nos parfums testeurs officiels, avec un parcours d'achat simple et un paiement sécurisé. Le résultat est soigné, rapide et fidèle à notre univers. Merci pour votre écoute et votre réactivité.",
+    name: "Terre de Parfums",
+    designation: "Vente en ligne de parfums testeurs",
+    src: LogoTerreDeParfums,
     contain: true,
   },
   {
