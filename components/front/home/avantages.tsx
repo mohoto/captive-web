@@ -196,11 +196,11 @@ function Avantages() {
       <div className="container relative mx-auto">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-start lg:gap-20">
           <div className="lg:sticky lg:top-28">
-            <h2 className="max-w-2xl text-white">
+            <h2 className="max-w-2xl text-white [text-wrap:wrap]">
               Une approche personnalisée pour chaque{" "}
               <span className="text-captive-ciel">secteur d&apos;activité</span>
             </h2>
-            <p className="mt-4 max-w-xl text-lg text-white/70">
+            <p className="mt-4 max-w-xl text-lg text-white/70 [text-wrap:wrap]">
               Quel que soit votre métier, nous concevons le site qui vous
               correspond.
             </p>
