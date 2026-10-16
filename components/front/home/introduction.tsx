@@ -12,22 +12,22 @@ const raisons = [
   {
     icon: Eye,
     title: "Visibilité 24/7",
-    description: "Votre entreprise reste accessible à tout moment, partout dans le monde.",
+    description: "Accessible à toute heure.",
   },
   {
     icon: ShieldCheck,
     title: "Crédibilité professionnelle",
-    description: "Un site bien conçu renforce votre image et inspire confiance.",
+    description: "Une image qui rassure.",
   },
   {
     icon: Lightning,
     title: "Acquisition de clients",
-    description: "Facilitez les ventes, les prises de contact et les demandes de devis.",
+    description: "Plus de contacts et de devis.",
   },
   {
     icon: ChatCircleDots,
     title: "Communication maîtrisée",
-    description: "Vous contrôlez votre message, vos offres et votre image de marque.",
+    description: "Votre message, vos règles.",
   },
 ];
 
@@ -57,24 +57,25 @@ function Introduction() {
             activité
           </h2>
           <p className="mt-5 max-w-xl text-lg text-neutral-900/80">
-            Que vous vouliez vendre en ligne, prendre des rendez-vous ou
-            simplement être trouvé sur Google, nous construisons le site qui
-            correspond à votre activité et qui travaille pour vous au
-            quotidien.
+            Vendre, prendre des rendez-vous ou être trouvé sur Google : un site
+            qui travaille pour vous.
           </p>
-          <ul className="mt-10 m-0 grid list-none gap-x-8 gap-y-9 p-0 sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2">
+          <ul className="mt-10 m-0 grid list-none gap-4 p-0 sm:grid-cols-2">
             {raisons.map((raison) => {
               const Icon = raison.icon;
               return (
-                <li key={raison.title} className="flex gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-captive-blue/10">
-                    <Icon className="h-5 w-5 text-captive-blue" weight="bold" />
+                <li
+                  key={raison.title}
+                  className="group flex items-center gap-4 rounded-2xl p-4 sm:flex-col sm:items-start border border-captive-secondary/10 bg-white sm:p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-captive-secondary/25 hover:shadow-lg hover:shadow-captive-secondary/10"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-captive-secondary text-white transition duration-300 group-hover:scale-105">
+                    <Icon className="h-6 w-6" weight="bold" />
                   </span>
                   <div>
-                    <h3 className="text-lg font-semibold leading-snug text-neutral-900">
+                    <h3 className="text-lg font-semibold leading-snug text-captive-ink">
                       {raison.title}
                     </h3>
-                    <p className="mt-1.5 mb-0 text-neutral-900/70">
+                    <p className="mt-1 mb-0 text-neutral-900/70">
                       {raison.description}
                     </p>
                   </div>
