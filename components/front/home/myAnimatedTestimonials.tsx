@@ -222,7 +222,7 @@ const MyAnimatedTestimonials: React.FC = () => {
       <div className="container mx-auto">
         <h2 className="mb-6 max-w-2xl">
           Nos clients témoignent des{" "}
-          <span className="text-captive-blue">résultats</span>
+          <span className="text-captive-secondary">résultats</span>
         </h2>
       </div>
       <div className="relative">

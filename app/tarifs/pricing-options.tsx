@@ -19,10 +19,10 @@ function OptionsCard({ title, options }: { title: string; options: PricingOption
           .map((option) => (
           <li key={option.id} className="flex items-start justify-between gap-4 py-3">
             <div>
-              <p className="mb-0 font-medium text-captive-secondary">{option.name}</p>
+              <p className="mb-0 font-medium text-captive-ink">{option.name}</p>
               <p className="mb-0 text-sm text-muted-foreground">{option.description}</p>
             </div>
-            <span className="shrink-0 font-semibold text-captive-secondary">
+            <span className="shrink-0 font-semibold text-captive-ink">
               {formatPrice(option.price)}
             </span>
           </li>
@@ -46,7 +46,7 @@ export function PricingOptions() {
         <OptionsCard title="E-commerce (Shopify)" options={shopifyOptions} />
       </div>
       <div className="mt-12 flex flex-col items-center gap-3 text-center">
-        <p className="mb-0 text-lg font-semibold text-captive-secondary">
+        <p className="mb-0 text-lg font-semibold text-captive-ink">
           Un projet en tête ? Estimez votre budget en 2 minutes.
         </p>
         <Link

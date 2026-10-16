@@ -23,7 +23,7 @@ function Page() {
       <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-secondary sm:text-4xl lg:text-left lg:text-[2.5rem]">
+            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-ink sm:text-4xl lg:text-left lg:text-[2.5rem]">
               Transformez vos processus métier avec une{" "}
               <span className="text-captive-blue">
                 application web personnalisée
@@ -56,7 +56,7 @@ function Page() {
           <div className="order-1 lg:order-2">
             <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
               Applications Web{" "}
-              <span className="text-captive-blue">sur mesure</span>
+              <span className="text-captive-secondary">sur mesure</span>
             </h2>
             <p>
               Vous avez besoin d&#39;une solution digitale qui va au-delà
@@ -72,7 +72,7 @@ function Page() {
         <div className="xl:px-16">
           <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Une application web pour chaque{" "}
-            <span className="text-captive-blue">besoin professionnel</span>
+            <span className="text-captive-secondary">besoin professionnel</span>
           </h2>
         </div>
         <CarouselApp />
@@ -81,7 +81,7 @@ function Page() {
         <div className="flex items-center flex-col">
           <h2 className="heading__center mb-4 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Pourquoi choisir nos{" "}
-            <span className="text-captive-blue">applications web</span> ?
+            <span className="text-captive-secondary">applications web</span> ?
           </h2>
           <p className="text-lg font-semibold text-center">
             Une approche complète qui combine expertise technique,

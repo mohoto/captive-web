@@ -24,7 +24,7 @@ function Page() {
       <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-secondary sm:text-4xl lg:text-left lg:text-[2.5rem]">
+            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-ink sm:text-4xl lg:text-left lg:text-[2.5rem]">
               Lancez votre e&#8209;commerce avec une{" "}
               <span className="text-captive-blue">
                 boutique en ligne professionnelle
@@ -58,7 +58,7 @@ function Page() {
           <div className="order-1 lg:order-2">
             <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
               Pourquoi se lancer dans l’
-              <span className="text-captive-blue">e&#8209;commerce</span> ?
+              <span className="text-captive-secondary">e&#8209;commerce</span> ?
             </h2>
             <p>
               L’e-commerce est aujourd’hui un levier incontournable pour
@@ -76,7 +76,7 @@ function Page() {
           <div className="place-self-center order-3">
             <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
               Pourquoi choisir{" "}
-              <span className="text-captive-blue">Shopify</span> pour votre
+              <span className="text-captive-secondary">Shopify</span> pour votre
               site e&#8209;commerce ?
             </h2>
             <p>
@@ -102,7 +102,7 @@ function Page() {
         <div className="xl:px-16">
           <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Shopify : une plateforme{" "}
-            <span className="text-captive-blue">complète</span>, pensée pour
+            <span className="text-captive-secondary">complète</span>, pensée pour
             les commerçants
           </h2>
         </div>
@@ -112,7 +112,7 @@ function Page() {
         <div className="flex items-center flex-col">
           <h2 className="heading__center mb-4 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Notre accompagnement{" "}
-            <span className="text-captive-blue">personnalisé</span> sur Shopify
+            <span className="text-captive-secondary">personnalisé</span> sur Shopify
           </h2>
           <p className="text-lg font-semibold text-center">
             Notre mission : vous livrer une boutique clé en main, prête à

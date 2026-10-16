@@ -62,7 +62,7 @@ function FaqRow({
           <span
             className={`text-lg leading-snug font-semibold transition-colors duration-200 ${
               isOpen
-                ? "text-captive-secondary"
+                ? "text-captive-ink"
                 : "text-neutral-900 group-hover:text-captive-blue"
             }`}
           >
@@ -72,7 +72,7 @@ function FaqRow({
             className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-colors duration-200 ${
               isOpen
                 ? "border-captive-secondary bg-captive-secondary text-white"
-                : "border-captive-secondary/25 text-captive-secondary group-hover:border-captive-blue group-hover:text-captive-blue"
+                : "border-captive-secondary/25 text-captive-ink group-hover:border-captive-blue group-hover:text-captive-blue"
             }`}
             aria-hidden="true"
           >
@@ -123,7 +123,7 @@ function FaqDemo() {
         <div className="lg:sticky lg:top-28">
           <h2 className="max-w-md">
             Questions fréquentes de nos clients sur la création de{" "}
-            <span className="text-captive-blue">sites web</span>
+            <span className="text-captive-secondary">sites web</span>
           </h2>
           <p className="mt-4 max-w-sm text-lg text-neutral-900/70">
             Une autre question ? Posez-la nous directement, nous répondons
@@ -133,7 +133,7 @@ function FaqDemo() {
             href="https://wa.me/33757837110?text=Bonjour,%20j%27ai%20une%20question%20sur%20la%20creation%20de%20site%20web"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center gap-2.5 font-semibold text-captive-secondary underline decoration-captive-blue decoration-2 underline-offset-4 transition-colors duration-200 hover:text-captive-blue"
+            className="mt-2 inline-flex items-center gap-2.5 font-semibold text-captive-ink underline decoration-captive-blue decoration-2 underline-offset-4 transition-colors duration-200 hover:text-captive-blue"
           >
             <WhatsappLogo className="h-5 w-5 text-green-600" weight="fill" />
             Écrivez-nous sur WhatsApp

@@ -31,14 +31,14 @@ export default function Page() {
   return(
     <LegalLayout title="Politique de confidentialité" updated="01/01/2025" toc={toc}>
         <section id="intro" className="mb-8 scroll-mt-28 rounded-2xl border-l-4 border-captive-blue bg-captive-blue/5 p-6 lg:p-8">
-            <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">INTRODUCTION</h2>
+            <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">INTRODUCTION</h2>
             <p className="text-neutral-900/80 leading-relaxed">
                 La société CAPTIVE s&#39;engage à protéger la confidentialité et la sécurité de vos données personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons, conservons et protégeons vos informations personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi française.
             </p>
         </section>
         <div className="space-y-8">
             <section id="s1" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">1. RESPONSABLE DU TRAITEMENT</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">1. RESPONSABLE DU TRAITEMENT</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Le responsable du traitement des données personnelles est :
                 </p>
@@ -51,13 +51,13 @@ export default function Page() {
                 </div>
             </section>
             <section id="s2" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">2. DONNÉES COLLECTÉES</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">2. DONNÉES COLLECTÉES</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Dans le cadre de nos services de création de sites web, nous sommes amenés à collecter les catégories de données suivantes :
                 </p>
                 <div className="space-y-4">
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Données d&#39;identification</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Données d&#39;identification</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80">
                             <li>Nom et prénom</li>
                             <li>Raison sociale de l&#39;entreprise</li>
@@ -68,7 +68,7 @@ export default function Page() {
                         </ul>
                     </div> 
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Données de projet</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Données de projet</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80">
                             <li>Cahier des charges et besoins exprimés</li>
                             <li>Contenus fournis (textes, images, logos)</li>
@@ -87,14 +87,14 @@ export default function Page() {
                 </div>
             </section>
             <section id="s3" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">3. FINALITÉS DU TRAITEMENT</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">3. FINALITÉS DU TRAITEMENT</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Vos données personnelles sont traitées pour les finalités suivantes :
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Exécution du contrat</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Exécution du contrat</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80 text-sm">
                             <li>Réalisation des prestations de création de sites web</li>
                             <li>Communication et suivi de projet</li>
@@ -103,7 +103,7 @@ export default function Page() {
                         </ul>
                     </div>
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Intérêts légitimes</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Intérêts légitimes</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80 text-sm">
                             <li>Amélioration de nos services</li>
                             <li>Prospection commerciale</li>
@@ -122,7 +122,7 @@ export default function Page() {
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-violet bg-captive-violet/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Consentement</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Consentement</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80 text-sm">
                             <li>Newsletter et communications marketing</li>
                             <li>Cookies non essentiels</li>
@@ -132,7 +132,7 @@ export default function Page() {
                 </div>
             </section>
             <section id="s4" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">4. DURÉE DE CONSERVATION</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">4. DURÉE DE CONSERVATION</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Nous conservons vos données personnelles pendant les durées suivantes :
                 </p>
@@ -141,8 +141,8 @@ export default function Page() {
                     <div className="overflow-x-auto"><table className="w-full min-w-[32rem] border-collapse border border-captive-secondary/15">
                         <thead className="bg-blue-100">
                             <tr>
-                                <th className="border border-captive-secondary/15 p-3 text-left font-semibold text-captive-secondary">Type de données</th>
-                                <th className="border border-captive-secondary/15 p-3 text-left font-semibold text-captive-secondary">Durée de conservation</th>
+                                <th className="border border-captive-secondary/15 p-3 text-left font-semibold text-captive-ink">Type de données</th>
+                                <th className="border border-captive-secondary/15 p-3 text-left font-semibold text-captive-ink">Durée de conservation</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -167,19 +167,19 @@ export default function Page() {
                 </div>
             </section>
             <section id="s5" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">5. DESTINATAIRES DES DONNÉES</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">5. DESTINATAIRES DES DONNÉES</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Vos données personnelles peuvent être transmises aux destinataires suivants :
                 </p>
                 
                 <div className="space-y-4">
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Personnel autorisé de CAPTIVE</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Personnel autorisé de CAPTIVE</h3>
                         <p className="text-neutral-900/80 text-sm">Accès strictement limité aux besoins de traitement</p>
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Prestataires techniques</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Prestataires techniques</h3>
                         <p className="text-neutral-900/80 text-sm">Hébergeurs, services de maintenance, outils de communication (sous contrat de sous-traitance)</p>
                     </div>
                     
@@ -195,19 +195,19 @@ export default function Page() {
                 </div>
             </section>
             <section id="s6" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">6. TRANSFERTS INTERNATIONAUX</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">6. TRANSFERTS INTERNATIONAUX</h2>
                 <p className="text-neutral-900/80 leading-relaxed">
                     Vos données personnelles sont principalement traitées en France. En cas de transfert vers un pays tiers à l&#39;Union européenne, nous nous assurons que des garanties appropriées sont mises en place (clauses contractuelles types, décision d&#39;adéquation de la Commission européenne, etc.).
                 </p>
             </section>
             <section id="s7" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">7. SÉCURITÉ DES DONNÉES</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">7. SÉCURITÉ DES DONNÉES</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Mesures techniques</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Mesures techniques</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80 text-sm">
                             <li>Chiffrement des données sensibles</li>
                             <li>Connexions sécurisées (HTTPS/SSL)</li>
@@ -218,7 +218,7 @@ export default function Page() {
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Mesures organisationnelles</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Mesures organisationnelles</h3>
                         <ul className="list-disc pl-6 marker:text-captive-blue space-y-1 text-neutral-900/80 text-sm">
                             <li>Accès limité aux données</li>
                             <li>Formation du personnel</li>
@@ -230,19 +230,19 @@ export default function Page() {
                 </div>
             </section>
             <section id="s8" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">8. VOS DROITS</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">8. VOS DROITS</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Conformément au RGPD, vous disposez des droits suivants :
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">🔍 Droit d&#39;accès</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">🔍 Droit d&#39;accès</h3>
                         <p className="text-neutral-900/80 text-sm">Obtenir une copie de vos données personnelles</p>
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Droit de rectification</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Droit de rectification</h3>
                         <p className="text-neutral-900/80 text-sm">Corriger des données inexactes ou incomplètes</p>
                     </div>
                     
@@ -257,7 +257,7 @@ export default function Page() {
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-violet bg-captive-violet/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Droit à la portabilité</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Droit à la portabilité</h3>
                         <p className="text-neutral-900/80 text-sm">Récupérer vos données dans un format structuré</p>
                     </div>
                     
@@ -278,24 +278,24 @@ export default function Page() {
                 </div>
             </section>
             <section id="s9" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">9. COOKIES</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">9. COOKIES</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Notre site web utilise des cookies pour améliorer votre expérience de navigation :
                 </p>
                 
                 <div className="space-y-4">
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Cookies essentiels</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Cookies essentiels</h3>
                         <p className="text-neutral-900/80 text-sm">Nécessaires au fonctionnement du site (pas de consentement requis)</p>
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Cookies de performance</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Cookies de performance</h3>
                         <p className="text-neutral-900/80 text-sm">Analytics et statistiques d&#39;utilisation (avec votre consentement)</p>
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-violet bg-captive-violet/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">Cookies marketing</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">Cookies marketing</h3>
                         <p className="text-neutral-900/80 text-sm">Publicité ciblée et réseaux sociaux (avec votre consentement)</p>
                     </div>
                 </div>
@@ -305,19 +305,19 @@ export default function Page() {
                 </p>
             </section>
             <section id="s10" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">10. RÉCLAMATIONS</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">10. RÉCLAMATIONS</h2>
                 <p className="text-neutral-900/80 leading-relaxed mb-4">
                     Si vous estimez que le traitement de vos données personnelles ne respecte pas la réglementation, vous pouvez :
                 </p>
                 
                 <div className="space-y-4">
                     <div className="rounded-xl border-l-4 border-captive-blue bg-captive-blue/5 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">1. Nous contacter directement</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">1. Nous contacter directement</h3>
                         <p className="text-neutral-900/80 text-sm">Email : [email à compléter]</p>
                     </div>
                     
                     <div className="rounded-xl border-l-4 border-captive-ciel bg-captive-ciel/10 p-4">
-                        <h3 className="font-semibold text-captive-secondary mb-2">2. Saisir la CNIL</h3>
+                        <h3 className="font-semibold text-captive-ink mb-2">2. Saisir la CNIL</h3>
                         <p className="text-neutral-900/80 text-sm">
                             Commission Nationale de l&#39;Informatique et des Libertés<br/>
                             3 Place de Fontenoy - TSA 80715<br/>
@@ -328,13 +328,13 @@ export default function Page() {
                 </div>
             </section>
             <section id="s11" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">11. MODIFICATIONS</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">11. MODIFICATIONS</h2>
                 <p className="text-neutral-900/80 leading-relaxed">
                     Cette politique de confidentialité peut être mise à jour pour refléter les changements dans nos pratiques ou la réglementation. Nous vous informerons de toute modification importante par email ou via notre site web. La date de dernière mise à jour est indiquée en en-tête de ce document.
                 </p>
             </section>
             <section id="s12" className="scroll-mt-28 rounded-2xl border border-captive-secondary/10 bg-white p-6 lg:p-8">
-                <h2 className="mb-4 text-xl font-bold text-captive-secondary lg:text-2xl">12. CONTACT</h2>
+                <h2 className="mb-4 text-xl font-bold text-captive-ink lg:text-2xl">12. CONTACT</h2>
                 <div className="bg-blue-50 p-6 rounded-lg">
                     <p className="text-neutral-900/80 leading-relaxed mb-4">
                         Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles, contactez-nous :
@@ -342,12 +342,12 @@ export default function Page() {
                     
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
-                            <h3 className="font-semibold text-captive-secondary mb-2">Par email</h3>
+                            <h3 className="font-semibold text-captive-ink mb-2">Par email</h3>
                             <p className="text-neutral-900/80">[Email à compléter]</p>
                         </div>
                         
                         <div>
-                            <h3 className="font-semibold text-captive-secondary mb-2">Par courrier</h3>
+                            <h3 className="font-semibold text-captive-ink mb-2">Par courrier</h3>
                             <p className="text-neutral-900/80">
                                 CAPTIVE<br/>
                                 256 rue Gabriel Péri<br/>
@@ -356,12 +356,12 @@ export default function Page() {
                         </div>
                         
                         <div>
-                            <h3 className="font-semibold text-captive-secondary mb-2">Par téléphone</h3>
+                            <h3 className="font-semibold text-captive-ink mb-2">Par téléphone</h3>
                             <p className="text-neutral-900/80">[Téléphone à compléter]</p>
                         </div>
                         
                         <div>
-                            <h3 className="font-semibold text-captive-secondary mb-2">Délai de réponse</h3>
+                            <h3 className="font-semibold text-captive-ink mb-2">Délai de réponse</h3>
                             <p className="text-neutral-900/80">Maximum 1 mois</p>
                         </div>
                     </div>

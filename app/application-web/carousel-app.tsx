@@ -45,7 +45,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Plateforme E-learning
                 </h3>
             <p className="font-semibold mb-0">Créez votre école en ligne</p>
@@ -111,7 +111,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Marketplace
                 </h3>
             <p className="font-semibold mb-0">Votre propre place de marché</p>
@@ -177,7 +177,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Système de réservation complexe
                 </h3>
             <p className="font-semibold mb-0">Automatisez la gestion des rendez-vous</p>
@@ -243,7 +243,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Application Métier
                 </h3>
             <p className="font-semibold mb-0">Digitalisez vos processus internes</p>
@@ -309,7 +309,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Applications temps réel
                 </h3>
             <p className="font-semibold mb-0">Interaction instantanée</p>
@@ -375,7 +375,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Solutions SaaS
                 </h3>
             <p className="font-semibold mb-0">Votre logiciel accessible partout</p>
@@ -441,7 +441,7 @@ function CarouselApp() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Plateforme communautaire
                 </h3>
             <p className="font-semibold mb-0">Fédérez votre communauté</p>

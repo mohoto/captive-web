@@ -198,7 +198,7 @@ function Avantages() {
           <div className="lg:sticky lg:top-28">
             <h2 className="max-w-2xl text-white [text-wrap:wrap]">
               Une approche personnalisée pour chaque{" "}
-              <span className="text-captive-ciel">secteur d&apos;activité</span>
+              <span className="text-captive-secondary">secteur d&apos;activité</span>
             </h2>
             <p className="mt-4 max-w-xl text-lg text-white/70 [text-wrap:wrap]">
               Quel que soit votre métier, nous concevons le site qui vous
@@ -250,7 +250,7 @@ function Avantages() {
                   type="button"
                   onClick={() => api?.scrollPrev()}
                   aria-label="Domaine précédent"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:bg-white hover:text-captive-secondary"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:bg-white hover:text-captive-ink"
                 >
                   <ArrowLeft className="h-5 w-5" weight="bold" />
                 </button>
@@ -258,7 +258,7 @@ function Avantages() {
                   type="button"
                   onClick={() => api?.scrollNext()}
                   aria-label="Domaine suivant"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:bg-white hover:text-captive-secondary"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition-colors duration-200 hover:bg-white hover:text-captive-ink"
                 >
                   <ArrowRight className="h-5 w-5" weight="bold" />
                 </button>

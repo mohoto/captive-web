@@ -53,7 +53,7 @@ function Banner({
             {cta === "devis" ? (
               <Link
                 href="/devis"
-                className="group inline-flex shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold sm:px-8 sm:text-lg text-captive-secondary transition-colors duration-200 hover:bg-captive-primary lg:self-auto"
+                className="group inline-flex shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold sm:px-8 sm:text-lg text-captive-ink transition-colors duration-200 hover:bg-captive-primary lg:self-auto"
               >
                 Obtenir mon devis
                 <ArrowRight
@@ -66,7 +66,7 @@ function Banner({
                 href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold sm:px-8 sm:text-lg text-captive-secondary transition-colors duration-200 hover:bg-captive-primary lg:self-auto"
+                className="group inline-flex shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap rounded-full bg-white px-6 py-4 text-base font-semibold sm:px-8 sm:text-lg text-captive-ink transition-colors duration-200 hover:bg-captive-primary lg:self-auto"
               >
                 <WhatsappLogo className="h-6 w-6 text-green-600" weight="fill" />
                 Discuter sur WhatsApp

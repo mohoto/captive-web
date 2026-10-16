@@ -48,7 +48,7 @@ export const Contact2 = ({
                   </button>
                 </li>
                 <li className="flex items-center gap-x-2">
-                  <MdEmail className="text-captive-secondary h-6 w-6" />
+                  <MdEmail className="text-captive-ink h-6 w-6" />
                   <span className="font-bold">Email: </span>
                   <a href={`mailto:${email}`} className="underline">
                     {email}

@@ -53,7 +53,7 @@ function Introduction() {
         <div className="order-1 lg:order-2">
           <h2 className="max-w-xl">
             Pourquoi avoir un site web est{" "}
-            <span className="text-captive-blue">essentiel</span> pour votre
+            <span className="text-captive-secondary">essentiel</span> pour votre
             activité
           </h2>
           <p className="mt-5 max-w-xl text-lg text-neutral-900/80">

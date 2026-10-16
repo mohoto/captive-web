@@ -343,7 +343,7 @@ export function QuoteForm() {
       <div className="p-6 lg:p-10">
         {step.kind === "project" && (
           <fieldset>
-            <legend className="mb-6 text-2xl font-bold text-captive-secondary">
+            <legend className="mb-6 text-2xl font-bold text-captive-ink">
               Pourquoi avez-vous besoin d&apos;un site web ?
             </legend>
             <div className="grid gap-4">
@@ -365,10 +365,10 @@ export function QuoteForm() {
                       <Icon className="h-6 w-6" weight="bold" />
                     </span>
                     <span className="flex-1">
-                      <span className="block font-bold text-captive-secondary">{title}</span>
+                      <span className="block font-bold text-captive-ink">{title}</span>
                       <span className="block text-sm text-neutral-900/60">{description}</span>
                     </span>
-                    <span className="shrink-0 text-right font-semibold text-captive-secondary">
+                    <span className="shrink-0 text-right font-semibold text-captive-ink">
                       dès {formatPrice(projects[key].basePrice)}
                     </span>
                   </button>
@@ -380,7 +380,7 @@ export function QuoteForm() {
 
         {step.kind === "site" && (
           <fieldset>
-            <legend className="text-2xl font-bold text-captive-secondary">
+            <legend className="text-2xl font-bold text-captive-ink">
               <span className="mb-2 block text-sm font-semibold tracking-wide text-captive-blue uppercase">
                 Votre situation
               </span>
@@ -395,7 +395,7 @@ export function QuoteForm() {
                   aria-checked={existingSite === choice}
                   onClick={() => setExistingSite(choice)}
                   className={cn(
-                    "rounded-2xl border-2 bg-white p-4 text-left font-medium text-captive-secondary transition-colors",
+                    "rounded-2xl border-2 bg-white p-4 text-left font-medium text-captive-ink transition-colors",
                     existingSite === choice
                       ? "border-captive-blue bg-captive-blue/5"
                       : "border-captive-secondary/10 hover:border-captive-blue/40"
@@ -465,7 +465,7 @@ export function QuoteForm() {
 
         {step.kind === "options" && (
           <fieldset>
-            <legend className="text-2xl font-bold text-captive-secondary">
+            <legend className="text-2xl font-bold text-captive-ink">
               <span className="mb-2 block text-sm font-semibold tracking-wide text-captive-blue uppercase">
                 {step.group.title}
               </span>
@@ -475,7 +475,7 @@ export function QuoteForm() {
               Plusieurs choix possibles, ou aucun : vous pouvez passer cette question.
             </p>
             {(hasRecs || sectorKnown) && firstOptionsStep?.kind === "options" && step.group.id === firstOptionsStep.group.id && (
-              <p className="mb-5 flex items-start gap-2 rounded-xl bg-captive-blue/10 p-4 text-sm text-captive-secondary">
+              <p className="mb-5 flex items-start gap-2 rounded-xl bg-captive-blue/10 p-4 text-sm text-captive-ink">
                 <Sparkle className="mt-0.5 h-5 w-5 shrink-0 text-captive-blue" weight="fill" />
                 <span>
                   Voici les options adaptées à votre activité ({activity}). Celles que
@@ -518,7 +518,7 @@ export function QuoteForm() {
                           {active && <Check className="h-4 w-4" weight="bold" />}
                         </span>
                         <span className="flex-1">
-                          <span className="block font-semibold text-captive-secondary">{option.name}</span>
+                          <span className="block font-semibold text-captive-ink">{option.name}</span>
                           <span className="block text-sm text-neutral-900/60">{option.description}</span>
                           {recs[option.id] && (
                             <span className="mt-2 flex items-start gap-1.5 text-sm font-medium text-captive-blue">
@@ -527,7 +527,7 @@ export function QuoteForm() {
                             </span>
                           )}
                         </span>
-                        <span className="shrink-0 font-semibold text-captive-secondary">
+                        <span className="shrink-0 font-semibold text-captive-ink">
                           {formatPrice(option.price)}
                         </span>
                       </button>
@@ -616,7 +616,7 @@ export function QuoteForm() {
             <p className="mb-6 text-sm text-neutral-900/60">Activité : {activityLabel}</p>
             <ul className="divide-y rounded-2xl bg-captive-primary px-5">
               <li className="flex justify-between gap-4 py-3">
-                <span className="font-semibold text-captive-secondary">{projects[project].label}</span>
+                <span className="font-semibold text-captive-ink">{projects[project].label}</span>
                 <span className="font-semibold">{formatPrice(projects[project].basePrice)}</span>
               </li>
               {chosen.map((o) => {
@@ -658,7 +658,7 @@ export function QuoteForm() {
             <button
               type="button"
               onClick={() => setIndex((i) => i - 1)}
-              className={cn(buttonBase, "px-5 text-captive-secondary hover:bg-captive-secondary/10")}
+              className={cn(buttonBase, "px-5 text-captive-ink hover:bg-captive-secondary/10")}
             >
               <ArrowLeft className="h-4 w-4" weight="bold" />
               Retour

@@ -24,7 +24,7 @@ function Services() {
           <div>
             <h2>
               Votre site web clé en main en{" "}
-              <span className="whitespace-nowrap text-captive-blue">7&nbsp;jours</span>
+              <span className="whitespace-nowrap text-captive-secondary">7&nbsp;jours</span>
             </h2>
             <p className="mt-5 max-w-lg text-neutral-900/80">
               Artisan, commerçant, indépendant ou dirigeant de PME/TPE :

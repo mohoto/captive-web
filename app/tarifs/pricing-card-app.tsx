@@ -83,7 +83,7 @@ export function PricingCardApp() {
                     <AppWindow className="h-6 w-6" weight="bold" />
                   </span>
                   <div>
-                    <CardTitle className="text-xl leading-tight font-bold text-captive-secondary">
+                    <CardTitle className="text-xl leading-tight font-bold text-captive-ink">
                       Application sur mesure
                     </CardTitle>
                     <CardDescription className="mt-1 text-sm leading-snug">
@@ -97,7 +97,7 @@ export function PricingCardApp() {
                   <span className="block text-sm text-neutral-900/60">
                     Tarif
                   </span>
-                  <span className="block text-5xl font-bold tracking-tight text-captive-secondary">
+                  <span className="block text-5xl font-bold tracking-tight text-captive-ink">
                     Sur devis
                   </span>
                 </div>

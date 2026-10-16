@@ -44,7 +44,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Artisans et bâtiment
             </h3>
             <p className="font-semibold mb-0">Plombier, électricien, maçon, peintre, menuisier, carreleur, couvreur, serrurier</p>
@@ -73,7 +73,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Commerçant local
             </h3>
             <p className="font-semibold mb-0">Restaurant, salon de coiffure, fleuriste, boulangerie, magasin de vêtements, pharmacie, opticien</p>
@@ -102,7 +102,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Profession libérale
             </h3>
             <p className="font-semibold mb-0">Avocat, médecin, architecte, consultant, expert-comptable, notaire, psychologue</p>
@@ -131,7 +131,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Indépendant / Auto-entrepreneur
             </h3>
             <p className="font-semibold mb-0">Coach, photographe, graphiste, rédacteur, traducteur, développeur, formateur, VTC</p>
@@ -160,7 +160,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Professionnel du bien-être
             </h3>
             <p className="font-semibold mb-0">Ostéopathe, naturopathe, esthéticienne, masseur, sophrologue, diététicien, coach sportif</p>
@@ -189,7 +189,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               PME / TPE
             </h3>
             <p className="font-semibold mb-0">Entreprises souhaitant une présence professionnelle en ligne</p>
@@ -218,7 +218,7 @@ function CarouselVitrine() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
               Association ou collectivité
             </h3>
             <p className="font-semibold mb-0">Souhaitant informer et communiquer facilement</p>

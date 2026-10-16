@@ -69,14 +69,14 @@ export function LegalLayout({ title, updated, toc, children }: LegalLayoutProps)
         <nav aria-label="Sommaire" className="lg:sticky lg:top-28 lg:self-start">
           {/* Mobile : sommaire repliable */}
           <details className="rounded-2xl border border-captive-secondary/10 bg-captive-primary p-4 lg:hidden">
-            <summary className="cursor-pointer text-sm font-semibold tracking-wide text-captive-secondary uppercase">
+            <summary className="cursor-pointer text-sm font-semibold tracking-wide text-captive-ink uppercase">
               Sommaire
             </summary>
             <TocList toc={toc} />
           </details>
           {/* Ordinateur : sommaire toujours visible et fixe */}
           <div className="hidden rounded-2xl border border-captive-secondary/10 bg-captive-primary p-4 lg:block">
-            <p className="mb-0 text-sm font-semibold tracking-wide text-captive-secondary uppercase">
+            <p className="mb-0 text-sm font-semibold tracking-wide text-captive-ink uppercase">
               Sommaire
             </p>
             <TocList toc={toc} />

@@ -89,7 +89,7 @@ function Realisations() {
           <div>
             <h2 className="mb-0 max-w-2xl">
               Des sites web faits{" "}
-              <span className="text-captive-blue">sur mesure</span> pour chaque
+              <span className="text-captive-secondary">sur mesure</span> pour chaque
               client
             </h2>
             <p className="mt-4 mb-0 max-w-xl text-lg text-neutral-900/70">
@@ -162,7 +162,7 @@ function Realisations() {
                     <h3 className="text-2xl font-bold text-neutral-900">
                       {realisation.name}
                     </h3>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-captive-secondary/20 text-captive-secondary transition-colors duration-200 group-hover:border-captive-secondary group-hover:bg-captive-secondary group-hover:text-white">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-captive-secondary/20 text-captive-ink transition-colors duration-200 group-hover:border-captive-secondary group-hover:bg-captive-secondary group-hover:text-white">
                       <ArrowUpRight className="h-5 w-5" weight="bold" />
                     </span>
                   </div>

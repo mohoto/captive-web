@@ -24,7 +24,7 @@ function Page() {
       <section className="pt-10 lg:pt-2 bg-captive-primary px-8 lg:px-32">
         <div className="container grid lg:grid-cols-2 gap-y-4 lg:gap-y-0 lg:place-content-between">
           <div className="place-self-center">
-            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-secondary sm:text-4xl lg:text-left lg:text-[2.5rem]">
+            <h1 className="mb-6 text-3xl leading-[1.1] font-bold tracking-tight text-balance text-center text-captive-ink sm:text-4xl lg:text-left lg:text-[2.5rem]">
               Gagnez en visibilité et en confiance avec un{" "}
               <span className="text-captive-blue">site web clé en main</span>
             </h1>
@@ -57,7 +57,7 @@ function Page() {
           <div className="order-1 lg:order-2">
             <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
               Un site web professionnel{" "}
-              <span className="text-captive-blue">sans prise de tête</span>
+              <span className="text-captive-secondary">sans prise de tête</span>
             </h2>
             <p>
               Vous êtes artisan, commerçant local, indépendant ou à la tête
@@ -78,7 +78,7 @@ function Page() {
           <div className="place-self-center order-1">
             <h2 className="mb-6 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
               Que vous vendiez un service, un savoir-faire ou votre expertise :{" "}
-              <span className="text-captive-blue">soyez visible</span>
+              <span className="text-captive-secondary">soyez visible</span>
             </h2>
             <p>
               Un site vitrine est idéal pour toutes les entreprises ou
@@ -111,7 +111,7 @@ function Page() {
         <div className="xl:px-16">
           <h2 className="mb-6 lg:mb-8 text-left text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Un site web vitrine :{" "}
-            <span className="text-captive-blue">pour qui ?</span>
+            <span className="text-captive-secondary">pour qui ?</span>
           </h2>
         </div>
         <CarouselVitrine />
@@ -120,7 +120,7 @@ function Page() {
         <div className="flex items-center flex-col">
           <h2 className="heading__center mb-4 text-[1.625rem] sm:text-[1.875rem] lg:text-[2rem] font-semibold">
             Notre accompagnement{" "}
-            <span className="text-captive-blue">personnalisé</span> pour votre
+            <span className="text-captive-secondary">personnalisé</span> pour votre
             site vitrine
           </h2>
           <p className="text-lg font-semibold text-center">

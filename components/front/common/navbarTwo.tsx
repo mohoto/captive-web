@@ -156,7 +156,7 @@ export default function NavbarTwo() {
                   </DrawerTitle>
                   <DrawerClose
                     aria-label="Fermer le menu"
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-captive-primary text-captive-secondary"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-captive-primary text-captive-ink"
                   >
                     <IoMdClose className="h-6 w-6" />
                   </DrawerClose>
@@ -173,7 +173,7 @@ export default function NavbarTwo() {
                           "flex items-center justify-between border-b py-5 text-xl font-semibold transition-colors",
                           active
                             ? "text-captive-blue"
-                            : "text-captive-secondary active:text-captive-blue"
+                            : "text-captive-ink active:text-captive-blue"
                         )}
                       >
                         {label}

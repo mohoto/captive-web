@@ -67,7 +67,7 @@ function PricingWebSite() {
       <div className="container mx-auto">
         <div className="mb-12 grid items-end gap-4 lg:mb-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <h2 className="mb-0 max-w-2xl">
-            Une offre <span className="text-captive-blue">adaptée</span> à
+            Une offre <span className="text-captive-secondary">adaptée</span> à
             votre activité, pour propulser votre visibilité en ligne
           </h2>
           <p className="mb-0 max-w-md text-lg text-neutral-900/70">
@@ -163,7 +163,7 @@ function PricingWebSite() {
                   href={offre.href}
                   className={`group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-center font-semibold transition-colors duration-200 ${
                     dark
-                      ? "bg-white text-captive-secondary hover:bg-captive-primary"
+                      ? "bg-white text-captive-ink hover:bg-captive-primary"
                       : "bg-captive-secondary text-white hover:bg-captive-secondary-hover"
                   }`}
                 >

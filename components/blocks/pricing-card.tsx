@@ -117,7 +117,7 @@ export function PricingCard({
                     </span>
                   )}
                   <div>
-                    <CardTitle className="text-xl leading-tight font-bold text-captive-secondary">
+                    <CardTitle className="text-xl leading-tight font-bold text-captive-ink">
                       {title}
                     </CardTitle>
                     <CardDescription className="mt-1 text-sm leading-snug">
@@ -131,7 +131,7 @@ export function PricingCard({
                   <span className="block text-sm text-neutral-900/60">
                     A partir de
                   </span>
-                  <span className="block text-5xl font-bold tracking-tight text-captive-secondary">
+                  <span className="block text-5xl font-bold tracking-tight text-captive-ink">
                     {price}&nbsp;€
                   </span>
                 </div>

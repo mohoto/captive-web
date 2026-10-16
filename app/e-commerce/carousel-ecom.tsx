@@ -43,7 +43,7 @@ function CarouselEcom() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Gestion des produits, commandes et stocks
                 </h3>
           </div>
@@ -119,7 +119,7 @@ function CarouselEcom() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Paiements sécurisés intégrés
                 </h3>
           </div>
@@ -187,7 +187,7 @@ function CarouselEcom() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Gestion simplifiée des livraisons
                 </h3>
           </div>
@@ -257,7 +257,7 @@ function CarouselEcom() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Outils marketing intégrés
                 </h3>
           </div>
@@ -315,7 +315,7 @@ function CarouselEcom() {
         <CarouselItem className="pt-20">
           <div className="grid gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-x-20 lg:gap-y-6">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            <h3 className="font-bold text-xl lg:text-2xl text-captive-secondary mb-2">
+            <h3 className="font-bold text-xl lg:text-2xl text-captive-ink mb-2">
                   Applications complémentaires
                 </h3>
           </div>

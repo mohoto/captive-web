@@ -28,7 +28,7 @@ function Hero() {
           >
             <Link
               href="/devis"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-lg font-semibold text-captive-secondary transition-colors duration-200 hover:bg-captive-primary"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-lg font-semibold text-captive-ink transition-colors duration-200 hover:bg-captive-primary"
             >
               Obtenir mon devis
               <ArrowRight
@@ -54,7 +54,7 @@ function Hero() {
             <div className="mt-6 flex justify-center lg:hidden">
               <Link
                 href="/devis"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-lg font-semibold text-captive-secondary transition-colors duration-200 hover:bg-captive-primary sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-lg font-semibold text-captive-ink transition-colors duration-200 hover:bg-captive-primary sm:w-auto"
               >
                 Obtenir mon devis
                 <ArrowRight

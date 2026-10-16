@@ -74,7 +74,7 @@ function FooterTwo() {
                 href="https://wa.me/33757837110?text=Bonjour,%20je%20vous%20contacte%20pour%20la%20creation%20de%20site%20web"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 font-semibold text-captive-secondary transition-colors duration-200 hover:bg-captive-primary"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-6 py-3 font-semibold text-captive-ink transition-colors duration-200 hover:bg-captive-primary"
               >
                 <WhatsappLogo className="h-5 w-5 text-green-600" weight="fill" />
                 Discuter sur WhatsApp

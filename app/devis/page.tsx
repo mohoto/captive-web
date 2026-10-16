@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <section className="bg-gradient-to-b from-captive-blue/10 via-white to-white px-6 pt-10 pb-20 lg:px-32 lg:pt-16">
       <div className="mx-auto max-w-3xl">
-        <h1 className="mb-3 text-center text-3xl font-extrabold tracking-tight text-captive-secondary lg:text-4xl">
+        <h1 className="mb-3 text-center text-3xl font-extrabold tracking-tight text-captive-ink lg:text-4xl">
           Votre devis en quelques questions
         </h1>
         <p className="mx-auto mb-10 max-w-xl text-center text-neutral-900/70">
